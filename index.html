@@ -147,12 +147,14 @@
 </head>
 <body class="antialiased">
 
-    <nav class="fixed top-0 w-full z-[100] bg-white/95 backdrop-blur-md border-b border-gray-100">
+    <nav class="fixed top-0 w-full z-[110] bg-white/95 backdrop-blur-md border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <button onclick="showPage('home')" class="flex flex-col items-start focus:outline-none">
-                <span class="text-xl md:text-2xl font-bold tracking-[0.4em] serif">ATHENA</span>
-                <span class="text-[8px] uppercase tracking-[0.6em] text-gray-400 -mt-1">Clinical Beauty & Spa</span>
-            </button>
+            <div class="relative z-[110]">
+                <button onclick="showPage('home'); closeMobileMenu()" class="flex flex-col items-start focus:outline-none">
+                    <span class="text-xl md:text-2xl font-bold tracking-[0.4em] serif">ATHENA</span>
+                    <span class="text-[8px] uppercase tracking-[0.6em] text-gray-400 -mt-1">Clinical Beauty & Spa</span>
+                </button>
+            </div>
             
             <div class="hidden md:flex gap-10 h-full items-center text-[10px] font-bold uppercase tracking-[0.25em] text-gray-400">
                 <a href="#" onclick="showPage('home')" class="hover:text-black transition-colors">Home</a>
@@ -176,9 +178,35 @@
                 <a href="#" onclick="scrollToFooter()" class="hover:text-black transition-colors">Contact</a>
             </div>
 
-            <button onclick="window.open('https://fresha.com')" class="bg-black text-white px-8 py-3 text-[10px] uppercase tracking-[0.25em] font-bold rounded-sm hover:opacity-80 transition-all">Book Online</button>
+            <div class="flex items-center gap-4 z-[110]">
+                <button onclick="window.open('https://fresha.com')" class="hidden sm:block bg-black text-white px-8 py-3 text-[10px] uppercase tracking-[0.25em] font-bold rounded-sm hover:opacity-80 transition-all">Book Online</button>
+                <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="md:hidden p-2 text-black focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+            </div>
         </div>
+
     </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-white z-[105] flex flex-col pt-24 pb-10 overflow-y-auto opacity-0 pointer-events-none transition-opacity duration-300">
+        <div class="flex flex-col items-center gap-8 text-center w-full px-6">
+            <a href="#" onclick="showPage('home'); closeMobileMenu()" class="text-xl uppercase tracking-[0.3em] font-bold hover:text-amber-700 transition-colors">Home</a>
+            <div class="w-full h-px bg-gray-100"></div>
+            <h3 class="text-[10px] uppercase tracking-[0.4em] text-gray-400 font-bold mb-2">Services</h3>
+            <a href="#" onclick="showPage('hair'); closeMobileMenu()" class="text-sm uppercase tracking-widest text-gray-600 hover:text-amber-700 transition-colors">Hair Atelier</a>
+            <a href="#" onclick="showPage('laser'); closeMobileMenu()" class="text-sm uppercase tracking-widest text-gray-600 hover:text-amber-700 transition-colors">Laser Clinic</a>
+            <a href="#" onclick="showPage('facials'); closeMobileMenu()" class="text-sm uppercase tracking-widest text-gray-600 hover:text-amber-700 transition-colors">Skin Clinic</a>
+            <a href="#" onclick="showPage('hydrafacial'); closeMobileMenu()" class="text-sm uppercase tracking-widest text-gray-600 hover:text-amber-700 transition-colors">Hydrafacial™</a>
+            <a href="#" onclick="showPage('microblading'); closeMobileMenu()" class="text-sm uppercase tracking-widest text-gray-600 hover:text-amber-700 transition-colors">Microblading</a>
+            <a href="#" onclick="showPage('mani-pedi'); closeMobileMenu()" class="text-sm uppercase tracking-widest text-gray-600 hover:text-amber-700 transition-colors">Nail Studio</a>
+            <a href="#" onclick="showPage('threading'); closeMobileMenu()" class="text-sm uppercase tracking-widest text-gray-600 hover:text-amber-700 transition-colors">Threading</a>
+            <a href="#" onclick="showPage('massage'); closeMobileMenu()" class="text-sm uppercase tracking-widest text-gray-600 hover:text-amber-700 transition-colors">Body Therapy</a>
+            <div class="w-full h-px bg-gray-100"></div>
+            <a href="#" onclick="scrollToFooter(); closeMobileMenu()" class="text-xl uppercase tracking-[0.3em] font-bold hover:text-amber-700 transition-colors">Contact</a>
+            <button onclick="window.open('https://fresha.com')" class="mt-4 bg-black text-white px-10 py-4 w-full max-w-[300px] text-[10px] uppercase tracking-[0.25em] font-bold rounded-sm hover:opacity-80 transition-all">Book Online</button>
+        </div>
+    </div>
 
     <main id="home-page" class="page-view active pt-32 pb-32">
         <div class="max-w-7xl mx-auto px-6">
@@ -562,7 +590,7 @@
                                 </div>
 
                                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                    <button class="btn-action btn-black" onclick="window.open('https://fresha.com')">Secure Booking</button>
+                                    <button class="btn-action btn-black" onclick="window.open('https://fresha.com')">Book Now </button>
                                     <button class="btn-action flex items-center justify-center gap-2 bg-[#25D366] text-white hover:bg-[#128C7E]" onclick="window.open('https://wa.me/440000000000')">
                                         <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 0C5.385 0 0 5.385 0 12.031c0 2.133.551 4.156 1.558 5.96L.101 24l6.195-1.621c1.729.897 3.666 1.365 5.735 1.365 6.646 0 12.031-5.385 12.031-12.031S18.677 0 12.031 0zM17.65 16.59c-.276.776-1.593 1.488-2.186 1.547-.56.055-1.282.164-3.693-.834-2.9-1.196-4.756-4.148-4.896-4.335-.141-.188-1.168-1.55-1.168-2.955 0-1.405.733-2.096 1.011-2.392.278-.297.604-.372.805-.372.2 0 .401.003.576.012.188.009.438-.073.687.525.263.633.916 2.235 1 2.423.083.188.139.407.014.656-.126.249-.189.407-.375.633-.186.225-.395.49-.56.633-.186.164-.383.344-.173.705.21.362.936 1.549 2.015 2.511 1.396 1.246 2.564 1.636 2.923 1.782.358.146.568.125.782-.125.214-.25 1.012-1.18 1.283-1.587.271-.408.542-.34.869-.216.326.124 2.062.973 2.417 1.15.355.176.592.264.678.414.086.15.086.867-.19 1.642z"/></svg>
                                         WhatsApp Inquiry
@@ -614,6 +642,30 @@
                 </div>
             `;
             container.innerHTML = html;
+        }
+
+        function closeMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            if (menu && !menu.classList.contains('pointer-events-none')) {
+                toggleMobileMenu();
+            }
+        }
+
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            if (!menu) return;
+            const icon = document.querySelector('#mobile-menu-btn svg path');
+            const isOpen = !menu.classList.contains('pointer-events-none');
+            
+            if (isOpen) {
+                menu.classList.add('opacity-0', 'pointer-events-none');
+                if(icon) icon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+                document.body.style.overflow = '';
+            } else {
+                menu.classList.remove('opacity-0', 'pointer-events-none');
+                if(icon) icon.setAttribute('d', 'M6 18L18 6M6 6l12 12');
+                document.body.style.overflow = 'hidden';
+            }
         }
 
         function toggleFaq(el) {
