@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Athena Clinical Spa | Premium Aesthetic Excellence</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --brand-primary: #1a1a1a;
+            --brand-accent: #c5a059;
+            --bg-soft: #fbfbfb;
+            --text-light: #666666;
+            --border-color: #f0f0f0;
+        }
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: #ffffff; 
+            color: var(--brand-primary);
+            scroll-behavior: smooth;
+        }
+        .serif { font-family: 'Playfair Display', serif; }
+        
+        .nav-dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            min-width: 280px;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.1);
+            border: 1px solid var(--border-color);
+            padding: 1rem 0;
+            z-index: 1000;
+        }
+        .group:hover .nav-dropdown { display: block; }
+        .nav-dropdown a {
+            display: block;
+            padding: 0.85rem 2rem;
+            font-size: 11px;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: #666;
+            transition: all 0.3s ease;
+        }
+        .nav-dropdown a:hover {
+            background: #fcf9f3;
+            color: var(--brand-accent);
+            padding-left: 2.25rem;
+        }
+
+        .page-view { display: none; opacity: 0; }
+        .page-view.active { display: block; opacity: 1; animation: fadeIn 0.8s ease-out forwards; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        .menu-plate {
+            border: 1px solid #e5e5e5;
+            padding: 4rem 3rem;
+            position: relative;
+            background: #fff;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.02);
+        }
+        .menu-plate::before {
+            content: '';
+            position: absolute;
+            top: 10px; left: 10px; right: 10px; bottom: 10px;
+            border: 1px solid #f9f9f9;
+            pointer-events: none;
+        }
+        .price-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 1.25rem;
+        }
+        .price-row .label {
+            background: white;
+            padding-right: 12px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #333;
+        }
+        .price-row .dots {
+            flex-grow: 1;
+            border-bottom: 1px dotted #ccc;
+            margin-bottom: 4px;
+        }
+        .price-row .value {
+            background: white;
+            padding-left: 12px;
+            font-weight: 700;
+            color: var(--brand-accent);
+            font-size: 0.9rem;
+        }
+
+        .clinical-box {
+            padding: 2.5rem;
+            border-radius: 4px;
+            border: 1px solid #f0f0f0;
+            height: 100%;
+        }
+        .clinical-blue { background: #f4f9fa; border-color: #e0eff1; }
+        .clinical-gold { background: #fcf9f3; border-color: #f3ede0; }
+        
+        .faq-item {
+            border-bottom: 1px solid #eeeeee;
+        }
+        .faq-trigger {
+            cursor: pointer;
+            padding: 1.5rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+        .faq-trigger:hover { color: var(--brand-accent); }
+        .faq-content { 
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            color: #666;
+            line-height: 1.6;
+            font-size: 0.85rem;
+        }
+        .faq-content.open {
+            max-height: 500px;
+            padding-bottom: 1.5rem;
+        }
+
+        .btn-action {
+            padding: 1.25rem 2rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            font-size: 0.7rem;
+            font-weight: 800;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        .btn-black { background: #000; color: #fff; }
+        .btn-black:hover { background: #333; }
+        .btn-outline { border: 1px solid #e5e5e5; color: #000; }
+        .btn-outline:hover { background: #fafafa; border-color: #000; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <nav class="fixed top-0 w-full z-[100] bg-white/95 backdrop-blur-md border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <button onclick="showPage('home')" class="flex flex-col items-start focus:outline-none">
+                <span class="text-xl md:text-2xl font-bold tracking-[0.4em] serif">ATHENA</span>
+                <span class="text-[8px] uppercase tracking-[0.6em] text-gray-400 -mt-1">Clinical Beauty & Spa</span>
+            </button>
+            
+            <div class="hidden md:flex gap-10 h-full items-center text-[10px] font-bold uppercase tracking-[0.25em] text-gray-400">
+                <a href="#" onclick="showPage('home')" class="hover:text-black transition-colors">Home</a>
+                
+                <div class="relative group h-full flex items-center cursor-pointer">
+                    <span class="hover:text-black transition-colors flex items-center gap-2">
+                        Services
+                        <svg class="w-2.5 h-2.5 opacity-40" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7"></path></svg>
+                    </span>
+                    <div class="nav-dropdown">
+                        <a href="#" onclick="showPage('hair')">Hair Atelier</a>
+                        <a href="#" onclick="showPage('laser')">Laser Clinic</a>
+                        <a href="#" onclick="showPage('facials')">Skin Clinic</a>
+                        <a href="#" onclick="showPage('hydrafacial')">Hydrafacial™</a>
+                        <a href="#" onclick="showPage('microblading')">Microblading</a>
+                        <a href="#" onclick="showPage('mani-pedi')">Nail Studio</a>
+                        <a href="#" onclick="showPage('threading')">Precision Threading</a>
+                        <a href="#" onclick="showPage('massage')">Body Therapy</a>
+                    </div>
+                </div>
+                <a href="#" onclick="scrollToFooter()" class="hover:text-black transition-colors">Contact</a>
+            </div>
+
+            <button onclick="window.open('https://fresha.com')" class="bg-black text-white px-8 py-3 text-[10px] uppercase tracking-[0.25em] font-bold rounded-sm hover:opacity-80 transition-all">Book Online</button>
+        </div>
+    </nav>
+
+    <main id="home-page" class="page-view active pt-32 pb-32">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-24">
+                <h1 class="text-5xl md:text-8xl serif mb-8 leading-tight">Mastery in <br>Clinical Beauty.</h1>
+                <div class="w-16 h-px bg-amber-500 mx-auto mb-8"></div>
+                <p class="text-gray-400 uppercase tracking-[0.5em] text-[10px]">London Boutique Clinic & Aesthetic Sanctuary</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div onclick="showPage('hair')" class="group cursor-pointer">
+                    <div class="aspect-[4/5] overflow-hidden mb-6 bg-gray-50"><img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"></div>
+                    <h3 class="serif text-xl mb-1">Hair Atelier</h3>
+                    <p class="text-[9px] uppercase tracking-widest text-amber-600 font-bold">Cutting & Colour</p>
+                </div>
+                <div onclick="showPage('laser')" class="group cursor-pointer">
+                    <div class="aspect-[4/5] overflow-hidden mb-6 bg-gray-50"><img src="https://images.unsplash.com/photo-1559599141-3816c0b333bc?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"></div>
+                    <h3 class="serif text-xl mb-1">Laser Hair Removal</h3>
+                    <p class="text-[9px] uppercase tracking-widest text-amber-600 font-bold">Medical Grade</p>
+                </div>
+                <div onclick="showPage('facials')" class="group cursor-pointer">
+                    <div class="aspect-[4/5] overflow-hidden mb-6 bg-gray-50"><img src="https://images.unsplash.com/photo-1570172619380-2826dc0c3c67?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"></div>
+                    <h3 class="serif text-xl mb-1">Skin Clinic</h3>
+                    <p class="text-[9px] uppercase tracking-widest text-amber-600 font-bold">Advanced Facials</p>
+                </div>
+                <div onclick="showPage('hydrafacial')" class="group cursor-pointer">
+                    <div class="aspect-[4/5] overflow-hidden mb-6 bg-gray-50"><img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"></div>
+                    <h3 class="serif text-xl mb-1">Hydrafacial™</h3>
+                    <p class="text-[9px] uppercase tracking-widest text-amber-600 font-bold">Vortex Technology</p>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
+                <div onclick="showPage('microblading')" class="group cursor-pointer">
+                    <div class="aspect-[4/5] overflow-hidden mb-6 bg-gray-50"><img src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"></div>
+                    <h3 class="serif text-xl mb-1">Microblading</h3>
+                    <p class="text-[9px] uppercase tracking-widest text-amber-600 font-bold">Brow Artistry</p>
+                </div>
+                <div onclick="showPage('mani-pedi')" class="group cursor-pointer">
+                    <div class="aspect-[4/5] overflow-hidden mb-6 bg-gray-50"><img src="https://images.unsplash.com/photo-1610992015732-2449b0c2629b?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"></div>
+                    <h3 class="serif text-xl mb-1">Nail Studio</h3>
+                    <p class="text-[9px] uppercase tracking-widest text-amber-600 font-bold">Manicure & Pedicure</p>
+                </div>
+                <div onclick="showPage('threading')" class="group cursor-pointer">
+                    <div class="aspect-[4/5] overflow-hidden mb-6 bg-gray-50"><img src="https://images.unsplash.com/photo-1519415387722-a1c3bbef716c?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"></div>
+                    <h3 class="serif text-xl mb-1">Threading</h3>
+                    <p class="text-[9px] uppercase tracking-widest text-amber-600 font-bold">Precision Shaping</p>
+                </div>
+                <div onclick="showPage('massage')" class="group cursor-pointer">
+                    <div class="aspect-[4/5] overflow-hidden mb-6 bg-gray-50"><img src="https://images.unsplash.com/photo-1544161515-4af6b1d46152?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"></div>
+                    <h3 class="serif text-xl mb-1">Body Therapy</h3>
+                    <p class="text-[9px] uppercase tracking-widest text-amber-600 font-bold">Massage & Body</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="page-container"></div>
+
+    <footer id="main-footer" class="bg-stone-50 py-24 border-t border-stone-200 mt-20">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-16">
+            <div>
+                <span class="text-2xl serif tracking-widest block mb-4">ATHENA</span>
+                <p class="text-[10px] text-gray-400 uppercase tracking-[0.4em] leading-loose">Clinical Beauty & Spa<br>London Boutique Clinic</p>
+            </div>
+            <div class="flex flex-col gap-4">
+                <h4 class="text-[10px] font-black tracking-[0.2em] uppercase text-gray-400">Quick Links</h4>
+                <div class="flex flex-col gap-3 text-sm text-gray-500">
+                    <a href="#" onclick="showPage('home')" class="hover:text-black">Home</a>
+                    <a href="#" class="hover:text-black">Clinical Ethics</a>
+                    <a href="#" class="hover:text-black">Privacy Policy</a>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-[10px] font-black tracking-[0.2em] uppercase text-gray-400 mb-6">Patient Support</h4>
+                <p class="text-xs text-gray-500 mb-4">Questions about your treatment?</p>
+                <a href="https://wa.me/440000000000" class="text-amber-700 font-bold text-xs uppercase tracking-widest hover:underline">Chat with a Clinical Expert</a>
+            </div>
+        </div>
+        <div class="mt-20 text-center">
+            <p class="text-gray-300 text-[9px] uppercase tracking-widest">&copy; 2024 Athena Clinical Spa. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const contentData = {
+            'hair': {
+                title: 'Athena Hair Atelier',
+                sub: 'The Architecture of Hair',
+                hero: 'https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&q=80&w=1600',
+                clinical: 'Our atelier focuses on the structural health of hair. We utilize L\'Oréal Professionnel and Kérastase medical-grade protocols to ensure that every cut and colour enhances both aesthetic and fibre integrity.',
+                sections: [
+                    {
+                        header: 'Precision Cutting & Styling',
+                        items: [
+                            { name: 'Ladies Signature Cut & Finish', val: '£55' },
+                            { name: 'Restyle Transformation', val: '£65' },
+                            { name: 'Blow Dry (Short)', val: '£35' },
+                            { name: 'Blow Dry (Long/Thick)', val: '£45' }
+                        ]
+                    },
+                    {
+                        header: 'Technical Colour Artistry',
+                        items: [
+                            { name: 'Full Head Balayage / Ombre', val: 'from £140' },
+                            { name: 'Half Head Highlights', val: '£85' },
+                            { name: 'Full Head Highlights', val: '£120' },
+                            { name: 'Root Tint Touch-up', val: '£55' }
+                        ]
+                    }
+                ],
+                faq: [
+                    { q: 'Is a patch test required?', a: 'Yes. For your safety, a mandatory skin patch test is required 48 hours prior to any first-time colour service to prevent adverse allergic reactions.' },
+                    { q: 'Which products do you use?', a: 'We exclusively use Kérastase and L\'Oréal Professionnel Smartbond to protect hair bonds during technical services.' },
+                    { q: 'How long does a Balayage take?', a: 'A bespoke balayage service typically takes between 3.5 to 4.5 hours depending on your hair density and desired outcome.' }
+                ]
+            },
+            'laser': {
+                title: 'Medical Laser Clinic',
+                sub: 'Permanent Hair Reduction',
+                hero: 'https://images.unsplash.com/photo-1559599141-3816c0b333bc?auto=format&fit=crop&q=80&w=1600',
+                clinical: 'Athena utilizes leading Diode Laser technology. Our systems feature advanced sapphire cooling tips to ensure a painless experience while targeting follicles with clinical precision across all Fitzpatrick skin types.',
+                sections: [
+                    {
+                        header: 'Facial Laser',
+                        items: [
+                            { name: 'Upper Lip', val: '£15' },
+                            { name: 'Full Face & Neck', val: '£60' },
+                            { name: 'Centre Brow', val: '£7' }
+                        ]
+                    },
+                    {
+                        header: 'Body Laser - Upper',
+                        items: [
+                            { name: 'Under Arms', val: '£10' },
+                            { name: 'Full Arms', val: '£80' },
+                            { name: 'Full Back', val: '£100' }
+                        ]
+                    },
+                    {
+                        header: 'Body Laser - Lower',
+                        items: [
+                            { name: 'Full Leg', val: '£80' },
+                            { name: 'Brazilian/Hollywood', val: '£30' },
+                            { name: 'Buttocks', val: '£50' }
+                        ]
+                    }
+                ],
+                faq: [
+                    { q: 'How many sessions are needed?', a: 'We typically recommend a clinical course of 6 to 8 sessions spaced 4 to 6 weeks apart for optimal permanent reduction.' },
+                    { q: 'Does it hurt?', a: 'Our medical-grade diode lasers include integrated cooling technology that numbs the area on contact, making the sensation very comfortable.' },
+                    { q: 'Can I laser over a tan?', a: 'No. You must avoid sun exposure, tanning beds, and fake tan for at least 2 weeks before your session to avoid pigment complications.' }
+                ]
+            },
+            'facials': {
+                title: 'Athena Skin Clinic',
+                sub: 'Dermatological Excellence',
+                hero: 'https://images.unsplash.com/photo-1570172619380-2826dc0c3c67?auto=format&fit=crop&q=80&w=1600',
+                clinical: 'Our skin specialists combine manual extraction techniques with high-potency botanical infusions. We focus on barrier repair and cellular turnover for long-term skin health.',
+                sections: [
+                    {
+                        header: 'Clinical Skin Therapy',
+                        items: [
+                            { name: 'Clinical Extraction (60m)', val: '£85' },
+                            { name: 'Oxygen Detox Facial (60m)', val: '£70' },
+                            { name: 'Time Resist Anti-Aging (90m)', val: '£120' },
+                            { name: 'Athena Bespoke Skin Map (90m)', val: '£120' }
+                        ]
+                    }
+                ],
+                faq: [
+                    { q: 'What is a Skin Map?', a: 'A Skin Map is a diagnostic consultation where we analyze UV damage, dehydration levels, and congestion to create a custom treatment plan.' },
+                    { q: 'Will I be red after extraction?', a: 'Some mild erythema (redness) is normal after manual extraction but typically subsides within 2 to 24 hours.' }
+                ]
+            },
+            'hydrafacial': {
+                title: 'Hydrafacial™ Elite',
+                sub: 'The Vortex-Fusion Experience',
+                hero: 'https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&q=80&w=1600',
+                clinical: 'The patented Hydrafacial device uses vortex-fusion to cleanse, extract, and hydrate. It is the gold standard in non-invasive skin resurfacing with zero downtime.',
+                sections: [
+                    {
+                        header: 'Hydrafacial Menu',
+                        items: [
+                            { name: 'Signature Hydrafacial', val: '£120' },
+                            { name: 'Deluxe (Includes Boosters)', val: '£150' },
+                            { name: 'Platinum (Full Detox)', val: '£180' }
+                        ]
+                    }
+                ],
+                faq: [
+                    { q: 'Can I wear makeup after?', a: 'We recommend waiting until the next morning to let the clinical serums fully absorb into the skin.' },
+                    { q: 'Is it safe during pregnancy?', a: 'While generally safe, we recommend the Signature version without specific chemical peels during pregnancy. Please consult our clinicians.' }
+                ]
+            },
+            'microblading': {
+                title: 'Bespoke Microblading',
+                sub: 'Semi-Permanent Brow Architecture',
+                hero: 'https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?auto=format&fit=crop&q=80&w=1600',
+                clinical: 'We use medical-grade pigments to create hyper-realistic hair strokes. Each brow is manually mapped using the Golden Ratio to harmonize with your unique facial structure.',
+                sections: [
+                    {
+                        header: 'Procedure & Maintenance',
+                        items: [
+                            { name: 'Initial Mapping & Blading', val: '£250' },
+                            { name: '6-Week Perfection Visit', val: '£100' },
+                            { name: 'Annual Colour Refresh', val: '£175' }
+                        ]
+                    }
+                ],
+                faq: [
+                    { q: 'How long does it last?', a: 'Results typically last 12-18 months depending on skin type and lifestyle (sun exposure and skincare products).' },
+                    { q: 'Does it hurt?', a: 'We apply a topical numbing cream 20 minutes before the procedure to ensure you feel minimal discomfort—mostly a light scratching sensation.' }
+                ]
+            },
+            'mani-pedi': {
+                title: 'The Nail Studio',
+                sub: 'Clinical Hand & Foot Care',
+                hero: 'https://images.unsplash.com/photo-1610992015732-2449b0c2629b?auto=format&fit=crop&q=80&w=1600',
+                clinical: 'Our studio adheres to medical sterilization standards. We use OPI and Shellac systems to provide high-gloss, long-wearing finishes without compromising nail health.',
+                sections: [
+                    {
+                        header: 'Manicures (Polish/Shellac)',
+                        items: [
+                            { name: 'Mini: Shape & Paint', val: '£25 / £35' },
+                            { name: 'Deluxe: Full Spa Therapy', val: '£45 / £55' }
+                        ]
+                    },
+                    {
+                        header: 'Pedicures (Polish/Shellac)',
+                        items: [
+                            { name: 'Mini: Tidy & Paint', val: '£35 / £45' },
+                            { name: 'Deluxe: Bubble Soak Spa', val: '£55 / £65' }
+                        ]
+                    }
+                ],
+                faq: [
+                    { q: 'How long does Shellac last?', a: 'When applied professionally, Shellac remains chip-free and high-gloss for up to 14 days.' },
+                    { q: 'Do you remove other salons\' gel?', a: 'Yes, we provide safe professional removal to prevent damage to the natural nail plate.' }
+                ]
+            },
+            'threading': {
+                title: 'Precision Threading',
+                sub: 'The Art of Ancient Shaping',
+                hero: 'https://images.unsplash.com/photo-1519415387722-a1c3bbef716c?auto=format&fit=crop&q=80&w=1600',
+                clinical: 'Using organic cotton thread, our specialists lift hair from the root with surgical precision. This method is ideal for sensitive skin as it does not pull the epidermis.',
+                sections: [
+                    {
+                        header: 'Threading Services',
+                        items: [
+                            { name: 'Eyebrow Map & Shape', val: '£15' },
+                            { name: 'Upper Lip', val: '£10' },
+                            { name: 'Full Face (Excl. Brows)', val: '£35' }
+                        ]
+                    }
+                ],
+                faq: [
+                    { q: 'Is it better than waxing?', a: 'Yes for sensitivity. Threading is 100% natural, uses no heat, and only targets the hair, making it better for those on Retinol or with thin skin.' },
+                    { q: 'How often should I thread?', a: 'We recommend every 3 to 4 weeks to maintain the architectural shape of the brows.' }
+                ]
+            },
+            'massage': {
+                title: 'Body Restoration',
+                sub: 'Clinical Massage Therapy',
+                hero: 'https://images.unsplash.com/photo-1544161515-4af6b1d46152?auto=format&fit=crop&q=80&w=1600',
+                clinical: 'Our therapists focus on physiological release. Whether targeting chronic tension or promoting lymphatic drainage, our body therapies are designed for physical recovery.',
+                sections: [
+                    {
+                        header: 'Therapeutic Massage',
+                        items: [
+                            { name: 'Deep Tissue (60m / 90m)', val: '£70 / £95' },
+                            { name: 'Swedish Massage (60m / 90m)', val: '£70 / £95' },
+                            { name: 'Head & Scalp (30m)', val: '£35' }
+                        ]
+                    }
+                ],
+                faq: [
+                    { q: 'What is Deep Tissue?', a: 'It is a technique that focuses on realigning deeper layers of muscles and connective tissue, especially helpful for chronic aches and stiff necks.' },
+                    { q: 'What should I wear?', a: 'Comfortable clothing is recommended. You will be professionally draped with towels at all times for your privacy.' }
+                ]
+            }
+        };
+
+        function showPage(id) {
+            const home = document.getElementById('home-page');
+            const container = document.getElementById('page-container');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            if (id === 'home') {
+                home.classList.add('active');
+                container.innerHTML = '';
+                return;
+            }
+
+            home.classList.remove('active');
+            const data = contentData[id];
+            if (!data) return;
+
+            let html = `
+                <div class="page-view active pt-20 pb-40">
+                    <div class="relative h-[450px] md:h-[600px] overflow-hidden">
+                        <img src="${data.hero}" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black/30 flex items-center justify-center text-white text-center p-6">
+                            <div class="max-w-3xl">
+                                <span class="uppercase tracking-[0.5em] text-[9px] font-bold mb-4 block">${data.sub}</span>
+                                <h1 class="text-5xl md:text-8xl serif leading-tight mb-8">${data.title}</h1>
+                                <div class="w-12 h-px bg-white mx-auto"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="max-w-7xl mx-auto px-6 mt-24">
+                        <div class="grid grid-cols-1 lg:grid-cols-12 gap-20">
+                            <!-- Left: Clinical Info & Menu -->
+                            <div class="lg:col-span-7">
+                                <div class="mb-16">
+                                    <h2 class="serif text-3xl mb-8">Clinical Approach</h2>
+                                    <p class="text-gray-500 leading-relaxed text-lg font-light italic border-l-4 border-amber-100 pl-8">"${data.clinical}"</p>
+                                </div>
+
+                                <div class="menu-plate mb-12">
+                                    <div class="text-center mb-10">
+                                        <h3 class="serif text-2xl mb-1">Digital Menu</h3>
+                                        <p class="text-[9px] uppercase tracking-widest text-gray-400">Clinical Pricing Guide</p>
+                                    </div>
+                                    ${data.sections.map(s => `
+                                        <h4 class="text-[9px] font-black tracking-[0.3em] text-gray-300 uppercase mb-6 mt-10 border-b pb-2">${s.header}</h4>
+                                        ${s.items.map(i => `
+                                            <div class="price-row">
+                                                <span class="label">${i.name}</span>
+                                                <div class="dots"></div>
+                                                <span class="value">${i.val}</span>
+                                            </div>
+                                        `).join('')}
+                                    `).join('')}
+                                </div>
+
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <button class="btn-action btn-black" onclick="window.open('https://fresha.com')">Secure Booking</button>
+                                    <button class="btn-action btn-outline" onclick="window.open('https://wa.me/440000000000')">WhatsApp Inquiry</button>
+                                </div>
+                            </div>
+
+                            <!-- Right: Fixed Patient Insights & Location -->
+                            <div class="lg:col-span-5 space-y-12">
+                                <div class="clinical-box clinical-blue">
+                                    <h3 class="font-bold text-[9px] uppercase tracking-[0.3em] mb-4">Patient Support</h3>
+                                    <p class="text-xs leading-relaxed text-gray-600">Our clinical team is available for virtual consultations. If you have specific medical concerns or skin conditions, please contact us prior to booking.</p>
+                                    <div class="mt-6 pt-6 border-t border-gray-200">
+                                        <a href="https://wa.me/440000000000" class="text-amber-700 font-bold text-[10px] uppercase tracking-widest hover:underline">Chat With Expert</a>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <h3 class="serif text-3xl mb-6">Patient Insights</h3>
+                                    <div class="border-t border-gray-100">
+                                        ${data.faq.map((f, idx) => `
+                                            <div class="faq-item">
+                                                <div class="faq-trigger" onclick="toggleFaq(this)">
+                                                    <span>${f.q}</span>
+                                                    <span class="faq-icon text-xl font-light">+</span>
+                                                </div>
+                                                <div class="faq-content">
+                                                    <div class="pr-8 pb-4">${f.a}</div>
+                                                </div>
+                                            </div>
+                                        `).join('')}
+                                    </div>
+                                </div>
+
+                                <div class="clinical-box clinical-gold">
+                                    <h4 class="text-[9px] font-bold tracking-widest uppercase mb-4 opacity-60">Location & Hours</h4>
+                                    <p class="text-xs text-gray-600 leading-loose">
+                                        Mon - Sat: 10:00 - 20:00<br>
+                                        Sun: Specialist Training (Closed)<br><br>
+                                        <span class="font-bold text-black uppercase tracking-widest">London Boutique Clinic</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+            container.innerHTML = html;
+        }
+
+        function toggleFaq(el) {
+            const content = el.nextElementSibling;
+            const icon = el.querySelector('.faq-icon');
+            const isOpen = content.classList.contains('open');
+            
+            // Reset all others in this page
+            document.querySelectorAll('.faq-content').forEach(c => c.classList.remove('open'));
+            document.querySelectorAll('.faq-icon').forEach(i => i.innerText = '+');
+
+            if (!isOpen) {
+                content.classList.add('open');
+                icon.innerText = '−';
+            }
+        }
+
+        function scrollToFooter() {
+            document.getElementById('main-footer').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
