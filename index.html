@@ -99,7 +99,6 @@
             padding: 2.5rem;
             border-radius: 4px;
             border: 1px solid #f0f0f0;
-            height: 100%;
         }
         .clinical-blue { background: #f4f9fa; border-color: #e0eff1; }
         .clinical-gold { background: #fcf9f3; border-color: #f3ede0; }
@@ -189,24 +188,39 @@
                 <p class="text-gray-400 uppercase tracking-[0.5em] text-[10px]">London Boutique Clinic & Aesthetic Sanctuary</p>
             </div>
 
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-24 max-w-5xl mx-auto text-center px-4">
+                <div class="p-6 bg-stone-50/50 rounded-sm border border-stone-100">
+                    <h3 class="serif text-xl mb-3 text-amber-700">Medical Precision</h3>
+                    <p class="text-xs text-gray-500 leading-relaxed">Our clinic integrates advanced medical protocols with aesthetic mastery to deliver safe, proven results.</p>
+                </div>
+                <div class="p-6 bg-stone-50/50 rounded-sm border border-stone-100">
+                    <h3 class="serif text-xl mb-3 text-amber-700">Bespoke Plans</h3>
+                    <p class="text-xs text-gray-500 leading-relaxed">Every patient receives a fully customized treatment path designed exclusively for their unique physiology.</p>
+                </div>
+                <div class="p-6 bg-stone-50/50 rounded-sm border border-stone-100">
+                    <h3 class="serif text-xl mb-3 text-amber-700">Luxury Sanctuary</h3>
+                    <p class="text-xs text-gray-500 leading-relaxed">Experience a serene, restorative environment where luxury meets the highest clinical standards in London.</p>
+                </div>
+            </div>
+
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div onclick="showPage('hair')" class="group cursor-pointer">
-                    <div class="aspect-[4/5] overflow-hidden mb-6 bg-gray-50"><img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"></div>
+                    <div class="aspect-[4/5] overflow-hidden mb-6 bg-gray-50"><img src="images/hair.png" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"></div>
                     <h3 class="serif text-xl mb-1">Hair Atelier</h3>
                     <p class="text-[9px] uppercase tracking-widest text-amber-600 font-bold">Cutting & Colour</p>
                 </div>
                 <div onclick="showPage('laser')" class="group cursor-pointer">
-                    <div class="aspect-[4/5] overflow-hidden mb-6 bg-gray-50"><img src="https://images.unsplash.com/photo-1559599141-3816c0b333bc?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"></div>
+                    <div class="aspect-[4/5] overflow-hidden mb-6 bg-gray-50"><img src="images/laser.png" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"></div>
                     <h3 class="serif text-xl mb-1">Laser Hair Removal</h3>
                     <p class="text-[9px] uppercase tracking-widest text-amber-600 font-bold">Medical Grade</p>
                 </div>
                 <div onclick="showPage('facials')" class="group cursor-pointer">
-                    <div class="aspect-[4/5] overflow-hidden mb-6 bg-gray-50"><img src="https://images.unsplash.com/photo-1570172619380-2826dc0c3c67?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"></div>
+                    <div class="aspect-[4/5] overflow-hidden mb-6 bg-gray-50"><img src="images/skin.png" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"></div>
                     <h3 class="serif text-xl mb-1">Skin Clinic</h3>
                     <p class="text-[9px] uppercase tracking-widest text-amber-600 font-bold">Advanced Facials</p>
                 </div>
                 <div onclick="showPage('hydrafacial')" class="group cursor-pointer">
-                    <div class="aspect-[4/5] overflow-hidden mb-6 bg-gray-50"><img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"></div>
+                    <div class="aspect-[4/5] overflow-hidden mb-6 bg-gray-50"><img src="images/hydra.png" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"></div>
                     <h3 class="serif text-xl mb-1">Hydrafacial™</h3>
                     <p class="text-[9px] uppercase tracking-widest text-amber-600 font-bold">Vortex Technology</p>
                 </div>
@@ -214,22 +228,22 @@
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
                 <div onclick="showPage('microblading')" class="group cursor-pointer">
-                    <div class="aspect-[4/5] overflow-hidden mb-6 bg-gray-50"><img src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"></div>
+                    <div class="aspect-[4/5] overflow-hidden mb-6 bg-gray-50"><img src="images/brows.png" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"></div>
                     <h3 class="serif text-xl mb-1">Microblading</h3>
                     <p class="text-[9px] uppercase tracking-widest text-amber-600 font-bold">Brow Artistry</p>
                 </div>
                 <div onclick="showPage('mani-pedi')" class="group cursor-pointer">
-                    <div class="aspect-[4/5] overflow-hidden mb-6 bg-gray-50"><img src="https://images.unsplash.com/photo-1610992015732-2449b0c2629b?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"></div>
+                    <div class="aspect-[4/5] overflow-hidden mb-6 bg-gray-50"><img src="images/nails.png" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"></div>
                     <h3 class="serif text-xl mb-1">Nail Studio</h3>
                     <p class="text-[9px] uppercase tracking-widest text-amber-600 font-bold">Manicure & Pedicure</p>
                 </div>
                 <div onclick="showPage('threading')" class="group cursor-pointer">
-                    <div class="aspect-[4/5] overflow-hidden mb-6 bg-gray-50"><img src="https://images.unsplash.com/photo-1519415387722-a1c3bbef716c?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"></div>
+                    <div class="aspect-[4/5] overflow-hidden mb-6 bg-gray-50"><img src="images/threading.png" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"></div>
                     <h3 class="serif text-xl mb-1">Threading</h3>
                     <p class="text-[9px] uppercase tracking-widest text-amber-600 font-bold">Precision Shaping</p>
                 </div>
                 <div onclick="showPage('massage')" class="group cursor-pointer">
-                    <div class="aspect-[4/5] overflow-hidden mb-6 bg-gray-50"><img src="https://images.unsplash.com/photo-1544161515-4af6b1d46152?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"></div>
+                    <div class="aspect-[4/5] overflow-hidden mb-6 bg-gray-50"><img src="images/massage.png" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"></div>
                     <h3 class="serif text-xl mb-1">Body Therapy</h3>
                     <p class="text-[9px] uppercase tracking-widest text-amber-600 font-bold">Massage & Body</p>
                 </div>
@@ -256,7 +270,10 @@
             <div>
                 <h4 class="text-[10px] font-black tracking-[0.2em] uppercase text-gray-400 mb-6">Patient Support</h4>
                 <p class="text-xs text-gray-500 mb-4">Questions about your treatment?</p>
-                <a href="https://wa.me/440000000000" class="text-amber-700 font-bold text-xs uppercase tracking-widest hover:underline">Chat with a Clinical Expert</a>
+                <a href="https://wa.me/440000000000" class="inline-flex items-center gap-2 bg-[#25D366] text-white px-6 py-3 rounded-md font-bold text-xs uppercase tracking-widest hover:bg-[#128C7E] transition-colors shadow-sm">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 0C5.385 0 0 5.385 0 12.031c0 2.133.551 4.156 1.558 5.96L.101 24l6.195-1.621c1.729.897 3.666 1.365 5.735 1.365 6.646 0 12.031-5.385 12.031-12.031S18.677 0 12.031 0zM17.65 16.59c-.276.776-1.593 1.488-2.186 1.547-.56.055-1.282.164-3.693-.834-2.9-1.196-4.756-4.148-4.896-4.335-.141-.188-1.168-1.55-1.168-2.955 0-1.405.733-2.096 1.011-2.392.278-.297.604-.372.805-.372.2 0 .401.003.576.012.188.009.438-.073.687.525.263.633.916 2.235 1 2.423.083.188.139.407.014.656-.126.249-.189.407-.375.633-.186.225-.395.49-.56.633-.186.164-.383.344-.173.705.21.362.936 1.549 2.015 2.511 1.396 1.246 2.564 1.636 2.923 1.782.358.146.568.125.782-.125.214-.25 1.012-1.18 1.283-1.587.271-.408.542-.34.869-.216.326.124 2.062.973 2.417 1.15.355.176.592.264.678.414.086.15.086.867-.19 1.642z"/></svg>
+                    WhatsApp Chat
+                </a>
             </div>
         </div>
         <div class="mt-20 text-center">
@@ -269,8 +286,10 @@
             'hair': {
                 title: 'Athena Hair Atelier',
                 sub: 'The Architecture of Hair',
-                hero: 'https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&q=80&w=1600',
+                hero: 'images/hair.png',
                 clinical: 'Our atelier focuses on the structural health of hair. We utilize L\'Oréal Professionnel and Kérastase medical-grade protocols to ensure that every cut and colour enhances both aesthetic and fibre integrity.',
+                philosophy: 'At the Athena Hair Atelier, we treat hair as a living fibre that requires architectural precision and clinical care. Every consultation begins with a thorough scalp and hair elasticity analysis, allowing our master stylists to prescribe the exact chemical formulation and cutting technique suited for your unique hair profile.',
+                benefits: 'By combining high-end luxury with trichological science, our treatments go beyond surface-level aesthetics. Our exclusive use of bond-multiplying technologies ensures that even the most dramatic colour transformations leave your hair stronger, more resilient, and brilliantly luminous.',
                 sections: [
                     {
                         header: 'Precision Cutting & Styling',
@@ -300,8 +319,10 @@
             'laser': {
                 title: 'Medical Laser Clinic',
                 sub: 'Permanent Hair Reduction',
-                hero: 'https://images.unsplash.com/photo-1559599141-3816c0b333bc?auto=format&fit=crop&q=80&w=1600',
+                hero: 'images/laser.png',
                 clinical: 'Athena utilizes leading Diode Laser technology. Our systems feature advanced sapphire cooling tips to ensure a painless experience while targeting follicles with clinical precision across all Fitzpatrick skin types.',
+                philosophy: 'We believe that laser hair reduction should be a safe, clinical, and universally effective process. Our approach combines medical-grade diode technology with rigorous practitioner training, ensuring that every pulse of laser energy is perfectly calibrated to your specific skin tone, hair density, and sensitivity level.',
+                benefits: 'Say goodbye to the irritation of shaving and the pain of waxing. Our advanced laser systems feature integrated sub-zero cooling that protects the epidermis, making the treatment highly tolerable. Patients experience significant, permanent hair reduction along with smoother, ingrown-free skin.',
                 sections: [
                     {
                         header: 'Facial Laser',
@@ -337,8 +358,10 @@
             'facials': {
                 title: 'Athena Skin Clinic',
                 sub: 'Dermatological Excellence',
-                hero: 'https://images.unsplash.com/photo-1570172619380-2826dc0c3c67?auto=format&fit=crop&q=80&w=1600',
+                hero: 'images/skin.png',
                 clinical: 'Our skin specialists combine manual extraction techniques with high-potency botanical infusions. We focus on barrier repair and cellular turnover for long-term skin health.',
+                philosophy: 'True skin health begins below the surface. Our dermatological philosophy rejects harsh, abrasive treatments in favor of scientifically proven methods that restore the skin\'s natural lipid barrier, encourage collagen synthesis, and balance the cellular microbiome.',
+                benefits: 'Experience a transformative glow that lasts. Our clinical facials not only address immediate concerns like congestion and dullness but also build long-term resilience against environmental stressors, premature aging, and hyperpigmentation.',
                 sections: [
                     {
                         header: 'Clinical Skin Therapy',
@@ -358,8 +381,10 @@
             'hydrafacial': {
                 title: 'Hydrafacial™ Elite',
                 sub: 'The Vortex-Fusion Experience',
-                hero: 'https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&q=80&w=1600',
+                hero: 'images/hydra.png',
                 clinical: 'The patented Hydrafacial device uses vortex-fusion to cleanse, extract, and hydrate. It is the gold standard in non-invasive skin resurfacing with zero downtime.',
+                philosophy: 'We embrace technology that delivers uncompromising results without the trauma associated with traditional resurfacing. The Hydrafacial philosophy centers on the synergy of deep mechanical exfoliation and the simultaneous infusion of potent, clinical-grade serums tailored to your skin\'s precise needs.',
+                benefits: 'This multi-step treatment provides immediate, noticeable improvements in skin tone, texture, and hydration. By painlessly clearing congested pores and saturating the skin with antioxidants and peptides, patients leave with a signature, radiant glow and zero recovery time.',
                 sections: [
                     {
                         header: 'Hydrafacial Menu',
@@ -378,8 +403,10 @@
             'microblading': {
                 title: 'Bespoke Microblading',
                 sub: 'Semi-Permanent Brow Architecture',
-                hero: 'https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?auto=format&fit=crop&q=80&w=1600',
+                hero: 'images/brows.png',
                 clinical: 'We use medical-grade pigments to create hyper-realistic hair strokes. Each brow is manually mapped using the Golden Ratio to harmonize with your unique facial structure.',
+                philosophy: 'Brows frame the face and define your expressions. Our approach to microblading is highly mathematical and deeply artistic. We utilize advanced facial morphometry (the Golden Ratio) to map out the perfect arch, ensuring symmetry and natural integration with your existing hair growth patterns.',
+                benefits: 'Wake up with flawless, smudge-proof brows every single day. Our meticulous micro-stroke technique creates undetectable, hair-like lines that add volume, shape, and definition. The results are incredibly natural, instantly lifting the face and drastically reducing your daily makeup routine.',
                 sections: [
                     {
                         header: 'Procedure & Maintenance',
@@ -398,8 +425,10 @@
             'mani-pedi': {
                 title: 'The Nail Studio',
                 sub: 'Clinical Hand & Foot Care',
-                hero: 'https://images.unsplash.com/photo-1610992015732-2449b0c2629b?auto=format&fit=crop&q=80&w=1600',
+                hero: 'images/nails.png',
                 clinical: 'Our studio adheres to medical sterilization standards. We use OPI and Shellac systems to provide high-gloss, long-wearing finishes without compromising nail health.',
+                philosophy: 'Nail care should never compromise the health of the natural nail plate. We strictly prohibit the use of damaging drills and toxic acrylics. Instead, we champion clinical hygiene, gentle cuticle care, and nourishing treatments that strengthen the nail bed while providing a flawless aesthetic finish.',
+                benefits: 'Enjoy pristine, beautifully manicured hands and feet with absolute peace of mind. Our rigorous sterilization protocols eliminate any risk of infection, while our premium gel systems deliver brilliant, chip-resistant shine that lasts for weeks without thinning your natural nails.',
                 sections: [
                     {
                         header: 'Manicures (Polish/Shellac)',
@@ -424,8 +453,10 @@
             'threading': {
                 title: 'Precision Threading',
                 sub: 'The Art of Ancient Shaping',
-                hero: 'https://images.unsplash.com/photo-1519415387722-a1c3bbef716c?auto=format&fit=crop&q=80&w=1600',
+                hero: 'images/threading.png',
                 clinical: 'Using organic cotton thread, our specialists lift hair from the root with surgical precision. This method is ideal for sensitive skin as it does not pull the epidermis.',
+                philosophy: 'We believe that hair removal, particularly on the face, should be gentle, entirely natural, and exact. Threading relies purely on practitioner skill rather than harsh chemicals or heat. Our focus is on geometric precision to sculpt crisp, perfectly defined lines that enhance your natural facial architecture.',
+                benefits: 'Because threading only catches the hair and not the skin, it is the safest, most dermatologically sound method for facial hair removal. It is perfectly suited for those using strong skincare ingredients like retinol, offering long-lasting results, finer regrowth, and zero risk of skin peeling or burns.',
                 sections: [
                     {
                         header: 'Threading Services',
@@ -444,8 +475,10 @@
             'massage': {
                 title: 'Body Restoration',
                 sub: 'Clinical Massage Therapy',
-                hero: 'https://images.unsplash.com/photo-1544161515-4af6b1d46152?auto=format&fit=crop&q=80&w=1600',
+                hero: 'images/massage.png',
                 clinical: 'Our therapists focus on physiological release. Whether targeting chronic tension or promoting lymphatic drainage, our body therapies are designed for physical recovery.',
+                philosophy: 'The body is an interconnected network of fascia, muscle, and energy. Our therapeutic approach goes beyond mere relaxation; we aim to correct postural imbalances, release deep-seated myofascial tension, and stimulate the lymphatic system to facilitate the body\'s natural healing and detoxification processes.',
+                benefits: 'Experience profound physical relief and mental clarity. Our tailored massage protocols decrease cortisol levels, improve circulation, and alleviate chronic pain syndromes. You will leave the clinic not just relaxed, but structurally restored, revitalized, and ready to perform at your peak.',
                 sections: [
                     {
                         header: 'Therapeutic Massage',
@@ -500,6 +533,17 @@
                                     <p class="text-gray-500 leading-relaxed text-lg font-light italic border-l-4 border-amber-100 pl-8">"${data.clinical}"</p>
                                 </div>
 
+                                <div class="mb-16 grid grid-cols-1 md:grid-cols-2 gap-10">
+                                    <div class="bg-stone-50 p-8 border border-stone-100 rounded-sm shadow-sm">
+                                        <h3 class="serif text-xl text-amber-700 mb-4">Our Philosophy</h3>
+                                        <p class="text-xs text-gray-600 leading-loose">${data.philosophy}</p>
+                                    </div>
+                                    <div class="bg-stone-50 p-8 border border-stone-100 rounded-sm shadow-sm">
+                                        <h3 class="serif text-xl text-amber-700 mb-4">Patient Benefits</h3>
+                                        <p class="text-xs text-gray-600 leading-loose">${data.benefits}</p>
+                                    </div>
+                                </div>
+
                                 <div class="menu-plate mb-12">
                                     <div class="text-center mb-10">
                                         <h3 class="serif text-2xl mb-1">Digital Menu</h3>
@@ -519,17 +563,23 @@
 
                                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                     <button class="btn-action btn-black" onclick="window.open('https://fresha.com')">Secure Booking</button>
-                                    <button class="btn-action btn-outline" onclick="window.open('https://wa.me/440000000000')">WhatsApp Inquiry</button>
+                                    <button class="btn-action flex items-center justify-center gap-2 bg-[#25D366] text-white hover:bg-[#128C7E]" onclick="window.open('https://wa.me/440000000000')">
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 0C5.385 0 0 5.385 0 12.031c0 2.133.551 4.156 1.558 5.96L.101 24l6.195-1.621c1.729.897 3.666 1.365 5.735 1.365 6.646 0 12.031-5.385 12.031-12.031S18.677 0 12.031 0zM17.65 16.59c-.276.776-1.593 1.488-2.186 1.547-.56.055-1.282.164-3.693-.834-2.9-1.196-4.756-4.148-4.896-4.335-.141-.188-1.168-1.55-1.168-2.955 0-1.405.733-2.096 1.011-2.392.278-.297.604-.372.805-.372.2 0 .401.003.576.012.188.009.438-.073.687.525.263.633.916 2.235 1 2.423.083.188.139.407.014.656-.126.249-.189.407-.375.633-.186.225-.395.49-.56.633-.186.164-.383.344-.173.705.21.362.936 1.549 2.015 2.511 1.396 1.246 2.564 1.636 2.923 1.782.358.146.568.125.782-.125.214-.25 1.012-1.18 1.283-1.587.271-.408.542-.34.869-.216.326.124 2.062.973 2.417 1.15.355.176.592.264.678.414.086.15.086.867-.19 1.642z"/></svg>
+                                        WhatsApp Inquiry
+                                    </button>
                                 </div>
                             </div>
 
                             <!-- Right: Fixed Patient Insights & Location -->
-                            <div class="lg:col-span-5 space-y-12">
+                            <div class="lg:col-span-5 space-y-12 lg:self-start">
                                 <div class="clinical-box clinical-blue">
                                     <h3 class="font-bold text-[9px] uppercase tracking-[0.3em] mb-4">Patient Support</h3>
                                     <p class="text-xs leading-relaxed text-gray-600">Our clinical team is available for virtual consultations. If you have specific medical concerns or skin conditions, please contact us prior to booking.</p>
                                     <div class="mt-6 pt-6 border-t border-gray-200">
-                                        <a href="https://wa.me/440000000000" class="text-amber-700 font-bold text-[10px] uppercase tracking-widest hover:underline">Chat With Expert</a>
+                                        <a href="https://wa.me/440000000000" class="inline-flex items-center gap-2 bg-[#25D366] text-white px-4 py-2 rounded-md font-bold text-[10px] uppercase tracking-widest hover:bg-[#128C7E] transition-colors">
+                                            <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 0C5.385 0 0 5.385 0 12.031c0 2.133.551 4.156 1.558 5.96L.101 24l6.195-1.621c1.729.897 3.666 1.365 5.735 1.365 6.646 0 12.031-5.385 12.031-12.031S18.677 0 12.031 0zM17.65 16.59c-.276.776-1.593 1.488-2.186 1.547-.56.055-1.282.164-3.693-.834-2.9-1.196-4.756-4.148-4.896-4.335-.141-.188-1.168-1.55-1.168-2.955 0-1.405.733-2.096 1.011-2.392.278-.297.604-.372.805-.372.2 0 .401.003.576.012.188.009.438-.073.687.525.263.633.916 2.235 1 2.423.083.188.139.407.014.656-.126.249-.189.407-.375.633-.186.225-.395.49-.56.633-.186.164-.383.344-.173.705.21.362.936 1.549 2.015 2.511 1.396 1.246 2.564 1.636 2.923 1.782.358.146.568.125.782-.125.214-.25 1.012-1.18 1.283-1.587.271-.408.542-.34.869-.216.326.124 2.062.973 2.417 1.15.355.176.592.264.678.414.086.15.086.867-.19 1.642z"/></svg>
+                                            Chat With Expert
+                                        </a>
                                     </div>
                                 </div>
 
