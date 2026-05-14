@@ -4,7 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Athena Mortlake Clinical Spa | Premium Aesthetic Excellence</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com">
+        // URL Hash Routing
+        window.addEventListener('hashchange', () => {
+            let hashId = window.location.hash.substring(1);
+            if (!hashId || !contentData[hashId]) {
+                showPage('home', false);
+            } else {
+                showPage(hashId, false);
+            }
+        });
+
+        window.addEventListener('load', () => {
+            let hashId = window.location.hash.substring(1);
+            if (hashId && contentData[hashId]) {
+                showPage(hashId, false);
+            }
+        });
+    </script>
+
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -160,7 +178,7 @@
             </div>
             
             <div class="hidden md:flex gap-10 h-full items-center text-[10px] font-bold uppercase tracking-[0.25em] text-gray-400">
-                <a href="#" onclick="showPage('home')" class="hover:text-black transition-colors">Home</a>
+                <a href="javascript:void(0);" onclick="showPage('home')" class="hover:text-black transition-colors">Home</a>
                 
                 <div class="relative group h-full flex items-center cursor-pointer">
                     <span class="hover:text-black transition-colors flex items-center gap-2">
@@ -168,17 +186,17 @@
                         <svg class="w-2.5 h-2.5 opacity-40" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7"></path></svg>
                     </span>
                     <div class="nav-dropdown">
-                        <a href="#" onclick="showPage('hair')">Hair Atelier</a>
-                        <a href="#" onclick="showPage('laser')">Laser Clinic</a>
-                        <a href="#" onclick="showPage('facials')">Skin Clinic</a>
-                        <a href="#" onclick="showPage('hydrafacial')">Hydrafacial™</a>
-                        <a href="#" onclick="showPage('microblading')">Microblading</a>
-                        <a href="#" onclick="showPage('mani-pedi')">Nail Studio</a>
-                        <a href="#" onclick="showPage('threading')">Precision Threading</a>
-                        <a href="#" onclick="showPage('massage')">Body Therapy</a>
+                        <a href="javascript:void(0);" onclick="showPage('hair')">Hair Atelier</a>
+                        <a href="javascript:void(0);" onclick="showPage('laser')">Laser Clinic</a>
+                        <a href="javascript:void(0);" onclick="showPage('facials')">Skin Clinic</a>
+                        <a href="javascript:void(0);" onclick="showPage('hydrafacial')">Hydrafacial™</a>
+                        <a href="javascript:void(0);" onclick="showPage('microblading')">Microblading</a>
+                        <a href="javascript:void(0);" onclick="showPage('mani-pedi')">Nail Studio</a>
+                        <a href="javascript:void(0);" onclick="showPage('threading')">Precision Threading</a>
+                        <a href="javascript:void(0);" onclick="showPage('massage')">Body Therapy</a>
                     </div>
                 </div>
-                <a href="#" onclick="scrollToFooter()" class="hover:text-black transition-colors">Contact</a>
+                <a href="javascript:void(0);" onclick="scrollToFooter()" class="hover:text-black transition-colors">Contact</a>
             </div>
 
             <div class="flex items-center gap-4 z-[110]">
@@ -194,19 +212,19 @@
     <!-- Mobile Menu Overlay -->
     <div id="mobile-menu" class="fixed inset-0 bg-white z-[105] flex flex-col pt-24 pb-10 overflow-y-auto opacity-0 pointer-events-none transition-opacity duration-300">
         <div class="flex flex-col items-center gap-8 text-center w-full px-6">
-            <a href="#" onclick="showPage('home'); closeMobileMenu()" class="text-xl uppercase tracking-[0.3em] font-bold hover:text-amber-700 transition-colors">Home</a>
+            <a href="javascript:void(0);" onclick="showPage('home'); closeMobileMenu()" class="text-xl uppercase tracking-[0.3em] font-bold hover:text-amber-700 transition-colors">Home</a>
             <div class="w-full h-px bg-gray-100"></div>
             <h3 class="text-[10px] uppercase tracking-[0.4em] text-gray-400 font-bold mb-2">Services</h3>
-            <a href="#" onclick="showPage('hair'); closeMobileMenu()" class="text-sm uppercase tracking-widest text-gray-600 hover:text-amber-700 transition-colors">Hair Atelier</a>
-            <a href="#" onclick="showPage('laser'); closeMobileMenu()" class="text-sm uppercase tracking-widest text-gray-600 hover:text-amber-700 transition-colors">Laser Clinic</a>
-            <a href="#" onclick="showPage('facials'); closeMobileMenu()" class="text-sm uppercase tracking-widest text-gray-600 hover:text-amber-700 transition-colors">Skin Clinic</a>
-            <a href="#" onclick="showPage('hydrafacial'); closeMobileMenu()" class="text-sm uppercase tracking-widest text-gray-600 hover:text-amber-700 transition-colors">Hydrafacial™</a>
-            <a href="#" onclick="showPage('microblading'); closeMobileMenu()" class="text-sm uppercase tracking-widest text-gray-600 hover:text-amber-700 transition-colors">Microblading</a>
-            <a href="#" onclick="showPage('mani-pedi'); closeMobileMenu()" class="text-sm uppercase tracking-widest text-gray-600 hover:text-amber-700 transition-colors">Nail Studio</a>
-            <a href="#" onclick="showPage('threading'); closeMobileMenu()" class="text-sm uppercase tracking-widest text-gray-600 hover:text-amber-700 transition-colors">Threading</a>
-            <a href="#" onclick="showPage('massage'); closeMobileMenu()" class="text-sm uppercase tracking-widest text-gray-600 hover:text-amber-700 transition-colors">Body Therapy</a>
+            <a href="javascript:void(0);" onclick="showPage('hair'); closeMobileMenu()" class="text-sm uppercase tracking-widest text-gray-600 hover:text-amber-700 transition-colors">Hair Atelier</a>
+            <a href="javascript:void(0);" onclick="showPage('laser'); closeMobileMenu()" class="text-sm uppercase tracking-widest text-gray-600 hover:text-amber-700 transition-colors">Laser Clinic</a>
+            <a href="javascript:void(0);" onclick="showPage('facials'); closeMobileMenu()" class="text-sm uppercase tracking-widest text-gray-600 hover:text-amber-700 transition-colors">Skin Clinic</a>
+            <a href="javascript:void(0);" onclick="showPage('hydrafacial'); closeMobileMenu()" class="text-sm uppercase tracking-widest text-gray-600 hover:text-amber-700 transition-colors">Hydrafacial™</a>
+            <a href="javascript:void(0);" onclick="showPage('microblading'); closeMobileMenu()" class="text-sm uppercase tracking-widest text-gray-600 hover:text-amber-700 transition-colors">Microblading</a>
+            <a href="javascript:void(0);" onclick="showPage('mani-pedi'); closeMobileMenu()" class="text-sm uppercase tracking-widest text-gray-600 hover:text-amber-700 transition-colors">Nail Studio</a>
+            <a href="javascript:void(0);" onclick="showPage('threading'); closeMobileMenu()" class="text-sm uppercase tracking-widest text-gray-600 hover:text-amber-700 transition-colors">Threading</a>
+            <a href="javascript:void(0);" onclick="showPage('massage'); closeMobileMenu()" class="text-sm uppercase tracking-widest text-gray-600 hover:text-amber-700 transition-colors">Body Therapy</a>
             <div class="w-full h-px bg-gray-100"></div>
-            <a href="#" onclick="scrollToFooter(); closeMobileMenu()" class="text-xl uppercase tracking-[0.3em] font-bold hover:text-amber-700 transition-colors">Contact</a>
+            <a href="javascript:void(0);" onclick="scrollToFooter(); closeMobileMenu()" class="text-xl uppercase tracking-[0.3em] font-bold hover:text-amber-700 transition-colors">Contact</a>
             <button onclick="window.open('https://fresha.com')" class="mt-4 bg-black text-white px-10 py-4 w-full max-w-[300px] text-[10px] uppercase tracking-[0.25em] font-bold rounded-sm hover:opacity-80 transition-all">Book Online</button>
         </div>
     </div>
@@ -296,7 +314,7 @@
             <div class="flex flex-col gap-4">
                 <h4 class="text-[10px] font-black tracking-[0.2em] uppercase text-gray-400">Quick Links</h4>
                 <div class="flex flex-col gap-3 text-sm text-gray-500">
-                    <a href="#" onclick="showPage('home')" class="hover:text-black">Home</a>
+                    <a href="javascript:void(0);" onclick="showPage('home')" class="hover:text-black">Home</a>
                     <a href="#" class="hover:text-black">Clinical Ethics</a>
                     <a href="#" class="hover:text-black">Privacy Policy</a>
                 </div>
@@ -325,6 +343,12 @@
                 philosophy: 'At the Athena Hair Atelier, we treat hair as a living fibre that requires architectural precision and clinical care. Every consultation begins with a thorough scalp and hair elasticity analysis, allowing our master stylists to prescribe the exact chemical formulation and cutting technique suited for your unique hair profile.',
                 benefits: 'By combining high-end luxury with trichological science, our treatments go beyond surface-level aesthetics. Our exclusive use of bond-multiplying technologies ensures that even the most dramatic colour transformations leave your hair stronger, more resilient, and brilliantly luminous.',
                 seoTitle: `Luxury Hair Salon in Mortlake, Richmond`,
+                gallery: ['images/hair.png', 'images/hair_2.png', 'images/hair_3.png'],
+                reviews: [
+                    { i: 'S', n: 'Sarah M.', text: 'Absolutely transformed my hair! The balayage looks incredibly natural and the salon is gorgeous. Highly recommend.' },
+                    { i: 'E', n: 'Emma T.', text: 'Best haircut I have ever had in Richmond. The stylist truly listened and gave me exactly what I wanted.' },
+                    { i: 'C', n: 'Chloe R.', text: 'My hair feels so healthy and bouncy. The luxury treatment products they use make a huge difference!' }
+                ],
                 bullets: ['Master Colourists & Balayage Experts', 'L\'Oréal Professionnel Treatments', 'Hair Fibre Restoration'],
                 seoH2: `Experience the Ultimate Hair Transformation`,
                 subServices: `Precision Cutting, Balayage, Highlights, Keratin Treatment`,
@@ -363,6 +387,12 @@
                 philosophy: 'We believe that laser hair reduction should be a safe, clinical, and universally effective process. Our approach combines medical-grade diode technology with rigorous practitioner training, ensuring that every pulse of laser energy is perfectly calibrated to your specific skin tone, hair density, and sensitivity level.',
                 benefits: 'Say goodbye to the irritation of shaving and the pain of waxing. Our advanced laser systems feature integrated sub-zero cooling that protects the epidermis, making the treatment highly tolerable. Patients experience significant, permanent hair reduction along with smoother, ingrown-free skin.',
                 seoTitle: `Medical Laser Hair Removal in Mortlake, Richmond`,
+                gallery: ['images/laser.png', 'images/laser_2.png', 'images/laser.png'],
+                reviews: [
+                    { i: 'J', n: 'Jessica W.', text: 'Virtually painless laser hair removal. I saw results after just two sessions. The clinic is spotless.' },
+                    { i: 'A', n: 'Amy B.', text: 'Professional and thorough. The staff made me feel incredibly comfortable throughout the entire treatment.' },
+                    { i: 'M', n: 'Megan L.', text: 'So glad I chose Athena Mortlake. Fast, efficient, and my skin has never felt smoother. Worth every penny!' }
+                ],
                 bullets: ['Painless Diode Laser Technology', 'Safe for All Skin Types', 'Permanent Hair Reduction'],
                 seoH2: `Silky, Smooth Skin with Advanced Laser Therapy`,
                 subServices: `Full Body Laser, Facial Laser, Bikini & Brazilian`,
@@ -407,6 +437,12 @@
                 philosophy: 'True skin health begins below the surface. Our dermatological philosophy rejects harsh, abrasive treatments in favor of scientifically proven methods that restore the skin\'s natural lipid barrier, encourage collagen synthesis, and balance the cellular microbiome.',
                 benefits: 'Experience a transformative glow that lasts. Our clinical facials not only address immediate concerns like congestion and dullness but also build long-term resilience against environmental stressors, premature aging, and hyperpigmentation.',
                 seoTitle: `Advanced Skin Clinic & Facials in Mortlake, Richmond`,
+                gallery: ['images/skin.png', 'images/skin_2.png', 'images/skin.png'],
+                reviews: [
+                    { i: 'N', n: 'Natasha P.', text: 'The most relaxing facial of my life. My skin was glowing for weeks afterwards. The aesthetician was brilliant.' },
+                    { i: 'L', n: 'Lucy K.', text: 'My acne has cleared up significantly since starting my bespoke skin treatments here. Truly life-changing.' },
+                    { i: 'O', n: 'Olivia S.', text: 'A luxurious experience from start to finish. The clinic smells divine and the results are instantly visible.' }
+                ],
                 bullets: ['Medical-Grade Skincare', 'Acne & Anti-Aging Specialists', 'Bespoke Dermatological Plans'],
                 seoH2: `Revitalize Your Complexion with Clinical Skin Therapy`,
                 subServices: `Deep Cleansing, Chemical Peels, LED Therapy, Dermaplaning`,
@@ -435,6 +471,12 @@
                 philosophy: 'We embrace technology that delivers uncompromising results without the trauma associated with traditional resurfacing. The Hydrafacial philosophy centers on the synergy of deep mechanical exfoliation and the simultaneous infusion of potent, clinical-grade serums tailored to your skin\'s precise needs.',
                 benefits: 'This multi-step treatment provides immediate, noticeable improvements in skin tone, texture, and hydration. By painlessly clearing congested pores and saturating the skin with antioxidants and peptides, patients leave with a signature, radiant glow and zero recovery time.',
                 seoTitle: `Official Hydrafacial™ Treatment in Mortlake, Richmond`,
+                gallery: ['images/hydra.png', 'images/hydra_2.png', 'images/hydra.png'],
+                reviews: [
+                    { i: 'K', n: 'Katie D.', text: 'My skin has literally never felt so clean. The Hydrafacial extracted everything and left me looking radiant.' },
+                    { i: 'R', n: 'Rachel M.', text: 'Perfect pre-event treatment. The hydration boost is incredible and my makeup goes on flawlessly now.' },
+                    { i: 'S', n: 'Sophie H.', text: 'You can actually see what they extract from your pores! Gross but so satisfying. Highly recommend.' }
+                ],
                 bullets: ['Patented Vortex-Fusion Technology', 'Instant Glowing Results', 'Zero Downtime'],
                 seoH2: `The Ultimate Deep Cleanse & Hydration Experience`,
                 subServices: `Signature Hydrafacial, Platinum Anti-Aging, Acne Clarifying`,
@@ -462,6 +504,12 @@
                 philosophy: 'Brows frame the face and define your expressions. Our approach to microblading is highly mathematical and deeply artistic. We utilize advanced facial morphometry (the Golden Ratio) to map out the perfect arch, ensuring symmetry and natural integration with your existing hair growth patterns.',
                 benefits: 'Wake up with flawless, smudge-proof brows every single day. Our meticulous micro-stroke technique creates undetectable, hair-like lines that add volume, shape, and definition. The results are incredibly natural, instantly lifting the face and drastically reducing your daily makeup routine.',
                 seoTitle: `Bespoke Microblading & Brows in Mortlake, Richmond`,
+                gallery: ['images/brows.png', 'images/brows_2.png', 'images/brows.png'],
+                reviews: [
+                    { i: 'T', n: 'Tara C.', text: 'I am obsessed with my new brows. The symmetry is perfect and the colour match is spot on. Thank you!' },
+                    { i: 'H', n: 'Hannah F.', text: 'I was nervous about the pain but the numbing cream worked perfectly. The mapping process was very thorough.' },
+                    { i: 'Z', n: 'Zara J.', text: 'Waking up with perfect eyebrows every day saves me so much time. Best investment in my beauty routine.' }
+                ],
                 bullets: ['Golden Ratio Brow Mapping', 'Hyper-Realistic Hair Strokes', 'Medical-Grade Pigments'],
                 seoH2: `Frame Your Face with Perfect, Semi-Permanent Brows`,
                 subServices: `Microblading, Ombre Powder Brows, Combination Brows`,
@@ -489,6 +537,12 @@
                 philosophy: 'Nail care should never compromise the health of the natural nail plate. We strictly prohibit the use of damaging drills and toxic acrylics. Instead, we champion clinical hygiene, gentle cuticle care, and nourishing treatments that strengthen the nail bed while providing a flawless aesthetic finish.',
                 benefits: 'Enjoy pristine, beautifully manicured hands and feet with absolute peace of mind. Our rigorous sterilization protocols eliminate any risk of infection, while our premium gel systems deliver brilliant, chip-resistant shine that lasts for weeks without thinning your natural nails.',
                 seoTitle: `Luxury Nail Studio & Pedicure in Mortlake, Richmond`,
+                gallery: ['images/nails.png', 'images/nails_2.png', 'images/nails.png'],
+                reviews: [
+                    { i: 'M', n: 'Mia V.', text: 'The best BIAB gel manicure in Mortlake. My nails last for a whole month without chipping!' },
+                    { i: 'F', n: 'Fiona G.', text: 'The spa pedicure is heaven. The massage chair and the foot scrub are exactly what I needed.' },
+                    { i: 'P', n: 'Penny L.', text: 'Such attention to detail! Cuticles are flawless and the color selection is massive.' }
+                ],
                 bullets: ['Clinical Sterilization Standards', 'Premium Gel & Shellac', 'Non-Toxic Nail Care'],
                 seoH2: `Flawless Manicures and Restorative Foot Care`,
                 subServices: `Gel Manicure, Spa Pedicure, BIAB, Callus Peel`,
@@ -522,6 +576,12 @@
                 philosophy: 'We believe that hair removal, particularly on the face, should be gentle, entirely natural, and exact. Threading relies purely on practitioner skill rather than harsh chemicals or heat. Our focus is on geometric precision to sculpt crisp, perfectly defined lines that enhance your natural facial architecture.',
                 benefits: 'Because threading only catches the hair and not the skin, it is the safest, most dermatologically sound method for facial hair removal. It is perfectly suited for those using strong skincare ingredients like retinol, offering long-lasting results, finer regrowth, and zero risk of skin peeling or burns.',
                 seoTitle: `Precision Threading & Hair Removal in Mortlake, Richmond`,
+                gallery: ['images/threading.png', 'images/threading_2.png', 'images/threading.png'],
+                reviews: [
+                    { i: 'A', n: 'Amelia B.', text: 'Quick, precise, and surprisingly painless. They really know how to shape brows to frame your face.' },
+                    { i: 'J', n: 'Jasmine K.', text: 'I only trust Athena with my brows. The threading is so much cleaner than waxing for my sensitive skin.' },
+                    { i: 'E', n: 'Eleanor R.', text: 'Always perfectly shaped. The aloe vera cooling gel afterwards is a lovely touch.' }
+                ],
                 bullets: ['Organic Cotton Threading', 'Gentle on Sensitive Skin', 'Flawless Geometric Shaping'],
                 seoH2: `The Ancient Art of Painless Facial Sculpting`,
                 subServices: `Eyebrow Threading, Upper Lip, Full Face Threading`,
@@ -549,6 +609,12 @@
                 philosophy: 'The body is an interconnected network of fascia, muscle, and energy. Our therapeutic approach goes beyond mere relaxation; we aim to correct postural imbalances, release deep-seated myofascial tension, and stimulate the lymphatic system to facilitate the body\'s natural healing and detoxification processes.',
                 benefits: 'Experience profound physical relief and mental clarity. Our tailored massage protocols decrease cortisol levels, improve circulation, and alleviate chronic pain syndromes. You will leave the clinic not just relaxed, but structurally restored, revitalized, and ready to perform at your peak.',
                 seoTitle: `Full Body Massage in Mortlake, Richmond`,
+                gallery: ['images/massage.png', 'images/massage_2.png', 'images/massage.png'],
+                reviews: [
+                    { i: 'D', n: 'David S.', text: 'The deep tissue massage sorted out my terrible back pain. The therapist really knew exactly where to target.' },
+                    { i: 'V', n: 'Victoria M.', text: 'An oasis of calm in London. I floated out of the clinic feeling completely relaxed and tension-free.' },
+                    { i: 'G', n: 'Grace W.', text: 'Perfect pressure and the heated massage oils were divine. I will definitely be making this a monthly habit.' }
+                ],
                 bullets: ['Professional Certified Masseuse', 'Helps Treat Sports Injuries', 'Ultimate Relaxation'],
                 seoH2: `Enjoy the Ultimate Relaxation from Massage Therapy`,
                 subServices: `Hand massage, Leg massage, Deep Tissue, Swedish`,
@@ -570,7 +636,9 @@
             }
         };
 
-        function showPage(id) {
+        function showPage(id, updateHash = true) {
+            if (updateHash && id !== 'home') window.location.hash = id;
+            if (updateHash && id === 'home') window.history.replaceState(null, null, ' ');
             const home = document.getElementById('home-page');
             const container = document.getElementById('page-container');
             window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -582,146 +650,236 @@
             }
 
             home.classList.remove('active');
-            const data = contentData[id];
+                        const data = contentData[id];
             if (!data) return;
 
+            // Generate hero icons logic
+            const b1 = data.bullets && data.bullets[0] ? data.bullets[0] : 'Certified Specialist';
+            const b2 = data.bullets && data.bullets[1] ? data.bullets[1] : 'Premium Care';
+            const b3 = data.bullets && data.bullets[2] ? data.bullets[2] : 'Ultimate Comfort';
+
             let html = `
-                <div class="page-view active pt-20 pb-40">
-                    <div class="relative h-[450px] md:h-[600px] overflow-hidden">
-                        <img src="${data.hero}" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-black/30 flex items-center justify-center text-white text-center p-6">
+                <div class="page-view active">
+                    
+                    <!-- HERO SECTION -->
+                    <div class="relative w-full py-24 md:py-32 lg:py-40 flex items-center justify-center">
+                        <div class="absolute inset-0 z-0">
+                            <img src="${data.hero}" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-black/60"></div>
+                        </div>
+                        
+                        <div class="relative z-10 w-full max-w-7xl mx-auto px-6 text-white">
                             <div class="max-w-3xl">
-                                <span class="uppercase tracking-[0.5em] text-[9px] font-bold mb-4 block">${data.sub}</span>
-                                <h1 class="text-5xl md:text-8xl serif leading-tight mb-8">${data.title}</h1>
-                                <div class="w-12 h-px bg-white mx-auto"></div>
+                                <span class="text-xs uppercase tracking-widest text-amber-200 mb-4 block font-medium">Athena Mortlake Clinical Spa</span>
+                                <h1 class="text-4xl md:text-6xl lg:text-7xl serif leading-tight mb-6">${data.seoTitle}</h1>
+                                <p class="text-lg md:text-xl text-gray-200 font-light mb-10 max-w-2xl leading-relaxed">${data.sub} • Professional clinical treatments for unparalleled results and recovery.</p>
+                                
+                                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-10">
+                                    <div class="flex items-center gap-3">
+                                        <svg class="w-6 h-6 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                        <span class="text-xs md:text-sm font-medium">${b1}</span>
+                                    </div>
+                                    <div class="flex items-center gap-3">
+                                        <svg class="w-6 h-6 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                                        <span class="text-xs md:text-sm font-medium">${b2}</span>
+                                    </div>
+                                    <div class="flex items-center gap-3">
+                                        <svg class="w-6 h-6 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                        <span class="text-xs md:text-sm font-medium">${b3}</span>
+                                    </div>
+                                    <div class="flex items-center gap-3">
+                                        <svg class="w-6 h-6 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                        <span class="text-xs md:text-sm font-medium">Mortlake, Richmond</span>
+                                    </div>
+                                </div>
+
+                                <div class="flex flex-col sm:flex-row gap-4">
+                                    <button class="bg-black text-white px-8 py-4 font-bold text-sm tracking-widest uppercase hover:bg-white hover:text-black transition-colors" onclick="window.open('https://fresha.com')">Book Now</button>
+                                    <button class="bg-[#25D366] text-white px-8 py-4 font-bold text-sm tracking-widest uppercase hover:bg-[#128C7E] transition-colors flex items-center justify-center gap-2" onclick="window.open('https://wa.me/440000000000')">
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 0C5.385 0 0 5.385 0 12.031c0 2.133.551 4.156 1.558 5.96L.101 24l6.195-1.621c1.729.897 3.666 1.365 5.735 1.365 6.646 0 12.031-5.385 12.031-12.031S18.677 0 12.031 0zM17.65 16.59c-.276.776-1.593 1.488-2.186 1.547-.56.055-1.282.164-3.693-.834-2.9-1.196-4.756-4.148-4.896-4.335-.141-.188-1.168-1.55-1.168-2.955 0-1.405.733-2.096 1.011-2.392.278-.297.604-.372.805-.372.2 0 .401.003.576.012.188.009.438-.073.687.525.263.633.916 2.235 1 2.423.083.188.139.407.014.656-.126.249-.189.407-.375.633-.186.225-.395.49-.56.633-.186.164-.383.344-.173.705.21.362.936 1.549 2.015 2.511 1.396 1.246 2.564 1.636 2.923 1.782.358.146.568.125.782-.125.214-.25 1.012-1.18 1.283-1.587.271-.408.542-.34.869-.216.326.124 2.062.973 2.417 1.15.355.176.592.264.678.414.086.15.086.867-.19 1.642z"/></svg>
+                                        Call To Book
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="max-w-7xl mx-auto px-6 mt-24">
-                        <div class="grid grid-cols-1 lg:grid-cols-12 gap-20">
-                            <!-- Left: Clinical Info & SEO Content -->
-                            <div class="lg:col-span-7">
-                                
-                                <!-- SEO Block 1: Title & Bullets -->
-                                <div class="mb-12">
-                                    <h2 class="serif text-4xl mb-6 leading-tight">${data.seoTitle}</h2>
-                                    
-                                    <ul class="space-y-4 mb-10">
-                                        ${data.bullets.map(b => `
-                                        <li class="flex items-center gap-4 text-gray-600">
-                                            <div class="w-1.5 h-1.5 bg-amber-600 rounded-full"></div>
-                                            <span class="text-sm tracking-wide">${b}</span>
-                                        </li>`).join('')}
-                                    </ul>
-
-                                    <!-- Review Badges / Images -->
-                                    <div class="flex flex-col sm:flex-row items-start sm:items-center gap-6 mb-12">
-                                        <div class="flex items-center gap-1 text-amber-500">
-                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    <!-- REVIEWS SECTION -->
+                    <div class="bg-stone-50 py-16 border-b border-stone-200">
+                        <div class="max-w-7xl mx-auto px-6">
+                            <div class="text-center flex flex-col md:flex-row items-center justify-center gap-4 mb-10">
+                                <h3 class="serif text-2xl">Trusted by Local Clients</h3>
+                                <div class="flex items-center text-amber-500 gap-1">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                </div>
+                                <span class="text-sm font-bold text-gray-400 uppercase tracking-widest">Rated 5.0</span>
+                            </div>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                                ${(data.reviews || []).map(r => `
+                                <div class="bg-white p-8 border border-stone-200 rounded-sm shadow-sm">
+                                    <div class="flex items-center gap-4 mb-4">
+                                        <div class="w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center text-amber-700 font-bold">${r.i}</div>
+                                        <div>
+                                            <h4 class="font-bold text-sm">${r.n}</h4>
+                                            <div class="flex text-amber-400 text-[10px]">★★★★★</div>
                                         </div>
-                                        <span class="text-[10px] font-bold uppercase tracking-widest text-gray-400">5.0 Star Rated in Richmond</span>
                                     </div>
+                                    <p class="text-sm text-gray-600 leading-relaxed">"${r.text}"</p>
+                                </div>`).join('')}
+                            </div>
+                        </div>
+                    </div>
 
-                                    <!-- CTA 1 -->
-                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-16">
-                                        <button class="btn-action btn-black" onclick="window.open('https://fresha.com')">Book Now</button>
-                                        <button class="btn-action flex items-center justify-center gap-2 bg-[#25D366] text-white hover:bg-[#128C7E]" onclick="window.open('https://wa.me/440000000000')">
+                    <!-- 3 IMAGES ROW -->
+                    <div class="grid grid-cols-3 gap-2 md:gap-6 max-w-7xl mx-auto px-2 md:px-6 py-10 md:py-16">
+                        ${(data.gallery || [data.hero, data.hero, data.hero]).map((img, idx) => `
+                            <img src="${img}" class="w-full h-32 md:h-64 object-cover rounded-sm transition duration-500 hover:opacity-90" style="object-position: center ${idx === 2 && !data.gallery ? 'bottom' : 'center'};">
+                        `).join('')}
+                    </div>
+
+                    <!-- MAIN CONTENT SPLIT -->
+                    <div class="max-w-7xl mx-auto px-6 py-12">
+                        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
+                            
+                            <!-- Left Column -->
+                            <div class="lg:col-span-7">
+                                <span class="text-[10px] uppercase tracking-[0.3em] font-bold text-amber-600 block mb-4">Relax • Recover • Restore</span>
+                                <h2 class="text-3xl md:text-4xl serif leading-tight mb-6">${data.seoH2}</h2>
+                                <p class="text-gray-600 leading-relaxed mb-12">${data.clinical}</p>
+
+                                <!-- 4 Grid Feature Boxes -->
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12">
+                                    <div class="border border-stone-200 p-6 bg-stone-50 rounded-sm">
+                                        <svg class="w-8 h-8 text-amber-500 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                        <h4 class="font-bold text-sm mb-2">${b1}</h4>
+                                        <p class="text-xs text-gray-500 leading-relaxed">Qualified, experienced and committed to safe, effective treatments tailored to your needs.</p>
+                                    </div>
+                                    <div class="border border-stone-200 p-6 bg-stone-50 rounded-sm">
+                                        <svg class="w-8 h-8 text-amber-500 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                                        <h4 class="font-bold text-sm mb-2">${b2}</h4>
+                                        <p class="text-xs text-gray-500 leading-relaxed">Advanced techniques that accelerate healing and relieve built-up physical tension quickly.</p>
+                                    </div>
+                                    <div class="border border-stone-200 p-6 bg-stone-50 rounded-sm">
+                                        <svg class="w-8 h-8 text-amber-500 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                        <h4 class="font-bold text-sm mb-2">${b3}</h4>
+                                        <p class="text-xs text-gray-500 leading-relaxed">Relieves stress, eases anxiety and promotes deep relaxation for both body and mind.</p>
+                                    </div>
+                                    <div class="border border-stone-200 p-6 bg-stone-50 rounded-sm">
+                                        <svg class="w-8 h-8 text-amber-500 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                                        <h4 class="font-bold text-sm mb-2">Tailored to Your Body</h4>
+                                        <p class="text-xs text-gray-500 leading-relaxed">Every session is customised to your specific physical concerns and comfort levels.</p>
+                                    </div>
+                                </div>
+
+                                <!-- Treatment Areas Box -->
+                                <div class="border border-stone-200 p-6 bg-white flex flex-col md:flex-row items-start md:items-center gap-6 mb-12">
+                                    <svg class="w-10 h-10 text-amber-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                    <div>
+                                        <h4 class="font-bold text-sm mb-2">Treatment Capabilities</h4>
+                                        <p class="text-xs text-gray-600 font-medium tracking-wide uppercase leading-loose">${data.subServices.split(',').join(' • ')}</p>
+                                    </div>
+                                </div>
+
+                                <!-- CTA Mini Banner -->
+                                <div class="bg-stone-100 p-8 text-center rounded-sm mb-16">
+                                    <svg class="w-8 h-8 text-amber-500 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+                                    <h3 class="serif text-2xl mb-6">Ready to Relax, Recover and Feel Better?</h3>
+                                    <div class="flex flex-col sm:flex-row justify-center gap-4">
+                                        <button class="bg-black text-white px-8 py-3 text-xs font-bold uppercase tracking-widest hover:bg-gray-800 transition" onclick="window.open('https://fresha.com')">Book Your Treatment</button>
+                                        <button class="bg-[#25D366] text-white px-8 py-3 text-xs font-bold uppercase tracking-widest hover:bg-[#128C7E] transition flex items-center justify-center gap-2" onclick="window.open('https://wa.me/440000000000')">
                                             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 0C5.385 0 0 5.385 0 12.031c0 2.133.551 4.156 1.558 5.96L.101 24l6.195-1.621c1.729.897 3.666 1.365 5.735 1.365 6.646 0 12.031-5.385 12.031-12.031S18.677 0 12.031 0zM17.65 16.59c-.276.776-1.593 1.488-2.186 1.547-.56.055-1.282.164-3.693-.834-2.9-1.196-4.756-4.148-4.896-4.335-.141-.188-1.168-1.55-1.168-2.955 0-1.405.733-2.096 1.011-2.392.278-.297.604-.372.805-.372.2 0 .401.003.576.012.188.009.438-.073.687.525.263.633.916 2.235 1 2.423.083.188.139.407.014.656-.126.249-.189.407-.375.633-.186.225-.395.49-.56.633-.186.164-.383.344-.173.705.21.362.936 1.549 2.015 2.511 1.396 1.246 2.564 1.636 2.923 1.782.358.146.568.125.782-.125.214-.25 1.012-1.18 1.283-1.587.271-.408.542-.34.869-.216.326.124 2.062.973 2.417 1.15.355.176.592.264.678.414.086.15.086.867-.19 1.642z"/></svg>
-                                            WhatsApp Inquiry
+                                            Call To Book
                                         </button>
                                     </div>
                                 </div>
 
-                                <!-- SEO Block 2: H2 & Longform -->
-                                <div class="bg-stone-50 p-8 md:p-12 border border-stone-100 rounded-sm mb-16">
-                                    <h3 class="serif text-3xl mb-3 text-amber-800">${data.seoH2}</h3>
-                                    <p class="text-[10px] uppercase tracking-[0.2em] text-amber-600 font-bold mb-8">${data.subServices}</p>
-                                    
-                                    <div class="text-sm text-gray-600 leading-loose space-y-6">
+                                <!-- SEO Content Box -->
+                                <div class="mb-16">
+                                    <h3 class="serif text-2xl mb-6">${data.seoTitle}</h3>
+                                    <div class="text-sm text-gray-600 leading-relaxed space-y-4">
                                         ${data.seoContent}
                                     </div>
                                 </div>
-
-                                <!-- Legacy Blocks (Philosophy & Menu) -->
-                                <div class="mb-16 grid grid-cols-1 md:grid-cols-2 gap-10">
-                                    <div>
-                                        <h4 class="serif text-xl text-amber-700 mb-4">Our Philosophy</h4>
-                                        <p class="text-xs text-gray-600 leading-loose">${data.philosophy}</p>
-                                    </div>
-                                    <div>
-                                        <h4 class="serif text-xl text-amber-700 mb-4">Patient Benefits</h4>
-                                        <p class="text-xs text-gray-600 leading-loose">${data.benefits}</p>
-                                    </div>
-                                </div>
-
-                                <div class="menu-plate mb-16">
-                                    <div class="text-center mb-10">
-                                        <h3 class="serif text-2xl mb-1">Digital Menu</h3>
-                                        <p class="text-[9px] uppercase tracking-widest text-gray-400">Clinical Pricing Guide</p>
-                                    </div>
-                                    ${data.sections.map(s => `
-                                        <h4 class="text-[9px] font-black tracking-[0.3em] text-gray-300 uppercase mb-6 mt-10 border-b pb-2">${s.header}</h4>
-                                        ${s.items.map(i => `
-                                            <div class="price-row">
-                                                <span class="label">${i.name}</span>
-                                                <div class="dots"></div>
-                                                <span class="value">${i.val}</span>
-                                            </div>
-                                        `).join('')}
-                                    `).join('')}
-                                </div>
-
-                                <!-- Final CTA -->
-                                <div class="text-center py-12 border-t border-b border-gray-100 mb-16">
-                                    <h3 class="serif text-2xl mb-6">Ready to Transform?</h3>
-                                    <p class="text-xs text-gray-500 mb-8 max-w-md mx-auto leading-relaxed">Book your appointment today at London's premier clinical spa in Mortlake.</p>
-                                    <button class="bg-black text-white px-10 py-4 text-[10px] uppercase tracking-[0.2em] font-bold hover:bg-amber-700 transition-colors rounded-sm" onclick="window.open('https://fresha.com')">Secure Your Booking</button>
-                                </div>
                             </div>
 
-                            <!-- Right: Fixed Patient Insights & Location -->
-                            <div class="lg:col-span-5 space-y-12 lg:self-start">
-                                <div class="clinical-box clinical-blue">
-                                    <h3 class="font-bold text-[9px] uppercase tracking-[0.3em] mb-4">Patient Support</h3>
-                                    <p class="text-xs leading-relaxed text-gray-600">Our clinical team is available for virtual consultations. If you have specific medical concerns or skin conditions, please contact us prior to booking.</p>
-                                    <div class="mt-6 pt-6 border-t border-gray-200">
-                                        <a href="https://wa.me/440000000000" class="inline-flex items-center gap-2 bg-[#25D366] text-white px-4 py-2 rounded-md font-bold text-[10px] uppercase tracking-widest hover:bg-[#128C7E] transition-colors">
-                                            <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 0C5.385 0 0 5.385 0 12.031c0 2.133.551 4.156 1.558 5.96L.101 24l6.195-1.621c1.729.897 3.666 1.365 5.735 1.365 6.646 0 12.031-5.385 12.031-12.031S18.677 0 12.031 0zM17.65 16.59c-.276.776-1.593 1.488-2.186 1.547-.56.055-1.282.164-3.693-.834-2.9-1.196-4.756-4.148-4.896-4.335-.141-.188-1.168-1.55-1.168-2.955 0-1.405.733-2.096 1.011-2.392.278-.297.604-.372.805-.372.2 0 .401.003.576.012.188.009.438-.073.687.525.263.633.916 2.235 1 2.423.083.188.139.407.014.656-.126.249-.189.407-.375.633-.186.225-.395.49-.56.633-.186.164-.383.344-.173.705.21.362.936 1.549 2.015 2.511 1.396 1.246 2.564 1.636 2.923 1.782.358.146.568.125.782-.125.214-.25 1.012-1.18 1.283-1.587.271-.408.542-.34.869-.216.326.124 2.062.973 2.417 1.15.355.176.592.264.678.414.086.15.086.867-.19 1.642z"/></svg>
-                                            Chat With Expert
-                                        </a>
-                                    </div>
+                            <!-- Right Column (Sidebar) -->
+                            <div class="lg:col-span-5 space-y-8 lg:self-start sticky top-24">
+                                
+                                <!-- Booking Fast -->
+                                <div class="bg-stone-50 border border-stone-200 p-8 rounded-sm">
+                                    <h3 class="serif text-2xl mb-4">Need to book fast?</h3>
+                                    <p class="text-sm text-gray-600 mb-6">Call or message us to arrange your appointment today.</p>
+                                    <button class="w-full mb-3 bg-[#25D366] text-white px-6 py-4 text-xs font-bold uppercase tracking-widest hover:bg-[#128C7E] transition flex items-center justify-center gap-2" onclick="window.open('https://wa.me/440000000000')">
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 0C5.385 0 0 5.385 0 12.031c0 2.133.551 4.156 1.558 5.96L.101 24l6.195-1.621c1.729.897 3.666 1.365 5.735 1.365 6.646 0 12.031-5.385 12.031-12.031S18.677 0 12.031 0zM17.65 16.59c-.276.776-1.593 1.488-2.186 1.547-.56.055-1.282.164-3.693-.834-2.9-1.196-4.756-4.148-4.896-4.335-.141-.188-1.168-1.55-1.168-2.955 0-1.405.733-2.096 1.011-2.392.278-.297.604-.372.805-.372.2 0 .401.003.576.012.188.009.438-.073.687.525.263.633.916 2.235 1 2.423.083.188.139.407.014.656-.126.249-.189.407-.375.633-.186.225-.395.49-.56.633-.186.164-.383.344-.173.705.21.362.936 1.549 2.015 2.511 1.396 1.246 2.564 1.636 2.923 1.782.358.146.568.125.782-.125.214-.25 1.012-1.18 1.283-1.587.271-.408.542-.34.869-.216.326.124 2.062.973 2.417 1.15.355.176.592.264.678.414.086.15.086.867-.19 1.642z"/></svg>
+                                        Call To Book
+                                    </button>
+                                    <button class="w-full bg-white border border-stone-200 text-black px-6 py-4 text-xs font-bold uppercase tracking-widest hover:bg-stone-50 transition flex items-center justify-center gap-2" onclick="window.open('https://wa.me/440000000000')">
+                                        <svg class="w-4 h-4 text-[#25D366]" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 0C5.385 0 0 5.385 0 12.031c0 2.133.551 4.156 1.558 5.96L.101 24l6.195-1.621c1.729.897 3.666 1.365 5.735 1.365 6.646 0 12.031-5.385 12.031-12.031S18.677 0 12.031 0zM17.65 16.59c-.276.776-1.593 1.488-2.186 1.547-.56.055-1.282.164-3.693-.834-2.9-1.196-4.756-4.148-4.896-4.335-.141-.188-1.168-1.55-1.168-2.955 0-1.405.733-2.096 1.011-2.392.278-.297.604-.372.805-.372.2 0 .401.003.576.012.188.009.438-.073.687.525.263.633.916 2.235 1 2.423.083.188.139.407.014.656-.126.249-.189.407-.375.633-.186.225-.395.49-.56.633-.186.164-.383.344-.173.705.21.362.936 1.549 2.015 2.511 1.396 1.246 2.564 1.636 2.923 1.782.358.146.568.125.782-.125.214-.25 1.012-1.18 1.283-1.587.271-.408.542-.34.869-.216.326.124 2.062.973 2.417 1.15.355.176.592.264.678.414.086.15.086.867-.19 1.642z"/></svg>
+                                        WhatsApp Enquiry
+                                    </button>
                                 </div>
 
-                                <div>
-                                    <h3 class="serif text-3xl mb-6">Patient Insights</h3>
-                                    <div class="border-t border-gray-100">
+                                <!-- FAQs -->
+                                <div class="bg-stone-50 border border-stone-200 p-8 rounded-sm">
+                                    <h3 class="serif text-2xl mb-6">Service FAQs</h3>
+                                    <div class="border-t border-gray-200">
                                         ${data.faq.map((f, idx) => `
-                                            <div class="faq-item">
-                                                <div class="faq-trigger" onclick="toggleFaq(this)">
+                                            <div class="faq-item border-b border-gray-200 last:border-0">
+                                                <div class="faq-trigger py-4 flex justify-between items-center cursor-pointer text-sm font-bold text-gray-800" onclick="toggleFaq(this)">
                                                     <span>${f.q}</span>
-                                                    <span class="faq-icon text-xl font-light">+</span>
+                                                    <span class="faq-icon text-xl text-gray-400 font-light">+</span>
                                                 </div>
-                                                <div class="faq-content">
-                                                    <div class="pr-8 pb-4">${f.a}</div>
+                                                <div class="faq-content overflow-hidden max-h-0 transition-all duration-300">
+                                                    <div class="pb-4 text-sm text-gray-600 leading-relaxed">${f.a}</div>
                                                 </div>
                                             </div>
                                         `).join('')}
                                     </div>
                                 </div>
 
-                                <div class="clinical-box clinical-gold">
-                                    <h4 class="text-[9px] font-bold tracking-widest uppercase mb-4 opacity-60">Location & Hours</h4>
-                                    <p class="text-xs text-gray-600 leading-loose">
-                                        Mon - Sat: 10:00 - 20:00<br>
-                                        Sun: Specialist Training (Closed)<br><br>
-                                        <span class="font-bold text-black uppercase tracking-widest">London Boutique Clinic</span>
-                                    </p>
+                                <!-- Trust Info -->
+                                <div class="bg-stone-50 border border-stone-200 p-8 rounded-sm flex items-start gap-4">
+                                    <svg class="w-8 h-8 text-amber-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                                    <div>
+                                        <h4 class="font-bold text-sm mb-1">Serving Mortlake, Richmond</h4>
+                                        <p class="text-xs text-gray-500">Premium clinical sanctuary located in the heart of London.</p>
+                                    </div>
                                 </div>
+
+                                <div class="bg-stone-50 border border-stone-200 p-8 rounded-sm flex items-start gap-4">
+                                    <svg class="w-8 h-8 text-amber-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                    <div>
+                                        <h4 class="font-bold text-sm mb-1">Professional Excellence</h4>
+                                        <p class="text-xs text-gray-500">Trusted care. Real results. Your wellbeing is our priority.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BOTTOM CTA FULL WIDTH -->
+                    <div class="bg-stone-100 py-16">
+                        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-8">
+                            <div class="flex items-center gap-6">
+                                <div class="w-16 h-16 rounded-full bg-white flex items-center justify-center shrink-0 border border-stone-200">
+                                    <svg class="w-8 h-8 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+                                </div>
+                                <div>
+                                    <h3 class="serif text-2xl mb-1">Your Body Deserves Expert Care</h3>
+                                    <p class="text-sm text-gray-600">Book your ${data.title.toLowerCase()} in Mortlake, Richmond today.</p>
+                                </div>
+                            </div>
+                            <div class="flex flex-col sm:flex-row gap-4 shrink-0 w-full md:w-auto">
+                                <button class="bg-black text-white px-8 py-4 text-xs font-bold uppercase tracking-widest hover:bg-gray-800 transition" onclick="window.open('https://fresha.com')">Book Now</button>
+                                <button class="bg-[#25D366] text-white px-8 py-4 text-xs font-bold uppercase tracking-widest hover:bg-[#128C7E] transition flex items-center justify-center gap-2" onclick="window.open('https://wa.me/440000000000')">
+                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 0C5.385 0 0 5.385 0 12.031c0 2.133.551 4.156 1.558 5.96L.101 24l6.195-1.621c1.729.897 3.666 1.365 5.735 1.365 6.646 0 12.031-5.385 12.031-12.031S18.677 0 12.031 0zM17.65 16.59c-.276.776-1.593 1.488-2.186 1.547-.56.055-1.282.164-3.693-.834-2.9-1.196-4.756-4.148-4.896-4.335-.141-.188-1.168-1.55-1.168-2.955 0-1.405.733-2.096 1.011-2.392.278-.297.604-.372.805-.372.2 0 .401.003.576.012.188.009.438-.073.687.525.263.633.916 2.235 1 2.423.083.188.139.407.014.656-.126.249-.189.407-.375.633-.186.225-.395.49-.56.633-.186.164-.383.344-.173.705.21.362.936 1.549 2.015 2.511 1.396 1.246 2.564 1.636 2.923 1.782.358.146.568.125.782-.125.214-.25 1.012-1.18 1.283-1.587.271-.408.542-.34.869-.216.326.124 2.062.973 2.417 1.15.355.176.592.264.678.414.086.15.086.867-.19 1.642z"/></svg>
+                                    Call To Book
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -772,6 +930,24 @@
         function scrollToFooter() {
             document.getElementById('main-footer').scrollIntoView({ behavior: 'smooth' });
         }
+    
+        // URL Hash Routing
+        window.addEventListener('hashchange', () => {
+            let hashId = window.location.hash.substring(1);
+            if (!hashId || !contentData[hashId]) {
+                showPage('home', false);
+            } else {
+                showPage(hashId, false);
+            }
+        });
+
+        window.addEventListener('load', () => {
+            let hashId = window.location.hash.substring(1);
+            if (hashId && contentData[hashId]) {
+                showPage(hashId, false);
+            }
+        });
     </script>
+
 </body>
 </html>
