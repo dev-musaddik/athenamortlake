@@ -154,7 +154,7 @@
         }
 
         .price-row .value {
-            background: white;
+            background: transparent;
             padding-left: 12px;
             font-weight: 700;
             color: var(--brand-accent);
@@ -238,6 +238,22 @@
             background: #fafafa;
             border-color: #000;
         }
+
+        .price-col-header { display: flex; justify-content: flex-end; gap: 1rem; margin-bottom: 0.5rem; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #888; }
+        .price-col-header span { width: 40px; text-align: right; }
+        .price-row-multi { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.8rem; }
+        .price-row-multi .label { background: transparent; padding-right: 8px; font-size: 0.95rem; font-weight: 500; color: #333; }
+        .price-row-multi .dots { flex-grow: 1; border-bottom: 1px dotted #ccc; margin-bottom: 4px; }
+        .price-row-multi .values { background: transparent; padding-left: 8px; display: flex; gap: 1rem; }
+        .price-row-multi .values span { width: 40px; text-align: right; font-weight: 700; color: var(--brand-accent); font-size: 0.95rem; }
+        .section-title-prices { text-align: center; font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-bottom: 1.5rem; color: #1a1a1a; position: relative; }
+        .section-title-prices a { color: inherit; text-decoration: none; transition: color 0.3s ease; }
+        .section-title-prices a:hover { color: var(--brand-accent); }
+        .section-title-prices::after { content: ''; display: block; width: 40px; height: 2px; background: var(--brand-accent); margin: 12px auto 0; }
+        .masonry-grid { column-count: 1; column-gap: 2rem; }
+        @media (min-width: 768px) { .masonry-grid { column-count: 2; } }
+        @media (min-width: 1024px) { .masonry-grid { column-count: 3; } }
+        .sub-heading-prices { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.2em; font-weight: 700; color: #999; margin-top: 1.5rem; margin-bottom: 0.75rem; text-align: center; }
     </style>
 </head>
 
@@ -281,6 +297,8 @@
                         <a href="javascript:void(0);" onclick="showPage('massage')">Body Therapy</a>
                     </div>
                 </div>
+                <a href="javascript:void(0);" onclick="showPage('prices')"
+                    class="hover:text-black transition-colors">Prices</a>
                 <a href="javascript:void(0);" onclick="scrollToFooter()"
                     class="hover:text-black transition-colors">Contact</a>
             </div>
@@ -330,6 +348,8 @@
             <a href="javascript:void(0);" onclick="showPage('massage'); closeMobileMenu()"
                 class="text-sm uppercase tracking-widest text-gray-600 hover:text-amber-700 transition-colors">Body
                 Therapy</a>
+            <a href="javascript:void(0);" onclick="showPage('prices'); closeMobileMenu()"
+                class="text-sm uppercase tracking-widest text-gray-600 hover:text-amber-700 transition-colors">Prices</a>
             <div class="w-full h-px bg-gray-100"></div>
             <a href="javascript:void(0);" onclick="scrollToFooter(); closeMobileMenu()"
                 class="text-xl uppercase tracking-[0.3em] font-bold hover:text-amber-700 transition-colors">Contact</a>
@@ -428,6 +448,259 @@
                 </div>
             </div>
         </div>
+    </main>
+
+    <main id="prices-page" class="page-view pt-32 pb-0">
+        <header class="pb-16 text-center bg-white">
+            <div class="max-w-4xl mx-auto px-6">
+                <h1 class="text-4xl md:text-6xl serif mb-6">Treatment Menu</h1>
+                <div class="w-16 h-px bg-amber-500 mx-auto mb-6"></div>
+                <p class="text-gray-500 max-w-2xl mx-auto text-sm">Explore our comprehensive range of clinical and aesthetic treatments. Click on any section heading to learn more about the service.</p>
+            </div>
+        </header>
+
+        <nav class="sticky top-20 bg-white/95 backdrop-blur-md z-40 border-y border-stone-200 py-6 px-6 shadow-sm">
+            <div class="max-w-7xl mx-auto flex flex-wrap justify-center gap-x-8 gap-y-4">
+                <a href="#price-threading" class="text-[13px] md:text-[15px] font-semibold text-gray-700 hover:text-amber-600 tracking-widest uppercase transition-colors">Threading</a>
+                <a href="#price-waxing-face" class="text-[13px] md:text-[15px] font-semibold text-gray-700 hover:text-amber-600 tracking-widest uppercase transition-colors">Waxing (Face)</a>
+                <a href="#price-lashes" class="text-[13px] md:text-[15px] font-semibold text-gray-700 hover:text-amber-600 tracking-widest uppercase transition-colors">Lashes & Brows</a>
+                <a href="#price-kids" class="text-[13px] md:text-[15px] font-semibold text-gray-700 hover:text-amber-600 tracking-widest uppercase transition-colors">Kids Waxing</a>
+                <a href="#price-combo" class="text-[13px] md:text-[15px] font-semibold text-gray-700 hover:text-amber-600 tracking-widest uppercase transition-colors">Combos</a>
+                <a href="#price-waxing-body" class="text-[13px] md:text-[15px] font-semibold text-gray-700 hover:text-amber-600 tracking-widest uppercase transition-colors">Waxing (Body)</a>
+                <a href="#price-facials" class="text-[13px] md:text-[15px] font-semibold text-gray-700 hover:text-amber-600 tracking-widest uppercase transition-colors">Facials</a>
+                <a href="#price-massage" class="text-[13px] md:text-[15px] font-semibold text-gray-700 hover:text-amber-600 tracking-widest uppercase transition-colors">Massage</a>
+                <a href="#price-mens" class="text-[13px] md:text-[15px] font-semibold text-gray-700 hover:text-amber-600 tracking-widest uppercase transition-colors">Men's</a>
+                <a href="#price-nails" class="text-[13px] md:text-[15px] font-semibold text-gray-700 hover:text-amber-600 tracking-widest uppercase transition-colors">Nails</a>
+                <a href="#price-hair" class="text-[13px] md:text-[15px] font-semibold text-gray-700 hover:text-amber-600 tracking-widest uppercase transition-colors">Hair</a>
+                <a href="#price-laser" class="text-[13px] md:text-[15px] font-semibold text-gray-700 hover:text-amber-600 tracking-widest uppercase transition-colors">Laser</a>
+            </div>
+        </nav>
+
+        <!-- THREADING -->
+        <section id="price-threading" class="py-20 bg-stone-50 border-t border-stone-100 scroll-mt-40">
+            <div class="max-w-3xl mx-auto px-6">
+                <h3 class="section-title-prices"><a href="javascript:void(0);" onclick="showPage('threading')">Threading</a></h3>
+                <div class="price-row"><span class="label">Eyebrow</span><div class="dots"></div><span class="value">£8</span></div>
+                <div class="price-row"><span class="label">Upper lip</span><div class="dots"></div><span class="value">£6</span></div>
+                <div class="price-row"><span class="label">Chin</span><div class="dots"></div><span class="value">£8</span></div>
+                <div class="price-row"><span class="label">Neck</span><div class="dots"></div><span class="value">£10</span></div>
+                <div class="price-row"><span class="label">Sides/Forehead/Lower lip</span><div class="dots"></div><span class="value">£8</span></div>
+                <div class="mt-12 text-center"><button onclick="window.open('https://fresha.com')" class="bg-black text-white px-10 py-3 text-[10px] uppercase tracking-[0.25em] font-bold rounded-sm hover:opacity-80 transition-all">Book Now</button></div>
+            </div>
+        </section>
+
+        <!-- WAXING (FACE) -->
+        <section id="price-waxing-face" class="py-20 bg-white border-t border-stone-100 scroll-mt-40">
+            <div class="max-w-3xl mx-auto px-6">
+                <h3 class="section-title-prices"><a href="javascript:void(0);" onclick="showPage('threading')">Waxing (Face)</a></h3>
+                <div class="price-row"><span class="label">Upper lip/Chin</span><div class="dots"></div><span class="value">£8</span></div>
+                <div class="price-row"><span class="label">Nostrils/Ears</span><div class="dots"></div><span class="value">£10</span></div>
+                <div class="price-row"><span class="label">Eyebrows/Neck</span><div class="dots"></div><span class="value">£10</span></div>
+                <div class="price-row"><span class="label">Jawline</span><div class="dots"></div><span class="value">£12</span></div>
+                <div class="price-row"><span class="label">Sides/Cheeks</span><div class="dots"></div><span class="value">£10</span></div>
+                <div class="price-row"><span class="label">Full Face</span><div class="dots"></div><span class="value">£30</span></div>
+                <div class="price-row"><span class="label">Full Face incl. Eyebrows</span><div class="dots"></div><span class="value">£35</span></div>
+                <div class="mt-12 text-center"><button onclick="window.open('https://fresha.com')" class="bg-black text-white px-10 py-3 text-[10px] uppercase tracking-[0.25em] font-bold rounded-sm hover:opacity-80 transition-all">Book Now</button></div>
+            </div>
+        </section>
+
+        <!-- LASH & BROW ENHANCEMENT -->
+        <section id="price-lashes" class="py-20 bg-stone-50 border-t border-stone-100 scroll-mt-40">
+            <div class="max-w-3xl mx-auto px-6">
+                <h3 class="section-title-prices"><a href="javascript:void(0);" onclick="showPage('microblading')">Lash & Brow Enhancement</a></h3>
+                <div class="price-row"><span class="label">Lash Tint</span><div class="dots"></div><span class="value">£15</span></div>
+                <div class="price-row"><span class="label">Brow Tint</span><div class="dots"></div><span class="value">£10</span></div>
+                <div class="price-row"><span class="label">Lash Lift and Tint</span><div class="dots"></div><span class="value">£55</span></div>
+                <div class="price-row"><span class="label">Brow Lamination</span><div class="dots"></div><span class="value">£45</span></div>
+                <div class="price-row"><span class="label">LVL lash Lift</span><div class="dots"></div><span class="value">£55</span></div>
+                <div class="mt-12 text-center"><button onclick="window.open('https://fresha.com')" class="bg-black text-white px-10 py-3 text-[10px] uppercase tracking-[0.25em] font-bold rounded-sm hover:opacity-80 transition-all">Book Now</button></div>
+            </div>
+        </section>
+
+        <!-- KIDS WAXING -->
+        <section id="price-kids" class="py-20 bg-white border-t border-stone-100 scroll-mt-40">
+            <div class="max-w-3xl mx-auto px-6">
+                <h3 class="section-title-prices">Kids Waxing</h3>
+                <div class="price-row"><span class="label">Eyebrow</span><div class="dots"></div><span class="value">£5</span></div>
+                <div class="price-row"><span class="label">Upper lip</span><div class="dots"></div><span class="value">£4</span></div>
+                <div class="price-row"><span class="label">Chin</span><div class="dots"></div><span class="value">£5</span></div>
+                <div class="price-row"><span class="label">Neck</span><div class="dots"></div><span class="value">£8</span></div>
+                <div class="price-row"><span class="label">Sides/Forehead/Lower lip</span><div class="dots"></div><span class="value">£6</span></div>
+                <div class="mt-12 text-center"><button onclick="window.open('https://fresha.com')" class="bg-black text-white px-10 py-3 text-[10px] uppercase tracking-[0.25em] font-bold rounded-sm hover:opacity-80 transition-all">Book Now</button></div>
+            </div>
+        </section>
+
+        <!-- COMBO PACKAGES -->
+        <section id="price-combo" class="py-20 bg-stone-50 border-t border-stone-100 scroll-mt-40">
+            <div class="max-w-3xl mx-auto px-6">
+                <h3 class="section-title-prices">Combo Packages</h3>
+                <div class="price-row"><span class="label">Eyebrow & upper lip</span><div class="dots"></div><span class="value">£13</span></div>
+                <div class="price-row"><span class="label">Eyebrow, upper lip & chin</span><div class="dots"></div><span class="value">£20</span></div>
+                <div class="price-row"><span class="label">Eyebrow & tint</span><div class="dots"></div><span class="value">£16</span></div>
+                <div class="price-row"><span class="label">Lash & brow tint</span><div class="dots"></div><span class="value">£22</span></div>
+                <div class="price-row"><span class="label">Lash lift/tint + Brow lamination</span><div class="dots"></div><span class="value">£90</span></div>
+                <div class="mt-12 text-center"><button onclick="window.open('https://fresha.com')" class="bg-black text-white px-10 py-3 text-[10px] uppercase tracking-[0.25em] font-bold rounded-sm hover:opacity-80 transition-all">Book Now</button></div>
+            </div>
+        </section>
+
+        <!-- WAXING (BODY) -->
+        <section id="price-waxing-body" class="py-20 bg-white border-t border-stone-100 scroll-mt-40">
+            <div class="max-w-3xl mx-auto px-6">
+                <h3 class="section-title-prices">Waxing (Body)</h3>
+                <div class="price-col-header">
+                    <span>Hot</span>
+                    <span>Strip</span>
+                </div>
+                <div class="price-row-multi">
+                    <span class="label">Under Arms</span><div class="dots"></div>
+                    <div class="values"><span>£15</span><span>£12</span></div>
+                </div>
+                <div class="price-row-multi">
+                    <span class="label">Half arms</span><div class="dots"></div>
+                    <div class="values"><span>£20</span><span>£18</span></div>
+                </div>
+                <div class="price-row-multi">
+                    <span class="label">Full arms</span><div class="dots"></div>
+                    <div class="values"><span>£25</span><span>£22</span></div>
+                </div>
+                <div class="price-row-multi">
+                    <span class="label">Bikini Line</span><div class="dots"></div>
+                    <div class="values"><span>£20</span><span>£18</span></div>
+                </div>
+                <div class="price-row-multi">
+                    <span class="label">Hollywood</span><div class="dots"></div>
+                    <div class="values"><span>£40</span><span>£35</span></div>
+                </div>
+                <div class="price-row-multi">
+                    <span class="label">Brazilian</span><div class="dots"></div>
+                    <div class="values"><span>£40</span><span>£35</span></div>
+                </div>
+                <div class="price-row-multi">
+                    <span class="label">Half Legs</span><div class="dots"></div>
+                    <div class="values"><span>£25</span><span>£20</span></div>
+                </div>
+                <div class="price-row-multi">
+                    <span class="label">Full Legs</span><div class="dots"></div>
+                    <div class="values"><span>£35</span><span>£30</span></div>
+                </div>
+                <div class="price-row-multi">
+                    <span class="label">Back/Chest/Stomach</span><div class="dots"></div>
+                    <div class="values"><span>£30</span><span>£25</span></div>
+                </div>
+                <div class="mt-12 text-center"><button onclick="window.open('https://fresha.com')" class="bg-black text-white px-10 py-3 text-[10px] uppercase tracking-[0.25em] font-bold rounded-sm hover:opacity-80 transition-all">Book Now</button></div>
+            </div>
+        </section>
+
+        <!-- FACIALS -->
+        <section id="price-facials" class="py-20 bg-stone-50 border-t border-stone-100 scroll-mt-40">
+            <div class="max-w-3xl mx-auto px-6">
+                <h3 class="section-title-prices"><a href="javascript:void(0);" onclick="showPage('facials')">Facials</a></h3>
+                <div class="price-row"><span class="label">Express Facial</span><div class="dots"></div><span class="value">£35</span></div>
+                <div class="price-row"><span class="label">Deep Cleanse Facial</span><div class="dots"></div><span class="value">£45</span></div>
+                <div class="price-row"><span class="label">Dermaplaning</span><div class="dots"></div><span class="value">£50</span></div>
+                <div class="price-row"><span class="label">Microneedling</span><div class="dots"></div><span class="value">£70</span></div>
+                <div class="price-row"><span class="label">Chemical Peel</span><div class="dots"></div><span class="value">£60</span></div>
+                <div class="price-row"><span class="label">LED Light Therapy</span><div class="dots"></div><span class="value">£30</span></div>
+                <div class="mt-12 text-center"><button onclick="window.open('https://fresha.com')" class="bg-black text-white px-10 py-3 text-[10px] uppercase tracking-[0.25em] font-bold rounded-sm hover:opacity-80 transition-all">Book Now</button></div>
+            </div>
+        </section>
+
+        <!-- MASSAGE -->
+        <section id="price-massage" class="py-20 bg-white border-t border-stone-100 scroll-mt-40">
+            <div class="max-w-3xl mx-auto px-6">
+                <h3 class="section-title-prices"><a href="javascript:void(0);" onclick="showPage('massage')">Massage</a></h3>
+                <div class="price-row"><span class="label">Indian Head Massage (30m)</span><div class="dots"></div><span class="value">£35</span></div>
+                <div class="price-row"><span class="label">Back, Neck & Shoulder (30m)</span><div class="dots"></div><span class="value">£40</span></div>
+                <div class="price-row"><span class="label">Full Body Massage (60m)</span><div class="dots"></div><span class="value">£60</span></div>
+                <div class="price-row"><span class="label">Hot Stone Massage (60m)</span><div class="dots"></div><span class="value">£65</span></div>
+                <div class="price-row"><span class="label">Deep Tissue Massage (60m)</span><div class="dots"></div><span class="value">£65</span></div>
+                <div class="price-row"><span class="label">Reflexology (45m)</span><div class="dots"></div><span class="value">£45</span></div>
+                <div class="mt-12 text-center"><button onclick="window.open('https://fresha.com')" class="bg-black text-white px-10 py-3 text-[10px] uppercase tracking-[0.25em] font-bold rounded-sm hover:opacity-80 transition-all">Book Now</button></div>
+            </div>
+        </section>
+
+        <!-- MEN'S GROOMING -->
+        <section id="price-mens" class="py-20 bg-stone-50 border-t border-stone-100 scroll-mt-40">
+            <div class="max-w-3xl mx-auto px-6">
+                <h3 class="section-title-prices">Men's Grooming</h3>
+                <div class="price-row"><span class="label">Eyebrow Threading</span><div class="dots"></div><span class="value">£10</span></div>
+                <div class="price-row"><span class="label">Beard Line Up</span><div class="dots"></div><span class="value">£12</span></div>
+                <div class="price-row"><span class="label">Nose/Ear Wax</span><div class="dots"></div><span class="value">£10</span></div>
+                <div class="price-row"><span class="label">Back Wax</span><div class="dots"></div><span class="value">£30</span></div>
+                <div class="price-row"><span class="label">Chest Wax</span><div class="dots"></div><span class="value">£30</span></div>
+                <div class="mt-12 text-center"><button onclick="window.open('https://fresha.com')" class="bg-black text-white px-10 py-3 text-[10px] uppercase tracking-[0.25em] font-bold rounded-sm hover:opacity-80 transition-all">Book Now</button></div>
+            </div>
+        </section>
+
+        <!-- NAILS -->
+        <section id="price-nails" class="py-20 bg-white border-t border-stone-100 scroll-mt-40">
+            <div class="max-w-3xl mx-auto px-6">
+                <h3 class="section-title-prices"><a href="javascript:void(0);" onclick="showPage('mani-pedi')">Nails</a></h3>
+                <div class="sub-heading-prices">Acrylic</div>
+                <div class="price-row"><span class="label">Full Set</span><div class="dots"></div><span class="value">£35</span></div>
+                <div class="price-row"><span class="label">Infill</span><div class="dots"></div><span class="value">£25</span></div>
+                <div class="price-row"><span class="label">Take Off</span><div class="dots"></div><span class="value">£15</span></div>
+
+                <div class="sub-heading-prices">BIAB</div>
+                <div class="price-row"><span class="label">Full Set</span><div class="dots"></div><span class="value">£40</span></div>
+                <div class="price-row"><span class="label">Infill</span><div class="dots"></div><span class="value">£30</span></div>
+                <div class="price-row"><span class="label">Take Off</span><div class="dots"></div><span class="value">£15</span></div>
+
+                <div class="sub-heading-prices">Shellac / Gel</div>
+                <div class="price-row"><span class="label">Manicure</span><div class="dots"></div><span class="value">£30</span></div>
+                <div class="price-row"><span class="label">Pedicure</span><div class="dots"></div><span class="value">£35</span></div>
+                <div class="price-row"><span class="label">Take Off</span><div class="dots"></div><span class="value">£10</span></div>
+
+                <div class="sub-heading-prices">Normal Polish</div>
+                <div class="price-row"><span class="label">Manicure</span><div class="dots"></div><span class="value">£20</span></div>
+                <div class="price-row"><span class="label">Pedicure</span><div class="dots"></div><span class="value">£25</span></div>
+                <div class="mt-12 text-center"><button onclick="window.open('https://fresha.com')" class="bg-black text-white px-10 py-3 text-[10px] uppercase tracking-[0.25em] font-bold rounded-sm hover:opacity-80 transition-all">Book Now</button></div>
+            </div>
+        </section>
+
+        <!-- HAIR DRESSING -->
+        <section id="price-hair" class="py-20 bg-stone-50 border-t border-stone-100 scroll-mt-40">
+            <div class="max-w-3xl mx-auto px-6">
+                <h3 class="section-title-prices"><a href="javascript:void(0);" onclick="showPage('hair')">Hair Dressing</a></h3>
+                <div class="sub-heading-prices">Ladies</div>
+                <div class="price-row"><span class="label">Wash & Cut</span><div class="dots"></div><span class="value">£35</span></div>
+                <div class="price-row"><span class="label">Wash, Cut & Blow Dry</span><div class="dots"></div><span class="value">£45</span></div>
+                <div class="price-row"><span class="label">Restyle</span><div class="dots"></div><span class="value">£55</span></div>
+                <div class="price-row"><span class="label">Blow Dry</span><div class="dots"></div><span class="value">£25</span></div>
+                <div class="price-row"><span class="label">Roots Colour</span><div class="dots"></div><span class="value">£40</span></div>
+                <div class="price-row"><span class="label">Full Head Colour</span><div class="dots"></div><span class="value">£60</span></div>
+                <div class="price-row"><span class="label">Half Head Highlights</span><div class="dots"></div><span class="value">£65</span></div>
+                <div class="price-row"><span class="label">Full Head Highlights</span><div class="dots"></div><span class="value">£85</span></div>
+                <div class="price-row"><span class="label">Balayage</span><div class="dots"></div><span class="value">from £95</span></div>
+
+                <div class="sub-heading-prices">Gents</div>
+                <div class="price-row"><span class="label">Dry Cut</span><div class="dots"></div><span class="value">£18</span></div>
+                <div class="price-row"><span class="label">Wash & Cut</span><div class="dots"></div><span class="value">£22</span></div>
+                <div class="price-row"><span class="label">Skin Fade</span><div class="dots"></div><span class="value">£20</span></div>
+                <div class="price-row"><span class="label">Beard Trim</span><div class="dots"></div><span class="value">£10</span></div>
+                <div class="mt-12 text-center"><button onclick="window.open('https://fresha.com')" class="bg-black text-white px-10 py-3 text-[10px] uppercase tracking-[0.25em] font-bold rounded-sm hover:opacity-80 transition-all">Book Now</button></div>
+            </div>
+        </section>
+
+        <!-- LASER HAIR REMOVAL -->
+        <section id="price-laser" class="py-20 bg-white border-y border-stone-100 scroll-mt-40">
+            <div class="max-w-3xl mx-auto px-6">
+                <h3 class="section-title-prices"><a href="javascript:void(0);" onclick="showPage('laser')">Laser Hair Removal</a></h3>
+                <div class="sub-heading-prices">Face Treatments</div>
+                <div class="price-row"><span class="label">Upper Lip</span><div class="dots"></div><span class="value">£15</span></div>
+                <div class="price-row"><span class="label">Chin</span><div class="dots"></div><span class="value">£18</span></div>
+                <div class="price-row"><span class="label">Centre Brow</span><div class="dots"></div><span class="value">£7</span></div>
+                <div class="price-row"><span class="label">Full Face</span><div class="dots"></div><span class="value">£45</span></div>
+                
+                <div class="sub-heading-prices">Body Treatments</div>
+                <div class="price-row"><span class="label">Under Arms</span><div class="dots"></div><span class="value">£10</span></div>
+                <div class="price-row"><span class="label">Half Arms / Full Arms</span><div class="dots"></div><span class="value">£45 / £80</span></div>
+                <div class="price-row"><span class="label">Lower Leg / Full Leg</span><div class="dots"></div><span class="value">£65 / £80</span></div>
+                <div class="price-row"><span class="label">Bikini Line</span><div class="dots"></div><span class="value">£25</span></div>
+                <div class="price-row"><span class="label">Brazilian / Hollywood</span><div class="dots"></div><span class="value">£30</span></div>
+                <div class="mt-12 text-center"><button onclick="window.open('https://fresha.com')" class="bg-black text-white px-10 py-3 text-[10px] uppercase tracking-[0.25em] font-bold rounded-sm hover:opacity-80 transition-all">Book Now</button></div>
+            </div>
+        </section>
     </main>
 
     <div id="page-container"></div>
@@ -933,16 +1206,26 @@
             if (updateHash && id !== 'home') window.location.hash = id;
             if (updateHash && id === 'home') window.history.replaceState(null, null, ' ');
             const home = document.getElementById('home-page');
+            const pricesPage = document.getElementById('prices-page');
             const container = document.getElementById('page-container');
             window.scrollTo({ top: 0, behavior: 'smooth' });
 
             if (id === 'home') {
                 home.classList.add('active');
+                if (pricesPage) pricesPage.classList.remove('active');
+                container.innerHTML = '';
+                return;
+            }
+
+            if (id === 'prices') {
+                home.classList.remove('active');
+                if (pricesPage) pricesPage.classList.add('active');
                 container.innerHTML = '';
                 return;
             }
 
             home.classList.remove('active');
+            if (pricesPage) pricesPage.classList.remove('active');
             const data = contentData[id];
             if (!data) return;
 
@@ -1299,6 +1582,11 @@
         // URL Hash Routing
         window.addEventListener('hashchange', () => {
             let hashId = window.location.hash.substring(1);
+            if (hashId.startsWith('price-')) return; // Ignore internal anchors
+            if (hashId === 'prices') {
+                showPage('prices', false);
+                return;
+            }
             if (!hashId || !contentData[hashId]) {
                 showPage('home', false);
             } else {
@@ -1308,6 +1596,19 @@
 
         window.addEventListener('load', () => {
             let hashId = window.location.hash.substring(1);
+            if (hashId.startsWith('price-')) {
+                showPage('prices', false);
+                // Let browser handle the scroll after a tiny delay to ensure page is visible
+                setTimeout(() => {
+                    const el = document.getElementById(hashId);
+                    if (el) el.scrollIntoView();
+                }, 100);
+                return;
+            }
+            if (hashId === 'prices') {
+                showPage('prices', false);
+                return;
+            }
             if (hashId && contentData[hashId]) {
                 showPage(hashId, false);
             }

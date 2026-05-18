@@ -1,0 +1,1787 @@
+<!-- ============================================================
+     ATHENA MORTLAKE — THREADING & BROW PAGE
+     WordPress Custom HTML Block — Paste into a Full-Width page
+     using Elementor / Divi / Gutenberg "Custom HTML" block
+
+     FIND & REPLACE before publishing:
+       https://www.fresha.com/book-now/athena-mortlake-c2gmn07m/all-offer?pId=1090219  → your booking URL
+       https://wa.me/447884492575?text=Hi%20I%27m%20interested                         → your WhatsApp link
+       https://athenamortlake.com/wp-content/uploads/2026/05/threading.jpg             → your WP media URL
+       https://athenamortlake.com/wp-content/uploads/2026/05/threading_2.jpg           → your WP media URL
+============================================================ -->
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Great+Vibes&display=swap"
+    rel="stylesheet">
+
+<style>
+    .fl-node-69eb8d67a650f .fl-row-content-wrap {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* ── SCOPE ── */
+    .atm-threading * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    .atm-threading a {
+        text-decoration: none;
+    }
+
+    .atm-threading {
+        font-family: Montserrat, sans-serif;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 1.7;
+        color: #000;
+        background: #fff;
+        --accent: #c5a059;
+        --stone-50: #fafaf9;
+        --stone-100: #f5f5f4;
+        --stone-200: #e7e5e4;
+    }
+
+    .atm-threading .serif {
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .atm-threading h1,
+    .atm-threading h2,
+    .atm-threading h3,
+    .atm-threading h4 {
+        line-height: 1.2;
+    }
+
+    /* ── LAYOUT ── */
+    .atm-threading .atm-wrap {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+    }
+
+    .atm-threading .atm-grid-12 {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+
+    @media(min-width:1024px) {
+        .atm-threading .atm-grid-12 {
+            grid-template-columns: 7fr 5fr;
+            gap: 6rem;
+        }
+    }
+
+    .atm-threading .atm-grid-3 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: .5rem;
+    }
+
+    @media(min-width:768px) {
+        .atm-threading .atm-grid-3 {
+            gap: 1.5rem;
+        }
+    }
+
+    .atm-threading .atm-grid-2 {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    @media(min-width:640px) {
+        .atm-threading .atm-grid-2 {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    .atm-threading .atm-grid-reviews {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    @media(min-width:768px) {
+        .atm-threading .atm-grid-reviews {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    /* ── HERO ── */
+    .atm-threading .atm-hero {
+        position: relative;
+        width: 100vw !important;
+        max-width: 100vw !important;
+        min-height: 620px;
+        display: flex;
+        align-items: center;
+        margin-left: calc(50% - 50vw) !important;
+        margin-right: calc(50% - 50vw) !important;
+        overflow: hidden;
+    }
+
+    .atm-threading .atm-hero-img {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        width: 100vw;
+    }
+
+    .atm-threading .atm-hero-img img {
+        width: 100vw;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .atm-threading .atm-hero-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(135deg, rgba(0, 0, 0, .78) 0%, rgba(0, 0, 0, .48) 100%);
+    }
+
+    .atm-threading .atm-hero-content {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        padding: 5rem 1.5rem;
+    }
+
+    .atm-threading .atm-hero-inner {
+        max-width: 100vw;
+        color: #fff;
+    }
+
+    .atm-threading .atm-hero-eyebrow {
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        letter-spacing: .22em;
+        color: #fde68a;
+        display: block;
+        margin-bottom: 1.1rem;
+        font-weight: 600;
+    }
+
+    .atm-threading .atm-hero h1 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: clamp(3.6rem, 9vw, 7rem);
+        margin-bottom: 1.5rem;
+        color: #fff;
+    }
+
+    .atm-threading .atm-hero-sub {
+        font-size: 1.6rem;
+        color: #e5e7eb;
+        font-weight: 300;
+        margin-bottom: 2.5rem;
+        max-width: 600px;
+        line-height: 1.75;
+    }
+
+    .atm-threading .atm-trust-badges {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        margin-bottom: 2.5rem;
+    }
+
+    @media(min-width:768px) {
+        .atm-threading .atm-trust-badges {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+
+    .atm-threading .atm-badge {
+        display: flex;
+        align-items: center;
+        gap: .65rem;
+        color: #fff;
+        font-size: 1.3rem;
+        font-weight: 500;
+    }
+
+    .atm-threading .atm-badge svg {
+        color: #f59e0b;
+        flex-shrink: 0;
+    }
+
+    .atm-threading .atm-hero-btns {
+        display: flex;
+        flex-direction: column;
+        gap: .75rem;
+    }
+
+    @media(min-width:480px) {
+        .atm-threading .atm-hero-btns {
+            flex-direction: row;
+            align-items: center;
+        }
+    }
+
+    /* ── BUTTONS ── */
+    .atm-threading .atm-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: .55rem;
+        padding: 1rem 2rem;
+        font-size: 1.05rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: .2em;
+        transition: all .3s ease;
+        cursor: pointer;
+        border: none;
+        white-space: nowrap;
+        line-height: 1;
+        vertical-align: middle;
+    }
+
+    .atm-threading .atm-btn svg,
+    .atm-threading .atm-btn img {
+        display: inline-block;
+        vertical-align: middle;
+        flex-shrink: 0;
+        position: relative;
+        top: 0;
+    }
+
+    .atm-threading .atm-btn-black {
+        background: #000;
+        color: #fff;
+    }
+
+    .atm-threading .atm-btn-black:hover {
+        background: #1a1a1a;
+        color: #fff;
+        transform: translateY(-1px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, .2);
+    }
+
+    .atm-threading .atm-btn-wa {
+        background: #25D366;
+        color: #fff;
+    }
+
+    .atm-threading .atm-btn-wa:hover {
+        background: #1ebe5d;
+        color: #fff;
+        transform: translateY(-1px);
+        box-shadow: 0 6px 20px rgba(37, 211, 102, .3);
+    }
+
+    .atm-threading .atm-btn-outline {
+        background: #fff;
+        border: 1.5px solid #e5e5e5;
+        color: #000;
+    }
+
+    .atm-threading .atm-btn-outline:hover {
+        background: #fafafa;
+        border-color: #000;
+        transform: translateY(-1px);
+    }
+
+    /* ── REVIEWS ── */
+    .atm-threading .atm-reviews-section {
+        padding: 30px 20px;
+        border-top: 1px solid #ebe7e2;
+        border-bottom: 1px solid #ebe7e2;
+        overflow: hidden;
+    }
+
+    .atm-threading .atm-max {
+        max-width: 1280px;
+        margin: 0 auto;
+    }
+
+    .atm-threading .atm-reviews-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 10px;
+        margin-bottom: 60px;
+    }
+
+    .atm-threading .atm-reviews-header h3 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 48px;
+        line-height: 1;
+        font-weight: 700;
+        color: #1f1f1f;
+        margin: 0;
+        letter-spacing: -1px;
+    }
+
+    .atm-threading .atm-stars {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+        color: #fbbc04;
+    }
+
+    .atm-threading .atm-stars svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .atm-threading .atm-review-count {
+        margin: 0;
+        font-size: 17px;
+        line-height: 1.5;
+        color: #777;
+    }
+
+    .atm-threading .atm-review-count strong {
+        color: #222;
+        font-weight: 700;
+    }
+
+    .atm-threading .atm-google-logo {
+        font-size: 42px;
+        font-weight: 700;
+        letter-spacing: -3px;
+        line-height: 1;
+    }
+
+    .atm-threading .atm-grid-reviews {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 28px;
+    }
+
+    .atm-threading .atm-review-card {
+        background: #fff;
+        border: 1px solid #ece7e2;
+        border-radius: 26px;
+        padding: 28px;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, .04);
+        transition: all .3s ease;
+        position: relative;
+    }
+
+    .atm-threading .atm-review-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 14px 40px rgba(0, 0, 0, .08);
+    }
+
+    .atm-threading .atm-review-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 14px;
+        margin-bottom: 18px;
+    }
+
+    .atm-threading .atm-reviewer {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+    }
+
+    .atm-threading .atm-avatar {
+        width: 54px;
+        height: 54px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        color: #fff;
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    .atm-threading .atm-reviewer-name {
+        font-size: 18px;
+        font-weight: 700;
+        color: #202124;
+        line-height: 1.2;
+    }
+
+    .atm-threading .atm-reviewer-meta {
+        font-size: 14px;
+        color: #7b7b7b;
+        margin-top: 3px;
+    }
+
+    .atm-threading .atm-review-row {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 18px;
+    }
+
+    .atm-threading .atm-review-stars {
+        display: flex;
+        align-items: center;
+        gap: 2px;
+        color: #fbbc04;
+    }
+
+    .atm-threading .atm-review-stars svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    .atm-threading .atm-review-ago {
+        font-size: 14px;
+        font-weight: 500;
+        color: #7a7a7a;
+    }
+
+    .atm-threading .atm-review-badge {
+        background: #f3f4f6;
+        color: #555;
+        border: 1px solid #e5e7eb;
+        font-size: 11px;
+        font-weight: 700;
+        padding: 4px 8px;
+        border-radius: 999px;
+    }
+
+    .atm-threading .atm-review-text {
+        font-size: 16px;
+        line-height: 1.8;
+        color: #333;
+        margin-bottom: 24px;
+        flex-grow: 1;
+    }
+
+    .atm-threading .atm-review-service {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 18px;
+        margin-bottom: 22px;
+        border-top: 1px solid #eee;
+    }
+
+    .atm-threading .atm-review-service strong {
+        font-size: 14px;
+        font-weight: 700;
+        color: #222;
+    }
+
+    .atm-threading .atm-review-service span {
+        font-size: 14px;
+        color: #777;
+    }
+
+    @media(max-width:768px) {
+        .atm-threading .atm-reviews-section {
+            padding: 70px 16px;
+        }
+
+        .atm-threading .atm-reviews-header {
+            margin-bottom: 45px;
+        }
+
+        .atm-threading .atm-reviews-header h3 {
+            font-size: 38px;
+        }
+
+        .atm-threading .atm-google-logo {
+            font-size: 34px;
+        }
+
+        .atm-threading .atm-grid-reviews {
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .atm-threading .atm-review-card {
+            padding: 22px;
+            border-radius: 22px;
+        }
+
+        .atm-threading .atm-review-text {
+            font-size: 15px;
+        }
+    }
+
+    /* ── GALLERY ── */
+    .atm-threading .atm-gallery-section {
+        padding: 3rem 1.5rem 1rem;
+    }
+
+    .atm-threading .atm-gallery-img {
+        width: 100%;
+        object-fit: cover;
+        border-radius: 2px;
+        height: 8rem;
+        transition: opacity .4s, transform .4s;
+    }
+
+    @media(min-width:768px) {
+        .atm-threading .atm-gallery-img {
+            height: 18rem;
+        }
+    }
+
+    .atm-threading .atm-gallery-img:hover {
+        opacity: .88;
+        transform: scale(1.01);
+    }
+
+    /* ── MAIN CONTENT ── */
+    .atm-threading .atm-main-section {
+        padding: 3.5rem 1.5rem;
+    }
+
+    .atm-threading .atm-eyebrow {
+        font-size: .82rem;
+        text-transform: uppercase;
+        letter-spacing: .3em;
+        font-weight: 700;
+        color: #b45309;
+        display: block;
+        margin-bottom: 1rem;
+    }
+
+    .atm-threading .atm-section-title {
+        font-family: 'Montserrat', sans-serif;
+        font-size: clamp(2.1rem, 3vw, 3rem);
+        margin-bottom: 1.5rem;
+    }
+
+    .atm-threading .atm-intro-text {
+        color: #4b5563;
+        line-height: 1.6;
+        margin-bottom: 3rem;
+        font-size: 1.5rem;
+    }
+
+    /* ── FEATURE CARDS ── */
+    .atm-threading .atm-features-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+        margin-bottom: 3rem;
+    }
+
+    @media(max-width:480px) {
+        .atm-threading .atm-features-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .atm-threading .atm-feature-card {
+        border: 1px solid var(--stone-200);
+        padding: 1.75rem;
+        background: var(--stone-50);
+        border-radius: 2px;
+        transition: transform .3s ease, box-shadow .3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .atm-threading .atm-feature-card::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(90deg, var(--accent), #e8c47a);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform .3s ease;
+    }
+
+    .atm-threading .atm-feature-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, .07);
+    }
+
+    .atm-threading .atm-feature-card:hover::before {
+        transform: scaleX(1);
+    }
+
+    .atm-threading .atm-feature-icon {
+        color: #f59e0b;
+        margin-bottom: 1rem;
+    }
+
+    .atm-threading .atm-feature-card h4 {
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-bottom: .6rem;
+        font-family: Montserrat, sans-serif;
+    }
+
+    .atm-threading .atm-feature-card p {
+        font-size: 1.1rem;
+        color: #6b7280;
+        line-height: 1.7;
+    }
+
+    /* ── CAPABILITIES BOX ── */
+    .atm-threading .atm-capabilities {
+        border: 1px solid var(--stone-200);
+        padding: 1.75rem;
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        margin-bottom: 3rem;
+        border-left: 4px solid var(--accent);
+    }
+
+    @media(min-width:640px) {
+        .atm-threading .atm-capabilities {
+            flex-direction: row;
+            align-items: center;
+        }
+    }
+
+    .atm-threading .atm-capabilities-text h4 {
+        font-size: 1.1rem;
+        font-weight: 700;
+        margin-bottom: .5rem;
+        font-family: Montserrat, sans-serif;
+    }
+
+    .atm-threading .atm-capabilities-text p {
+        font-size: .95rem;
+        color: #4b5563;
+        text-transform: uppercase;
+        letter-spacing: .1em;
+        line-height: 2.1;
+        font-weight: 600;
+    }
+
+    /* ── FEATURED TREATMENTS ── */
+    .atm-threading .atm-featured-section {
+        margin-bottom: 4rem;
+    }
+
+    .atm-threading .atm-featured-section h3 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 2.1rem;
+        margin-bottom: 2rem;
+    }
+
+    .atm-threading .atm-treatment-card {
+        background: #fff;
+        border: 1px solid #f5f5f4;
+        border-radius: 2px;
+        overflow: hidden;
+        transition: box-shadow .3s ease, transform .3s ease;
+    }
+
+    .atm-threading .atm-treatment-card:hover {
+        box-shadow: 0 12px 40px rgba(0, 0, 0, .1);
+        transform: translateY(-3px);
+    }
+
+    .atm-threading .atm-treatment-img {
+        height: 210px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .atm-threading .atm-treatment-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform .7s ease;
+    }
+
+    .atm-threading .atm-treatment-card:hover .atm-treatment-img img {
+        transform: scale(1.06);
+    }
+
+    .atm-threading .atm-popular-badge {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: rgba(255, 255, 255, .94);
+        backdrop-filter: blur(4px);
+        padding: .3rem .85rem;
+        border-radius: 999px;
+        font-size: .75rem;
+        font-weight: 900;
+        color: #92400e;
+        text-transform: uppercase;
+        letter-spacing: .15em;
+        border: 1px solid #fef3c7;
+    }
+
+    .atm-threading .atm-treatment-body {
+        padding: 1.75rem;
+    }
+
+    .atm-threading .atm-treatment-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: .75rem;
+    }
+
+    .atm-threading .atm-treatment-name {
+        font-weight: 700;
+        font-size: 1.35rem;
+        color: #1c1917;
+    }
+
+    .atm-threading .atm-treatment-price {
+        font-weight: 900;
+        font-size: 1.35rem;
+        color: var(--accent);
+    }
+
+    .atm-threading .atm-treatment-desc {
+        font-size: 1rem;
+        color: #78716c;
+        line-height: 1.7;
+        margin-bottom: 1.5rem;
+    }
+
+    /* ── PRICE MENU PLATE ── */
+    .atm-threading .atm-menu-plate {
+        border: 1px solid #e5e5e5;
+        padding: 3rem 2rem;
+        position: relative;
+        background: #fff;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, .03);
+        margin-bottom: 4rem;
+        border-top: 4px solid var(--accent);
+    }
+
+    @media(min-width:640px) {
+        .atm-threading .atm-menu-plate {
+            padding: 4rem 3rem;
+        }
+    }
+
+    .atm-threading .atm-menu-plate::before {
+        content: '';
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+        border: 1px solid #fafafa;
+        pointer-events: none;
+    }
+
+    .atm-threading .atm-menu-header {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    .atm-threading .atm-menu-header h3 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 2.1rem;
+        margin-bottom: .35rem;
+    }
+
+    .atm-threading .atm-menu-header p {
+        font-size: .75rem;
+        text-transform: uppercase;
+        letter-spacing: .3em;
+        color: #9ca3af;
+    }
+
+    .atm-threading .atm-price-section {
+        margin-bottom: 3rem;
+    }
+
+    .atm-threading .atm-price-section:last-child {
+        margin-bottom: 0;
+    }
+
+    .atm-threading .atm-price-section-header {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        border-bottom: 1px solid #f5f5f4;
+        padding-bottom: 1.1rem;
+        margin-bottom: 1.75rem;
+    }
+
+    @media(min-width:480px) {
+        .atm-threading .atm-price-section-header {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+    .atm-threading .atm-price-section-header h4 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.55rem;
+        color: #1c1917;
+    }
+
+    .atm-threading .atm-price-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 1.35rem;
+    }
+
+    .atm-threading .atm-price-label {
+        background: #fff;
+        padding-right: 12px;
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: #333;
+    }
+
+    .atm-threading .atm-price-dots {
+        flex-grow: 1;
+        border-bottom: 1px dotted #ddd;
+        margin-bottom: 4px;
+    }
+
+    .atm-threading .atm-price-value {
+        background: #fff;
+        padding-left: 12px;
+        font-weight: 700;
+        color: var(--accent);
+        font-size: 1.15rem;
+    }
+
+    /* ── SEO CONTENT ── */
+    .atm-threading .atm-seo-block h3 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .atm-threading .atm-seo-block p {
+        font-size: 1.15rem;
+        color: #4b5563;
+        line-height: 1.85;
+        margin-bottom: 1.1rem;
+    }
+
+    .atm-threading .atm-seo-block {
+        margin-bottom: 4rem;
+    }
+
+    /* ── SIDEBAR ── */
+    .atm-threading .atm-sidebar {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    @media(min-width:1024px) {
+        .atm-threading .atm-sidebar {
+            position: sticky;
+            top: 100px;
+        }
+    }
+
+    .atm-threading .atm-sidebar-card {
+        background: var(--stone-50);
+        border: 1px solid var(--stone-200);
+        padding: 2rem;
+        border-radius: 2px;
+    }
+
+    .atm-threading .atm-sidebar-card h3 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+
+    .atm-threading .atm-sidebar-card p {
+        font-size: 1.1rem;
+        color: #4b5563;
+        margin-bottom: 1.5rem;
+        line-height: 1.7;
+    }
+
+    .atm-threading .atm-sidebar-btns {
+        display: flex;
+        flex-direction: column;
+        gap: .75rem;
+    }
+
+    .atm-threading .atm-sidebar-btns .atm-btn {
+        width: 100%;
+    }
+
+    /* ── FAQ ── */
+    .atm-threading .atm-faq-list {
+        border-top: 1px solid #e5e7eb;
+    }
+
+    .atm-threading .atm-faq-item {
+        border-bottom: 1px solid #e5e7eb;
+    }
+
+    .atm-threading .atm-faq-trigger {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.1rem 0;
+        cursor: pointer;
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: #1f2937;
+        background: none;
+        border: none;
+        width: 100%;
+        text-align: left;
+        transition: color .3s;
+        gap: .5rem;
+    }
+
+    .atm-threading .atm-faq-trigger:hover {
+        color: var(--accent);
+    }
+
+    .atm-threading .atm-faq-icon {
+        font-size: 1.4rem;
+        color: #9ca3af;
+        font-weight: 300;
+        flex-shrink: 0;
+        line-height: 1;
+    }
+
+    .atm-threading .atm-faq-body {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height .4s cubic-bezier(.4, 0, .2, 1);
+    }
+
+    .atm-threading .atm-faq-body.open {
+        max-height: 400px;
+    }
+
+    .atm-threading .atm-faq-body-inner {
+        padding-bottom: 1.1rem;
+        font-size: 1.1rem;
+        color: #4b5563;
+        line-height: 1.75;
+    }
+
+    /* ── TRUST BOX ── */
+    .atm-threading .atm-trust-box {
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .atm-threading .atm-trust-box svg {
+        color: #f59e0b;
+        flex-shrink: 0;
+        margin-top: 2px;
+    }
+
+    .atm-threading .atm-trust-box h4 {
+        font-size: 1.1rem;
+        font-weight: 700;
+        margin-bottom: .3rem;
+        font-family: Montserrat, sans-serif;
+    }
+
+    .atm-threading .atm-trust-box p {
+        font-size: 1.1rem;
+        color: #6b7280;
+        line-height: 1.6;
+    }
+
+    /* ── BOTTOM CTA ── */
+    .atm-threading .atm-bottom-cta {
+        background: var(--stone-100);
+        padding: 4.5rem 1.5rem;
+        border-top: 1px solid var(--stone-200);
+    }
+
+    .atm-threading .atm-bottom-cta-inner {
+        max-width: 1280px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    @media(min-width:768px) {
+        .atm-threading .atm-bottom-cta-inner {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+    .atm-threading .atm-bottom-cta-left {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .atm-threading .atm-cta-icon {
+        width: 68px;
+        height: 68px;
+        border-radius: 50%;
+        background: #fff;
+        border: 1px solid var(--stone-200);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+    }
+
+    .atm-threading .atm-cta-icon svg {
+        color: #f59e0b;
+    }
+
+    .atm-threading .atm-bottom-cta h3 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.95rem;
+        margin-bottom: .3rem;
+    }
+
+    .atm-threading .atm-bottom-cta p {
+        font-size: 1.1rem;
+        color: #4b5563;
+    }
+
+    .atm-threading .atm-bottom-cta-btns {
+        display: flex;
+        flex-direction: column;
+        gap: .75rem;
+        flex-shrink: 0;
+        width: 100;
+        align-items: flex-start;
+    }
+
+    @media(min-width:768px) {
+        .atm-threading .atm-bottom-cta-btns {
+            flex-direction: row;
+            width: auto;
+            align-items: center;
+        }
+    }
+
+    /* ── UTILITY ── */
+    .atm-threading svg {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .atm-threading .atm-divider {
+        text-align: center;
+        color: var(--accent);
+        font-size: 1.5rem;
+        letter-spacing: .5rem;
+        margin: 1rem 0;
+        opacity: .5;
+    }
+</style>
+
+
+<div class="atm-threading">
+
+    <!-- ══ HERO ══ -->
+    <div class="atm-hero">
+        <div class="atm-hero-img">
+            <img src="https://athenamortlake.com/wp-content/uploads/2026/05/eyebrow-threading-richmond-athena-mortlake.jpg"
+                alt="Woman receiving professional eyebrow threading services in Richmond at Athena Mortlake salon">
+            <div class="atm-hero-overlay"></div>
+        </div>
+        <div class="atm-hero-content">
+            <div class="atm-max">
+                <div class="atm-hero-inner">
+                    <span class="atm-hero-eyebrow">Athena Mortlake Clinical Spa</span>
+                    <h1>Eyebrow & Facial Threading in Mortlake, Richmond</h1>
+                    <p class="atm-hero-sub">Precise threading treatments for beautifully shaped brows and smooth,
+                        hair-free skin.
+                        A gentle, effective method ideal for sensitive facial areas with clean, defined results.
+                        Enhance your natural features with expert eyebrow and facial threading in Mortlake, Richmond.
+                    </p>
+
+                    <div class="atm-trust-badges">
+                        <div class="atm-badge">
+                            <svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            <span>Organic Cotton Thread</span>
+                        </div>
+                        <div class="atm-badge">
+                            <svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            </svg>
+                            <span>Gentle on Sensitive Skin</span>
+                        </div>
+                        <div class="atm-badge">
+                            <svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            <span>Flawless Geometric Shaping</span>
+                        </div>
+                        <div class="atm-badge">
+                            <svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                            <span>Mortlake, Richmond</span>
+                        </div>
+                    </div>
+
+                    <div class="atm-hero-btns" style="display:flex; gap:10px;">
+                        <a href="https://www.fresha.com/book-now/athena-mortlake-c2gmn07m/all-offer?pId=1090219"
+                            target="_blank" class="atm-btn atm-btn-black"
+                            style="display:flex; align-items:center; justify-content:center; height:52px; padding:0 18px;">
+                            Book Now
+                        </a>
+                        <a href="https://wa.me/447884492575?text=Hi%20I%27m%20interested" target="_blank"
+                            class="atm-btn atm-btn-wa"
+                            style="display:flex; align-items:center; justify-content:center; height:52px; padding:0 18px; gap:8px;">
+                            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24" style="flex-shrink:0;">
+                                <path
+                                    d="M12.031 0C5.385 0 0 5.385 0 12.031c0 2.133.551 4.156 1.558 5.96L.101 24l6.195-1.621c1.729.897 3.666 1.365 5.735 1.365 6.646 0 12.031-5.385 12.031-12.031S18.677 0 12.031 0zM17.65 16.59c-.276.776-1.593 1.488-2.186 1.547-.56.055-1.282.164-3.693-.834-2.9-1.196-4.756-4.148-4.896-4.335-.141-.188-1.168-1.55-1.168-2.955 0-1.405.733-2.096 1.011-2.392.278-.297.604-.372.805-.372.2 0 .401.003.576.012.188.009.438-.073.687.525.263.633.916 2.235 1 2.423.083.188.139.407.014.656-.126.249-.189.407-.375.633-.186.225-.395.49-.56.633-.186.164-.383.344-.173.705.21.362.936 1.549 2.015 2.511 1.396 1.246 2.564 1.636 2.923 1.782.358.146.568.125.782-.125.214-.25 1.012-1.18 1.283-1.587.271-.408.542-.34.869-.216.326.124 2.062.973 2.417 1.15.355.176.592.264.678.414.086.15.086.867-.19 1.642z" />
+                            </svg>
+                            WhatsApp Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ══ REVIEWS ══ -->
+    <div class="atm-reviews-section">
+        <div class="atm-max">
+            <div class="atm-reviews-section">
+                <div class="atm-max">
+
+                    <div class="atm-reviews-header">
+                        <h3>Excellent</h3>
+                        <div class="atm-stars">
+                            <svg fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                        </div>
+                        <p class="atm-review-count">Based on <strong>55 Reviews</strong></p>
+                        <div class="atm-google-logo">
+                            <span style="color:#4285F4;">G</span><span style="color:#EA4335;">o</span><span
+                                style="color:#FBBC05;">o</span><span style="color:#4285F4;">g</span><span
+                                style="color:#34A853;">l</span><span style="color:#EA4335;">e</span>
+                        </div>
+                    </div>
+
+                    <!-- Reviews Grid -->
+                    <div class="atm-grid-reviews">
+
+                        <!-- Review 1 -->
+                        <div class="atm-review-card">
+                            <div class="atm-review-top">
+                                <div class="atm-reviewer">
+                                    <div class="atm-avatar" style="background:#5b4a8a;">A</div>
+                                    <div>
+                                        <div class="atm-reviewer-name">Amelia B.</div>
+                                        <div class="atm-reviewer-meta">6 reviews &bull; 1 photo</div>
+                                    </div>
+                                </div>
+                                <svg width="18" height="18" fill="none" stroke="#9ca3af" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                                </svg>
+                            </div>
+                            <div class="atm-review-row">
+                                <div class="atm-review-stars">
+                                    <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                    <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                    <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                    <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                    <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                </div>
+                                <span class="atm-review-ago">1 week ago</span>
+                                <span class="atm-review-badge">NEW</span>
+                            </div>
+                            <p class="atm-review-text">Quick, precise, and surprisingly painless. They really know how
+                                to shape brows to beautifully frame your face. The best threading in Mortlake by far!
+                            </p>
+                            <div class="atm-review-service"><strong>Services</strong><span>Eyebrow Threading</span>
+                            </div>
+                        </div>
+
+                        <!-- Review 2 -->
+                        <div class="atm-review-card">
+                            <div class="atm-review-top">
+                                <div class="atm-reviewer">
+                                    <div class="atm-avatar" style="background:#2d6a5e;">J</div>
+                                    <div>
+                                        <div class="atm-reviewer-name">Jasmine K.</div>
+                                        <div class="atm-reviewer-meta">9 reviews &bull; 4 photos</div>
+                                    </div>
+                                </div>
+                                <svg width="18" height="18" fill="none" stroke="#9ca3af" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                                </svg>
+                            </div>
+                            <div class="atm-review-row">
+                                <div class="atm-review-stars">
+                                    <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                    <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                    <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                    <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                    <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                </div>
+                                <span class="atm-review-ago">2 weeks ago</span>
+                                <span class="atm-review-badge">NEW</span>
+                            </div>
+                            <p class="atm-review-text">I only trust Athena with my brows. The threading is so much
+                                cleaner and less irritating than waxing, especially for my sensitive skin. Always
+                                perfectly shaped.</p>
+                            <div class="atm-review-service"><strong>Services</strong><span>Eyebrow Threading &amp;
+                                    Tint</span></div>
+                        </div>
+
+                        <!-- Review 3 -->
+                        <div class="atm-review-card">
+                            <div class="atm-review-top">
+                                <div class="atm-reviewer">
+                                    <div class="atm-avatar" style="background:#7a4c2d;">E</div>
+                                    <div>
+                                        <div class="atm-reviewer-name">Eleanor R.</div>
+                                        <div class="atm-reviewer-meta">13 reviews &bull; 7 photos</div>
+                                    </div>
+                                </div>
+                                <svg width="18" height="18" fill="none" stroke="#9ca3af" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                                </svg>
+                            </div>
+                            <div class="atm-review-row">
+                                <div class="atm-review-stars">
+                                    <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                    <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                    <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                    <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                    <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                </div>
+                                <span class="atm-review-ago">1 month ago</span>
+                            </div>
+                            <p class="atm-review-text">Always perfectly shaped every single time. The aloe vera cooling
+                                gel afterwards is a lovely, calming touch. Best brow studio in Richmond without a doubt.
+                            </p>
+                            <div class="atm-review-service"><strong>Services</strong><span>Full Face Threading</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ══ GALLERY ══ -->
+    <div class="atm-gallery-section atm-max">
+        <div class="atm-grid-3">
+            <img src="https://athenamortlake.com/wp-content/uploads/2026/05/Eyebrows-Eyelashes-Threading-Eyebrow-Shape.jpg"
+                alt="Eyebrow Threading Studio Mortlake" class="atm-gallery-img">
+            <img src="https://athenamortlake.com/wp-content/uploads/2026/05/Eyebrows-Eyelashes-resultinspo-shot-—-Henna-Brows-or-Tint-Shape.jpg"
+                alt="Brow Shaping Richmond" class="atm-gallery-img">
+            <img src="https://athenamortlake.com/wp-content/uploads/2026/05/applying-makeup-with-eyelash-curler-2026-01-07-01-43-25-utc-scaled.jpg"
+                alt="Precision Threading London" class="atm-gallery-img" style="object-position:center bottom;">
+        </div>
+    </div>
+
+
+    <!-- ══ MAIN CONTENT + SIDEBAR ══ -->
+    <div class="atm-main-section atm-max">
+        <div class="atm-grid-12">
+
+            <!-- LEFT COLUMN -->
+            <div>
+                <span class="atm-eyebrow">Precise &bull; Natural &bull; Painless</span>
+                <h2 class="atm-section-title">The Ancient Art of Geometric Brow Shaping</h2>
+                <p class="atm-intro-text">Looking for the best eyebrow threading Richmond has to offer? At Athena
+                    Mortlake, we specialise in precision eyebrow and facial threading designed to perfectly shape,
+                    define, and enhance your natural features. Using accurate, gentle techniques, our team delivers
+                    clean brow shaping and smooth facial hair removal with flawless, long-lasting results. Book your
+                    threading appointment today at Athena Mortlake.</p>
+
+                <!-- Feature Cards -->
+                <div class="atm-features-grid">
+                    <div class="atm-feature-card">
+                        <div class="atm-feature-icon">
+                            <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <h4>Organic Cotton Thread</h4>
+                        <p>100% natural method — no chemicals, no wax, no heat. Suitable for all skin types including
+                            those on Retinol or acne medication.</p>
+                    </div>
+                    <div class="atm-feature-card">
+                        <div class="atm-feature-icon">
+                            <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            </svg>
+                        </div>
+                        <h4>Gentle on Sensitive Skin</h4>
+                        <p>Threading catches only the hair, never the skin — ideal for clients who react to waxing or
+                            have thin, delicate facial skin.</p>
+                    </div>
+                    <div class="atm-feature-card">
+                        <div class="atm-feature-icon">
+                            <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <h4>Flawless Geometric Shaping</h4>
+                        <p>Our specialists sculpt crisp, precise lines that define your natural arch and harmonise with
+                            your unique bone structure.</p>
+                    </div>
+                    <div class="atm-feature-card">
+                        <div class="atm-feature-icon">
+                            <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                            </svg>
+                        </div>
+                        <h4>Longer-Lasting Results</h4>
+                        <p>Hair is removed from the root so regrowth is finer and slower, keeping brows defined for up
+                            to four weeks.</p>
+                    </div>
+                </div>
+
+                <!-- Capabilities -->
+                <div class="atm-capabilities">
+                    <svg width="42" height="42" fill="none" stroke="#f59e0b" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
+                            d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <div class="atm-capabilities-text">
+                        <h4>Treatment Capabilities</h4>
+                        <p>Eyebrow Threading &bull; Upper Lip &bull; Chin &bull; Sides of Face &bull; Full Face &bull;
+                            Eyebrow Tinting &bull; Lash Tinting &bull; Henna Brows &bull; LVL Lash Lift</p>
+                    </div>
+                </div>
+
+                <!-- Featured Treatments -->
+                <div class="atm-featured-section">
+                    <h3>Our Signature Experiences</h3>
+                    <div class="atm-grid-2">
+                        <div class="atm-treatment-card">
+                            <div class="atm-treatment-img">
+                                <img src="https://athenamortlake.com/wp-content/uploads/2026/05/Eyebrows-Eyelashes-Henna-Brows.jpg"
+                                    alt="Eyebrow Threading Mortlake">
+                                <span class="atm-popular-badge">Most Popular</span>
+                            </div>
+                            <div class="atm-treatment-body">
+                                <div class="atm-treatment-header">
+                                    <span class="atm-treatment-name">Eyebrows Tint & Shape</span>
+                                    <span class="atm-treatment-price">from £30</span>
+                                </div>
+                                <p class="atm-treatment-desc">Expert eyebrow shaping using organic cotton thread to
+                                    frame your face with perfectly sculpted, defined arches.</p>
+                                <a href="https://www.fresha.com/book-now/athena-mortlake-c2gmn07m/all-offer?pId=1090219"
+                                    target="_blank" class="atm-btn atm-btn-black" style="width:100%;">Book Threading</a>
+                            </div>
+                        </div>
+                        <div class="atm-treatment-card">
+                            <div class="atm-treatment-img">
+                                <img src="https://athenamortlake.com/wp-content/uploads/2026/05/applying-makeup-with-eyelash-curler-2026-01-07-01-43-25-utc-scaled.jpg"
+                                    alt="Mega Volume Lashes Mortlake">
+                                <span class="atm-popular-badge">Best Value</span>
+                            </div>
+                            <div class="atm-treatment-body">
+                                <div class="atm-treatment-header">
+                                    <span class="atm-treatment-name">Mega Volume Lashes</span>
+                                    <span class="atm-treatment-price">£100</span>
+                                </div>
+                                <p class="atm-treatment-desc">Ultra-full, dramatic lash extensions designed to create
+                                    maximum volume, depth, and glamorous definition.</p>
+                                <a href="https://www.fresha.com/book-now/athena-mortlake-c2gmn07m/all-offer?pId=1090219"
+                                    target="_blank" class="atm-btn atm-btn-black" style="width:100%;">Book Full Face</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- PRICE MENU PLATE -->
+                <div class="atm-menu-plate">
+                    <div class="atm-menu-header">
+                        <h3>Threading &amp; Brow Pricing</h3>
+                        <p>Transparent &amp; Honest</p>
+                    </div>
+
+                    <!-- Threading -->
+                    <div class="atm-price-section">
+                        <div class="atm-price-section-header">
+                            <h4>Threading</h4>
+                            <a href="https://www.fresha.com/book-now/athena-mortlake-c2gmn07m/all-offer?pId=1090219"
+                                target="_blank" class="atm-btn atm-btn-black" style="padding:.55rem 1.35rem;">Book
+                                Now</a>
+                        </div>
+                        <div class="atm-price-row"><span class="atm-price-label">Eyebrows</span>
+                            <div class="atm-price-dots"></div><span class="atm-price-value">£15</span>
+                        </div>
+                        <div class="atm-price-row"><span class="atm-price-label">Upper Lip</span>
+                            <div class="atm-price-dots"></div><span class="atm-price-value">£10</span>
+                        </div>
+                        <div class="atm-price-row"><span class="atm-price-label">Chin</span>
+                            <div class="atm-price-dots"></div><span class="atm-price-value">£15</span>
+                        </div>
+                        <div class="atm-price-row"><span class="atm-price-label">Sides</span>
+                            <div class="atm-price-dots"></div><span class="atm-price-value">£25</span>
+                        </div>
+                        <div class="atm-price-row"><span class="atm-price-label">Full Face (no eyebrows)</span>
+                            <div class="atm-price-dots"></div><span class="atm-price-value">£35</span>
+                        </div>
+                    </div>
+
+                    <!-- Eyebrows & Lashes -->
+                    <div class="atm-price-section">
+                        <div class="atm-price-section-header">
+                            <h4>Eyebrows &amp; Eyelashes</h4>
+                            <a href="https://www.fresha.com/book-now/athena-mortlake-c2gmn07m/all-offer?pId=1090219"
+                                target="_blank" class="atm-btn atm-btn-black" style="padding:.55rem 1.35rem;">Book
+                                Now</a>
+                        </div>
+                        <div class="atm-price-row"><span class="atm-price-label">Eyebrow Tinting</span>
+                            <div class="atm-price-dots"></div><span class="atm-price-value">£20</span>
+                        </div>
+                        <div class="atm-price-row"><span class="atm-price-label">Eyebrows Threading</span>
+                            <div class="atm-price-dots"></div><span class="atm-price-value">£15</span>
+                        </div>
+                        <div class="atm-price-row"><span class="atm-price-label">Eyebrows Waxing</span>
+                            <div class="atm-price-dots"></div><span class="atm-price-value">£15</span>
+                        </div>
+                        <div class="atm-price-row"><span class="atm-price-label">Eyebrows Tint &amp; Shape</span>
+                            <div class="atm-price-dots"></div><span class="atm-price-value">£30</span>
+                        </div>
+                        <div class="atm-price-row"><span class="atm-price-label">Eyelash Tinting</span>
+                            <div class="atm-price-dots"></div><span class="atm-price-value">£20</span>
+                        </div>
+                        <div class="atm-price-row"><span class="atm-price-label">Henna Brows</span>
+                            <div class="atm-price-dots"></div><span class="atm-price-value">£55</span>
+                        </div>
+                        <div class="atm-price-row"><span class="atm-price-label">Nouveau LVL Lash Lift</span>
+                            <div class="atm-price-dots"></div><span class="atm-price-value">£65</span>
+                        </div>
+                    </div>
+
+                    <!-- Semi Permanent Individual Lashes -->
+                    <div class="atm-price-section">
+                        <div class="atm-price-section-header">
+                            <h4>Semi Permanent Individual Lashes</h4>
+                            <a href="https://www.fresha.com/book-now/athena-mortlake-c2gmn07m/all-offer?pId=1090219"
+                                target="_blank" class="atm-btn atm-btn-black" style="padding:.55rem 1.35rem;">Book
+                                Now</a>
+                        </div>
+
+                        <div class="atm-price-row">
+                            <span class="atm-price-label">Classic Lashes</span>
+                            <div class="atm-price-dots"></div>
+                            <span class="atm-price-value">£65</span>
+                        </div>
+
+                        <div class="atm-price-row">
+                            <span class="atm-price-label">Light Volume Lashes</span>
+                            <div class="atm-price-dots"></div>
+                            <span class="atm-price-value">£80</span>
+                        </div>
+
+                        <div class="atm-price-row">
+                            <span class="atm-price-label">Mega Volume Lashes</span>
+                            <div class="atm-price-dots"></div>
+                            <span class="atm-price-value">£100</span>
+                        </div>
+
+                        <div class="atm-price-row">
+                            <span class="atm-price-label">Infills for all Lashes</span>
+                            <div class="atm-price-dots"></div>
+                            <span class="atm-price-value">£50</span>
+                        </div>
+
+                        <div class="atm-price-row">
+                            <span class="atm-price-label">Lash Removal</span>
+                            <div class="atm-price-dots"></div>
+                            <span class="atm-price-value">£20</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- SEO Content -->
+                <div class="atm-seo-block">
+                    <h3>Precision Threading & Brow Studio in Mortlake, Richmond</h3>
+                    <p>Experience the most precise and skin-friendly method of facial hair removal at Athena Clinical
+                        Spa in Mortlake, Richmond. Threading is an ancient technique that uses a loop of 100% organic
+                        cotton thread to trap and lift hair directly from the follicle — no heat, no chemicals, no
+                        tearing of the skin. Unlike waxing, threading only catches the hair, making it the safest option
+                        for clients using Retinol, chemical peels, or acne medications.</p>
+                    <p>Our threading specialists are masters of geometric brow architecture, creating incredibly crisp,
+                        clean lines that define your natural arch and lift the entire face. Enjoy slower, finer hair
+                        regrowth and a completely smooth, irritation-free complexion after every visit. Complement your
+                        threading with our eyebrow and lash tinting, Henna Brows, or the Nouveau LVL Lash Lift for a
+                        fully polished, defined look.</p>
+                </div>
+            </div>
+
+            <!-- RIGHT SIDEBAR -->
+            <div class="atm-sidebar">
+
+                <!-- Book Fast -->
+                <div class="atm-sidebar-card">
+                    <h3>Need to book fast?</h3>
+                    <p>Call or message us to arrange your appointment today.</p>
+                    <div class="atm-sidebar-btns">
+                        <a href="https://wa.me/447884492575?text=Hi%20I%27m%20interested" target="_blank"
+                            class="atm-btn atm-btn-wa">
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" style="flex-shrink:0;">
+                                <path
+                                    d="M12.031 0C5.385 0 0 5.385 0 12.031c0 2.133.551 4.156 1.558 5.96L.101 24l6.195-1.621c1.729.897 3.666 1.365 5.735 1.365 6.646 0 12.031-5.385 12.031-12.031S18.677 0 12.031 0zM17.65 16.59c-.276.776-1.593 1.488-2.186 1.547-.56.055-1.282.164-3.693-.834-2.9-1.196-4.756-4.148-4.896-4.335-.141-.188-1.168-1.55-1.168-2.955 0-1.405.733-2.096 1.011-2.392.278-.297.604-.372.805-.372.2 0 .401.003.576.012.188.009.438-.073.687.525.263.633.916 2.235 1 2.423.083.188.139.407.014.656-.126.249-.189.407-.375.633-.186.225-.395.49-.56.633-.186.164-.383.344-.173.705.21.362.936 1.549 2.015 2.511 1.396 1.246 2.564 1.636 2.923 1.782.358.146.568.125.782-.125.214-.25 1.012-1.18 1.283-1.587.271-.408.542-.34.869-.216.326.124 2.062.973 2.417 1.15.355.176.592.264.678.414.086.15.086.867-.19 1.642z" />
+                            </svg>
+                            WhatsApp Us
+                        </a>
+                        <a href="https://www.fresha.com/book-now/athena-mortlake-c2gmn07m/all-offer?pId=1090219"
+                            target="_blank" class="atm-btn atm-btn-outline">
+                            Book now
+                        </a>
+                    </div>
+                </div>
+
+                <!-- FAQs -->
+                <div class="atm-sidebar-card">
+                    <h3>Service FAQs</h3>
+                    <div class="atm-faq-list">
+                        <div class="atm-faq-item">
+                            <button class="atm-faq-trigger" onclick="atmToggleFaqTh(this)">
+                                <span class="atm-treatment-name">Is threading better than waxing?</span>
+                                <span class="atm-faq-icon">+</span>
+                            </button>
+                            <div class="atm-faq-body">
+                                <div class="atm-faq-body-inner">Yes, particularly for sensitive skin. Threading is 100%
+                                    natural, uses no heat or chemicals, and only targets the hair — never the skin. This
+                                    makes it ideal for clients using Retinol, on acne medication, or with thin, reactive
+                                    facial skin.</div>
+                            </div>
+                        </div>
+                        <div class="atm-faq-item">
+                            <button class="atm-faq-trigger" onclick="atmToggleFaqTh(this)">
+                                <span class="atm-treatment-name">How often should I thread my brows?</span>
+                                <span class="atm-faq-icon">+</span>
+                            </button>
+                            <div class="atm-faq-body">
+                                <div class="atm-faq-body-inner">We recommend every 3 to 4 weeks to maintain the
+                                    architectural shape of the brows. Because threading removes hair from the root,
+                                    regrowth is finer and slower than shaving or depilatory creams.</div>
+                            </div>
+                        </div>
+                        <div class="atm-faq-item">
+                            <button class="atm-faq-trigger" onclick="atmToggleFaqTh(this)">
+                                <span class="atm-treatment-name">Does threading hurt?</span>
+                                <span class="atm-faq-icon">+</span>
+                            </button>
+                            <div class="atm-faq-body">
+                                <div class="atm-faq-body-inner">Most clients describe a mild stinging sensation — far
+                                    less intense than waxing. Because no skin is pulled, there is no post-treatment
+                                    redness or peeling. We apply a soothing aloe vera gel afterwards to calm the skin.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="atm-faq-item">
+                            <button class="atm-faq-trigger" onclick="atmToggleFaqTh(this)">
+                                <span class="atm-treatment-name">What is the difference between threading and
+                                    waxing?</span>
+                                <span class="atm-faq-icon">+</span>
+                            </button>
+                            <div class="atm-faq-body">
+                                <div class="atm-faq-body-inner">Waxing adheres to both the hair and the skin, which can
+                                    strip the top layer of the epidermis. Threading uses a fine cotton thread that only
+                                    wraps around the hair shaft and lifts it from the follicle, leaving the surrounding
+                                    skin completely undisturbed. This makes threading the superior choice for precise
+                                    shaping and sensitive skin types.</div>
+                            </div>
+                        </div>
+                        <div class="atm-faq-item">
+                            <button class="atm-faq-trigger" onclick="atmToggleFaqTh(this)">
+                                <span class="atm-treatment-name">Can I thread while on Retinol or Accutane?</span>
+                                <span class="atm-faq-icon">+</span>
+                            </button>
+                            <div class="atm-faq-body">
+                                <div class="atm-faq-body-inner">Threading is generally safe for those using topical
+                                    Retinol, as the thread does not contact or remove skin. However, if you are taking
+                                    oral Accutane (Isotretinoin), we advise waiting until your course is complete before
+                                    any facial hair removal. Please inform us of any skincare medications before your
+                                    appointment.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Trust Boxes -->
+                <div class="atm-sidebar-card">
+                    <div class="atm-trust-box">
+                        <svg width="30" height="30" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                        </svg>
+                        <div>
+                            <h4>Serving Mortlake, Richmond</h4>
+                            <p>Premium clinical beauty sanctuary located in the heart of London.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="atm-sidebar-card">
+                    <div class="atm-trust-box">
+                        <svg width="30" height="30" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <div>
+                            <h4>Expert Threading Specialists</h4>
+                            <p>Skilled in geometric brow shaping. Results you'll see the moment you look in the mirror.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ══ BOTTOM CTA ══ -->
+    <div class="atm-bottom-cta">
+        <div class="atm-bottom-cta-inner">
+            <div class="atm-bottom-cta-left">
+                <div class="atm-cta-icon">
+                    <svg width="34" height="34" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                            d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                    </svg>
+                </div>
+                <div>
+                    <h3>Your Brows Deserve Expert Shaping</h3>
+                    <p>Book your threading appointment in Mortlake, Richmond today.</p>
+                </div>
+            </div>
+            <div class="atm-bottom-cta-btns" style="display:flex; gap:10px;">
+                <a href="https://www.fresha.com/book-now/athena-mortlake-c2gmn07m/all-offer?pId=1090219" target="_blank"
+                    class="atm-btn atm-btn-black"
+                    style="display:flex; align-items:center; justify-content:center; height:50px; padding:0 16px;">
+                    Book Now
+                </a>
+                <a href="https://wa.me/447884492575?text=Hi%20I%27m%20interested" target="_blank"
+                    class="atm-btn atm-btn-wa"
+                    style="display:flex; align-items:center; justify-content:center; height:50px; padding:0 16px; gap:8px;">
+                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" style="flex-shrink:0;">
+                        <path
+                            d="M12.031 0C5.385 0 0 5.385 0 12.031c0 2.133.551 4.156 1.558 5.96L.101 24l6.195-1.621c1.729.897 3.666 1.365 5.735 1.365 6.646 0 12.031-5.385 12.031-12.031S18.677 0 12.031 0zM17.65 16.59c-.276.776-1.593 1.488-2.186 1.547-.56.055-1.282.164-3.693-.834-2.9-1.196-4.756-4.148-4.896-4.335-.141-.188-1.168-1.55-1.168-2.955 0-1.405.733-2.096 1.011-2.392.278-.297.604-.372.805-.372.2 0 .401.003.576.012.188.009.438-.073.687.525.263.633.916 2.235 1 2.423.083.188.139.407.014.656-.126.249-.189.407-.375.633-.186.225-.395.49-.56.633-.186.164-.383.344-.173.705.21.362.936 1.549 2.015 2.511 1.396 1.246 2.564 1.636 2.923 1.782.358.146.568.125.782-.125.214-.25 1.012-1.18 1.283-1.587.271-.408.542-.34.869-.216.326.124 2.062.973 2.417 1.15.355.176.592.264.678.414.086.15.086.867-.19 1.642z" />
+                    </svg>
+                    WhatsApp Us
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div><!-- end .atm-threading -->
+
+
+<script>
+    function atmToggleFaqTh(trigger) {
+        var body = trigger.nextElementSibling;
+        var icon = trigger.querySelector('.atm-faq-icon');
+        var isOpen = body.classList.contains('open');
+
+        var allBodies = document.querySelectorAll('.atm-threading .atm-faq-body');
+        var allIcons = document.querySelectorAll('.atm-threading .atm-faq-icon');
+        allBodies.forEach(function (b) { b.classList.remove('open'); });
+        allIcons.forEach(function (i) { i.innerText = '+'; });
+
+        if (!isOpen) {
+            body.classList.add('open');
+            icon.innerText = '\u2212';
+        }
+    }
+</script>

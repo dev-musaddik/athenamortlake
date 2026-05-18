@@ -1,0 +1,1790 @@
+<!-- ============================================================
+     ATHENA MORTLAKE — HAIR DRESSING PAGE
+     WordPress Custom HTML Block — Paste into a Full-Width page
+     using Elementor / Divi / Gutenberg "Custom HTML" block
+
+     FIND & REPLACE before publishing:
+       https://wa.me/447884492575?text=Hi%20I%27m%20interested  → your booking URL
+       https://wa.me/447884492575?text=Hi%20I%27m%20interested                         → your WhatsApp link
+       https://athenamortlake.com/wp-content/uploads/2026/05/hair.jpg                  → your WP media URL
+       https://athenamortlake.com/wp-content/uploads/2026/05/hair_2.jpg                → your WP media URL
+============================================================ -->
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Great+Vibes&display=swap"
+    rel="stylesheet">
+
+<style>
+    .fl-NODE-69eb8d67a650f .fl-row-content-wrap {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* ── SCOPE ── */
+    .atm-hair * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    .atm-hair a {
+        text-decoration: none;
+    }
+
+    .atm-hair {
+        font-family: Montserrat, sans-serif;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 1.7;
+        color: #000;
+        background: #fff;
+        --accent: #c5a059;
+        --stone-50: #fafaf9;
+        --stone-100: #f5f5f4;
+        --stone-200: #e7e5e4;
+    }
+
+    .atm-hair .serif {
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .atm-hair h1,
+    .atm-hair h2,
+    .atm-hair h3,
+    .atm-hair h4 {
+        line-height: 1.2;
+    }
+
+    /* ── LAYOUT ── */
+    .atm-hair .atm-wrap {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+    }
+
+    .atm-hair .atm-grid-12 {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+
+    @media(min-width:1024px) {
+        .atm-hair .atm-grid-12 {
+            grid-template-columns: 7fr 5fr;
+            gap: 6rem;
+        }
+    }
+
+    .atm-hair .atm-grid-3 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: .5rem;
+    }
+
+    @media(min-width:768px) {
+        .atm-hair .atm-grid-3 {
+            gap: 1.5rem;
+        }
+    }
+
+    .atm-hair .atm-grid-2 {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    @media(min-width:640px) {
+        .atm-hair .atm-grid-2 {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    .atm-hair .atm-grid-reviews {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    @media(min-width:768px) {
+        .atm-hair .atm-grid-reviews {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    /* ── HERO ── */
+    .atm-hair .atm-hero {
+        position: relative;
+        width: 100vw !important;
+        max-width: 100vw !important;
+        min-height: 620px;
+        display: flex;
+        align-items: center;
+        margin-left: calc(50% - 50vw) !important;
+        margin-right: calc(50% - 50vw) !important;
+        overflow: hidden;
+    }
+
+    .atm-hair .atm-hero-img {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        width: 100vw;
+    }
+
+    .atm-hair .atm-hero-img img {
+        width: 100vw;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .atm-hair .atm-hero-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(135deg, rgba(0, 0, 0, .78) 0%, rgba(0, 0, 0, .48) 100%);
+    }
+
+    .atm-hair .atm-hero-content {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        padding: 5rem 1.5rem;
+    }
+
+    .atm-hair .atm-hero-inner {
+        max-width: 100vw;
+        color: #fff;
+    }
+
+    .atm-hair .atm-hero-eyebrow {
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        letter-spacing: .22em;
+        color: #fde68a;
+        display: block;
+        margin-bottom: 1.1rem;
+        font-weight: 600;
+    }
+
+    .atm-hair .atm-hero h1 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: clamp(3.6rem, 9vw, 7rem);
+        margin-bottom: 1.5rem;
+        color: #fff;
+    }
+
+    .atm-hair .atm-hero-sub {
+        font-size: 1.6rem;
+        color: #e5e7eb;
+        font-weight: 300;
+        margin-bottom: 2.5rem;
+        max-width: 600px;
+        line-height: 1.75;
+    }
+
+    .atm-hair .atm-trust-badges {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        margin-bottom: 2.5rem;
+    }
+
+    @media(min-width:768px) {
+        .atm-hair .atm-trust-badges {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+
+    .atm-hair .atm-badge {
+        display: flex;
+        align-items: center;
+        gap: .65rem;
+        color: #fff;
+        font-size: 1.3rem;
+        font-weight: 500;
+    }
+
+    .atm-hair .atm-badge svg {
+        color: #f59e0b;
+        flex-shrink: 0;
+    }
+
+    .atm-hair .atm-hero-btns {
+        display: flex;
+        flex-direction: column;
+        gap: .75rem;
+    }
+
+    @media(min-width:480px) {
+        .atm-hair .atm-hero-btns {
+            flex-direction: row;
+            align-items: center;
+        }
+    }
+
+    /* ── BUTTONS ── */
+    .atm-hair .atm-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: .55rem;
+        padding: 1rem 2rem;
+        font-size: 1.05rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: .2em;
+        transition: all .3s ease;
+        cursor: pointer;
+        border: none;
+        white-space: nowrap;
+        line-height: 1;
+        vertical-align: middle;
+    }
+
+    .atm-hair .atm-btn svg,
+    .atm-hair .atm-btn img {
+        display: inline-block;
+        vertical-align: middle;
+        flex-shrink: 0;
+        position: relative;
+        top: 0;
+    }
+
+    .atm-hair .atm-btn-black {
+        background: #000;
+        color: #fff;
+    }
+
+    .atm-hair .atm-btn-black:hover {
+        background: #1a1a1a;
+        color: #fff;
+        transform: translateY(-1px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, .2);
+    }
+
+    .atm-hair .atm-btn-wa {
+        background: #25D366;
+        color: #fff;
+    }
+
+    .atm-hair .atm-btn-wa:hover {
+        background: #1ebe5d;
+        color: #fff;
+        transform: translateY(-1px);
+        box-shadow: 0 6px 20px rgba(37, 211, 102, .3);
+    }
+
+    .atm-hair .atm-btn-outline {
+        background: #fff;
+        border: 1.5px solid #e5e5e5;
+        color: #000;
+    }
+
+    .atm-hair .atm-btn-outline:hover {
+        background: #fafafa;
+        border-color: #000;
+        transform: translateY(-1px);
+    }
+
+    /* ── REVIEWS ── */
+    .atm-hair .atm-reviews-section {
+        padding: 30px 20px;
+        border-top: 1px solid #ebe7e2;
+        border-bottom: 1px solid #ebe7e2;
+        overflow: hidden;
+    }
+
+    .atm-hair .atm-max {
+        max-width: 1280px;
+        margin: 0 auto;
+    }
+
+    .atm-hair .atm-reviews-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 10px;
+        margin-bottom: 60px;
+    }
+
+    .atm-hair .atm-reviews-header h3 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 48px;
+        line-height: 1;
+        font-weight: 700;
+        color: #1f1f1f;
+        margin: 0;
+        letter-spacing: -1px;
+    }
+
+    .atm-hair .atm-stars {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+        color: #fbbc04;
+    }
+
+    .atm-hair .atm-stars svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .atm-hair .atm-review-count {
+        margin: 0;
+        font-size: 17px;
+        line-height: 1.5;
+        color: #777;
+    }
+
+    .atm-hair .atm-review-count strong {
+        color: #222;
+        font-weight: 700;
+    }
+
+    .atm-hair .atm-google-logo {
+        font-size: 42px;
+        font-weight: 700;
+        letter-spacing: -3px;
+        line-height: 1;
+    }
+
+    .atm-hair .atm-grid-reviews {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 28px;
+    }
+
+    .atm-hair .atm-review-card {
+        background: #fff;
+        border: 1px solid #ece7e2;
+        border-radius: 26px;
+        padding: 28px;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, .04);
+        transition: all .3s ease;
+        position: relative;
+    }
+
+    .atm-hair .atm-review-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 14px 40px rgba(0, 0, 0, .08);
+    }
+
+    .atm-hair .atm-review-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 14px;
+        margin-bottom: 18px;
+    }
+
+    .atm-hair .atm-reviewer {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+    }
+
+    .atm-hair .atm-avatar {
+        width: 54px;
+        height: 54px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        color: #fff;
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    .atm-hair .atm-reviewer-name {
+        font-size: 18px;
+        font-weight: 700;
+        color: #202124;
+        line-height: 1.2;
+    }
+
+    .atm-hair .atm-reviewer-meta {
+        font-size: 14px;
+        color: #7b7b7b;
+        margin-top: 3px;
+    }
+
+    .atm-hair .atm-review-row {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 18px;
+    }
+
+    .atm-hair .atm-review-stars {
+        display: flex;
+        align-items: center;
+        gap: 2px;
+        color: #fbbc04;
+    }
+
+    .atm-hair .atm-review-stars svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    .atm-hair .atm-review-ago {
+        font-size: 14px;
+        font-weight: 500;
+        color: #7a7a7a;
+    }
+
+    .atm-hair .atm-review-badge {
+        background: #f3f4f6;
+        color: #555;
+        border: 1px solid #e5e7eb;
+        font-size: 11px;
+        font-weight: 700;
+        padding: 4px 8px;
+        border-radius: 999px;
+    }
+
+    .atm-hair .atm-review-text {
+        font-size: 16px;
+        line-height: 1.8;
+        color: #333;
+        margin-bottom: 24px;
+        flex-grow: 1;
+    }
+
+    .atm-hair .atm-review-service {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 18px;
+        margin-bottom: 22px;
+        border-top: 1px solid #eee;
+    }
+
+    .atm-hair .atm-review-service strong {
+        font-size: 14px;
+        font-weight: 700;
+        color: #222;
+    }
+
+    .atm-hair .atm-review-service span {
+        font-size: 14px;
+        color: #777;
+    }
+
+    @media(max-width:768px) {
+        .atm-hair .atm-reviews-section {
+            padding: 70px 16px;
+        }
+
+        .atm-hair .atm-reviews-header {
+            margin-bottom: 45px;
+        }
+
+        .atm-hair .atm-reviews-header h3 {
+            font-size: 38px;
+        }
+
+        .atm-hair .atm-google-logo {
+            font-size: 34px;
+        }
+
+        .atm-hair .atm-grid-reviews {
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .atm-hair .atm-review-card {
+            padding: 22px;
+            border-radius: 22px;
+        }
+
+        .atm-hair .atm-review-text {
+            font-size: 15px;
+        }
+    }
+
+    /* ── GALLERY ── */
+    .atm-hair .atm-gallery-section {
+        padding: 3rem 1.5rem 1rem;
+    }
+
+    .atm-hair .atm-gallery-img {
+        width: 100%;
+        object-fit: cover;
+        border-radius: 2px;
+        height: 8rem;
+        transition: opacity .4s, transform .4s;
+    }
+
+    @media(min-width:768px) {
+        .atm-hair .atm-gallery-img {
+            height: 18rem;
+        }
+    }
+
+    .atm-hair .atm-gallery-img:hover {
+        opacity: .88;
+        transform: scale(1.01);
+    }
+
+    /* ── MAIN CONTENT ── */
+    .atm-hair .atm-main-section {
+        padding: 3.5rem 1.5rem;
+    }
+
+    .atm-hair .atm-eyebrow {
+        font-size: .82rem;
+        text-transform: uppercase;
+        letter-spacing: .3em;
+        font-weight: 700;
+        color: #b45309;
+        display: block;
+        margin-bottom: 1rem;
+    }
+
+    .atm-hair .atm-section-title {
+        font-family: 'Montserrat', sans-serif;
+        font-size: clamp(2.1rem, 3vw, 3rem);
+        margin-bottom: 1.5rem;
+    }
+
+    .atm-hair .atm-intro-text {
+        color: #4b5563;
+        line-height: 1.6;
+        margin-bottom: 3rem;
+        font-size: 1.5rem;
+    }
+
+    /* ── FEATURE CARDS ── */
+    .atm-hair .atm-features-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+        margin-bottom: 3rem;
+    }
+
+    @media(max-width:480px) {
+        .atm-hair .atm-features-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .atm-hair .atm-feature-card {
+        border: 1px solid var(--stone-200);
+        padding: 1.75rem;
+        background: var(--stone-50);
+        border-radius: 2px;
+        transition: transform .3s ease, box-shadow .3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .atm-hair .atm-feature-card::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(90deg, var(--accent), #e8c47a);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform .3s ease;
+    }
+
+    .atm-hair .atm-feature-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, .07);
+    }
+
+    .atm-hair .atm-feature-card:hover::before {
+        transform: scaleX(1);
+    }
+
+    .atm-hair .atm-feature-icon {
+        color: #f59e0b;
+        margin-bottom: 1rem;
+    }
+
+    .atm-hair .atm-feature-card h4 {
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-bottom: .6rem;
+        font-family: Montserrat, sans-serif;
+    }
+
+    .atm-hair .atm-feature-card p {
+        font-size: 1.1rem;
+        color: #6b7280;
+        line-height: 1.7;
+    }
+
+    /* ── CAPABILITIES BOX ── */
+    .atm-hair .atm-capabilities {
+        border: 1px solid var(--stone-200);
+        padding: 1.75rem;
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        margin-bottom: 3rem;
+        border-left: 4px solid var(--accent);
+    }
+
+    @media(min-width:640px) {
+        .atm-hair .atm-capabilities {
+            flex-direction: row;
+            align-items: center;
+        }
+    }
+
+    .atm-hair .atm-capabilities-text h4 {
+        font-size: 1.1rem;
+        font-weight: 700;
+        margin-bottom: .5rem;
+        font-family: Montserrat, sans-serif;
+    }
+
+    .atm-hair .atm-capabilities-text p {
+        font-size: .95rem;
+        color: #4b5563;
+        text-transform: uppercase;
+        letter-spacing: .1em;
+        line-height: 2.1;
+        font-weight: 600;
+    }
+
+    /* ── FEATURED TREATMENTS ── */
+    .atm-hair .atm-featured-section {
+        margin-bottom: 4rem;
+    }
+
+    .atm-hair .atm-featured-section h3 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 2.1rem;
+        margin-bottom: 2rem;
+    }
+
+    .atm-hair .atm-treatment-card {
+        background: #fff;
+        border: 1px solid #f5f5f4;
+        border-radius: 2px;
+        overflow: hidden;
+        transition: box-shadow .3s ease, transform .3s ease;
+    }
+
+    .atm-hair .atm-treatment-card:hover {
+        box-shadow: 0 12px 40px rgba(0, 0, 0, .1);
+        transform: translateY(-3px);
+    }
+
+    .atm-hair .atm-treatment-img {
+        height: 210px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .atm-hair .atm-treatment-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform .7s ease;
+    }
+
+    .atm-hair .atm-treatment-card:hover .atm-treatment-img img {
+        transform: scale(1.06);
+    }
+
+    .atm-hair .atm-popular-badge {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: rgba(255, 255, 255, .94);
+        backdrop-filter: blur(4px);
+        padding: .3rem .85rem;
+        border-radius: 999px;
+        font-size: .75rem;
+        font-weight: 900;
+        color: #92400e;
+        text-transform: uppercase;
+        letter-spacing: .15em;
+        border: 1px solid #fef3c7;
+    }
+
+    .atm-hair .atm-treatment-body {
+        padding: 1.75rem;
+    }
+
+    .atm-hair .atm-treatment-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: .75rem;
+    }
+
+    .atm-hair .atm-treatment-name {
+        font-weight: 700;
+        font-size: 1.35rem;
+        color: #1c1917;
+    }
+
+    .atm-hair .atm-treatment-price {
+        font-weight: 900;
+        font-size: 1.35rem;
+        color: var(--accent);
+    }
+
+    .atm-hair .atm-treatment-desc {
+        font-size: 1rem;
+        color: #78716c;
+        line-height: 1.7;
+        margin-bottom: 1.5rem;
+    }
+
+    /* ── PRICE MENU PLATE ── */
+    .atm-hair .atm-menu-plate {
+        border: 1px solid #e5e5e5;
+        padding: 3rem 2rem;
+        position: relative;
+        background: #fff;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, .03);
+        margin-bottom: 4rem;
+        border-top: 4px solid var(--accent);
+    }
+
+    @media(min-width:640px) {
+        .atm-hair .atm-menu-plate {
+            padding: 4rem 3rem;
+        }
+    }
+
+    .atm-hair .atm-menu-plate::before {
+        content: '';
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+        border: 1px solid #fafafa;
+        pointer-events: none;
+    }
+
+    .atm-hair .atm-menu-header {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    .atm-hair .atm-menu-header h3 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 2.1rem;
+        margin-bottom: .35rem;
+    }
+
+    .atm-hair .atm-menu-header p {
+        font-size: .75rem;
+        text-transform: uppercase;
+        letter-spacing: .3em;
+        color: #9ca3af;
+    }
+
+    .atm-hair .atm-price-section {
+        margin-bottom: 3rem;
+    }
+
+    .atm-hair .atm-price-section:last-child {
+        margin-bottom: 0;
+    }
+
+    .atm-hair .atm-price-section-header {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        border-bottom: 1px solid #f5f5f4;
+        padding-bottom: 1.1rem;
+        margin-bottom: 1.75rem;
+    }
+
+    @media(min-width:480px) {
+        .atm-hair .atm-price-section-header {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+    .atm-hair .atm-price-section-header h4 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.55rem;
+        color: #1c1917;
+    }
+
+    .atm-hair .atm-price-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 1.35rem;
+    }
+
+    .atm-hair .atm-price-label {
+        background: #fff;
+        padding-right: 12px;
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: #333;
+    }
+
+    .atm-hair .atm-price-dots {
+        flex-grow: 1;
+        border-bottom: 1px dotted #ddd;
+        margin-bottom: 4px;
+    }
+
+    .atm-hair .atm-price-value {
+        background: #fff;
+        padding-left: 12px;
+        font-weight: 700;
+        color: var(--accent);
+        font-size: 1.15rem;
+    }
+
+    /* ── SEO CONTENT ── */
+    .atm-hair .atm-seo-block h3 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .atm-hair .atm-seo-block p {
+        font-size: 1.15rem;
+        color: #4b5563;
+        line-height: 1.85;
+        margin-bottom: 1.1rem;
+    }
+
+    .atm-hair .atm-seo-block {
+        margin-bottom: 4rem;
+    }
+
+    /* ── SIDEBAR ── */
+    .atm-hair .atm-sidebar {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    @media(min-width:1024px) {
+        .atm-hair .atm-sidebar {
+            position: sticky;
+            top: 100px;
+        }
+    }
+
+    .atm-hair .atm-sidebar-card {
+        background: var(--stone-50);
+        border: 1px solid var(--stone-200);
+        padding: 2rem;
+        border-radius: 2px;
+    }
+
+    .atm-hair .atm-sidebar-card h3 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+
+    .atm-hair .atm-sidebar-card p {
+        font-size: 1.1rem;
+        color: #4b5563;
+        margin-bottom: 1.5rem;
+        line-height: 1.7;
+    }
+
+    .atm-hair .atm-sidebar-btns {
+        display: flex;
+        flex-direction: column;
+        gap: .75rem;
+    }
+
+    .atm-hair .atm-sidebar-btns .atm-btn {
+        width: 100%;
+    }
+
+    /* ── FAQ ── */
+    .atm-hair .atm-faq-list {
+        border-top: 1px solid #e5e7eb;
+    }
+
+    .atm-hair .atm-faq-item {
+        border-bottom: 1px solid #e5e7eb;
+    }
+
+    .atm-hair .atm-faq-trigger {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.1rem 0;
+        cursor: pointer;
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: #1f2937;
+        background: none;
+        border: none;
+        width: 100%;
+        text-align: left;
+        transition: color .3s;
+        gap: .5rem;
+    }
+
+    .atm-hair .atm-faq-trigger:hover {
+        color: var(--accent);
+    }
+
+    .atm-hair .atm-faq-icon {
+        font-size: 1.4rem;
+        color: #9ca3af;
+        font-weight: 300;
+        flex-shrink: 0;
+        line-height: 1;
+    }
+
+    .atm-hair .atm-faq-body {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height .4s cubic-bezier(.4, 0, .2, 1);
+    }
+
+    .atm-hair .atm-faq-body.open {
+        max-height: 400px;
+    }
+
+    .atm-hair .atm-faq-body-inner {
+        padding-bottom: 1.1rem;
+        font-size: 1.1rem;
+        color: #4b5563;
+        line-height: 1.75;
+    }
+
+    /* ── TRUST BOX ── */
+    .atm-hair .atm-trust-box {
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .atm-hair .atm-trust-box svg {
+        color: #f59e0b;
+        flex-shrink: 0;
+        margin-top: 2px;
+    }
+
+    .atm-hair .atm-trust-box h4 {
+        font-size: 1.1rem;
+        font-weight: 700;
+        margin-bottom: .3rem;
+        font-family: Montserrat, sans-serif;
+    }
+
+    .atm-hair .atm-trust-box p {
+        font-size: 1.1rem;
+        color: #6b7280;
+        line-height: 1.6;
+    }
+
+    /* ── BOTTOM CTA ── */
+    .atm-hair .atm-bottom-cta {
+        background: var(--stone-100);
+        padding: 4.5rem 1.5rem;
+        border-top: 1px solid var(--stone-200);
+    }
+
+    .atm-hair .atm-bottom-cta-inner {
+        max-width: 1280px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    @media(min-width:768px) {
+        .atm-hair .atm-bottom-cta-inner {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+    .atm-hair .atm-bottom-cta-left {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .atm-hair .atm-cta-icon {
+        width: 68px;
+        height: 68px;
+        border-radius: 50%;
+        background: #fff;
+        border: 1px solid var(--stone-200);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+    }
+
+    .atm-hair .atm-cta-icon svg {
+        color: #f59e0b;
+    }
+
+    .atm-hair .atm-bottom-cta h3 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.95rem;
+        margin-bottom: .3rem;
+    }
+
+    .atm-hair .atm-bottom-cta p {
+        font-size: 1.1rem;
+        color: #4b5563;
+    }
+
+    .atm-hair .atm-bottom-cta-btns {
+        display: flex;
+        flex-direction: column;
+        gap: .75rem;
+        flex-shrink: 0;
+        width: 100;
+        align-items: flex-start;
+    }
+
+    @media(min-width:768px) {
+        .atm-hair .atm-bottom-cta-btns {
+            flex-direction: row;
+            width: auto;
+            align-items: center;
+        }
+    }
+
+    /* ── UTILITY ── */
+    .atm-hair svg {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .atm-hair .atm-divider {
+        text-align: center;
+        color: var(--accent);
+        font-size: 1.5rem;
+        letter-spacing: .5rem;
+        margin: 1rem 0;
+        opacity: .5;
+    }
+</style>
+
+
+<div class="atm-hair">
+
+    <!-- ══ HERO ══ -->
+    <div class="atm-hero">
+        <div class="atm-hero-img">
+            <img src=" https://athenamortlake.com/wp-content/uploads/2026/05/hair-salon-richmond.jpg"
+                alt="A client receiving a professional, nourishing hair treatment at Athena Mortlake salon in Richmond.">
+            <div class="atm-hero-overlay"></div>
+        </div>
+        <div class="atm-hero-content">
+            <div class="atm-max">
+                <div class="atm-hero-inner">
+                    <span class="atm-hero-eyebrow">Athena Mortlake Clinical Spa</span>
+                    <h1>Luxury Hair Salon in Mortlake, Richmond | Haircuts, Styling & Hair Extensions</h1>
+                    <p class="atm-hero-sub">Expert Hair Atelier &bull; From precision blow-drys and haircuts to stunning
+                        extensions and colour — experience the finest hair artistry in a luxury London sanctuary.</p>
+
+                    <div class="atm-trust-badges">
+                        <div class="atm-badge">
+                            <svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            <span>Master Certified Stylists</span>
+                        </div>
+                        <div class="atm-badge">
+                            <svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            </svg>
+                            <span>Premium Colour Artistry</span>
+                        </div>
+                        <div class="atm-badge">
+                            <svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                            </svg>
+                            <span>Natural Hair Extensions</span>
+                        </div>
+                        <div class="atm-badge">
+                            <svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                            <span>Mortlake, Richmond</span>
+                        </div>
+                    </div>
+
+                    <div class="atm-hero-btns" style="display:flex; gap:10px;">
+                        <a href="tel:+442080019638" target="_blank" class="atm-btn atm-btn-black"
+                            style="display:flex; align-items:center; justify-content:center; height:52px; padding:0 18px;">
+                            Call: +44 20 8001 9638
+                        </a>
+                        <a href="https://wa.me/447884492575?text=Hi%20I%27m%20interested" target="_blank"
+                            class="atm-btn atm-btn-wa"
+                            style="display:flex; align-items:center; justify-content:center; height:52px; padding:0 18px; gap:8px;">
+                            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24" style="flex-shrink:0;">
+                                <path
+                                    d="M12.031 0C5.385 0 0 5.385 0 12.031c0 2.133.551 4.156 1.558 5.96L.101 24l6.195-1.621c1.729.897 3.666 1.365 5.735 1.365 6.646 0 12.031-5.385 12.031-12.031S18.677 0 12.031 0zM17.65 16.59c-.276.776-1.593 1.488-2.186 1.547-.56.055-1.282.164-3.693-.834-2.9-1.196-4.756-4.148-4.896-4.335-.141-.188-1.168-1.55-1.168-2.955 0-1.405.733-2.096 1.011-2.392.278-.297.604-.372.805-.372.2 0 .401.003.576.012.188.009.438-.073.687.525.263.633.916 2.235 1 2.423.083.188.139.407.014.656-.126.249-.189.407-.375.633-.186.225-.395.49-.56.633-.186.164-.383.344-.173.705.21.362.936 1.549 2.015 2.511 1.396 1.246 2.564 1.636 2.923 1.782.358.146.568.125.782-.125.214-.25 1.012-1.18 1.283-1.587.271-.408.542-.34.869-.216.326.124 2.062.973 2.417 1.15.355.176.592.264.678.414.086.15.086.867-.19 1.642z" />
+                            </svg>
+                            WhatsApp Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ══ REVIEWS ══ -->
+    <div class="atm-reviews-section">
+        <div class="atm-max">
+            <div class="atm-reviews-section">
+                <div class="atm-max">
+
+                    <div class="atm-reviews-header">
+                        <h3>Excellent</h3>
+                        <div class="atm-stars">
+                            <svg fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                        </div>
+                        <p class="atm-review-count">Based on <strong>63 Reviews</strong></p>
+                        <div class="atm-google-logo">
+                            <span style="color:#4285F4;">G</span><span style="color:#EA4335;">o</span><span
+                                style="color:#FBBC05;">o</span><span style="color:#4285F4;">g</span><span
+                                style="color:#34A853;">l</span><span style="color:#EA4335;">e</span>
+                        </div>
+                    </div>
+
+                    <!-- Reviews Grid -->
+                    <div class="atm-grid-reviews">
+
+                        <!-- Review 1 -->
+                        <div class="atm-review-card">
+                            <div class="atm-review-top">
+                                <div class="atm-reviewer">
+                                    <div class="atm-avatar" style="background:#5b4a8a;">S</div>
+                                    <div>
+                                        <div class="atm-reviewer-name">Sophie L.</div>
+                                        <div class="atm-reviewer-meta">8 reviews &bull; 3 photos</div>
+                                    </div>
+                                </div>
+                                <svg width="18" height="18" fill="none" stroke="#9ca3af" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                                </svg>
+                            </div>
+                            <div class="atm-review-row">
+                                <div class="atm-review-stars">
+                                    <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                    <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                    <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                    <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                    <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                </div>
+                                <span class="atm-review-ago">2 weeks ago</span>
+                                <span class="atm-review-badge">NEW</span>
+                            </div>
+                            <p class="atm-review-text">My balayage came out absolutely stunning. The stylist took so
+                                much time during the consultation and the colour looks completely natural. Best hair
+                                salon in Richmond by far!</p>
+                            <div class="atm-review-service"><strong>Services</strong><span>Hair Colour / Balayage</span>
+                            </div>
+                        </div>
+
+                        <!-- Review 2 -->
+                        <div class="atm-review-card">
+                            <div class="atm-review-top">
+                                <div class="atm-reviewer">
+                                    <div class="atm-avatar" style="background:#4a6e5e;">E</div>
+                                    <div>
+                                        <div class="atm-reviewer-name">Emma T.</div>
+                                        <div class="atm-reviewer-meta">5 reviews &bull; 1 photo</div>
+                                    </div>
+                                </div>
+                                <svg width="18" height="18" fill="none" stroke="#9ca3af" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                                </svg>
+                            </div>
+                            <div class="atm-review-row">
+                                <div class="atm-review-stars">
+                                    <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                    <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                    <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                    <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                    <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                </div>
+                                <span class="atm-review-ago">1 month ago</span>
+                                <span class="atm-review-badge">NEW</span>
+                            </div>
+                            <p class="atm-review-text">The blow dry and haircut transformed my hair completely. I walked
+                                out feeling like a new woman. The attention to detail is incredible — every layer
+                                perfect.</p>
+                            <div class="atm-review-service"><strong>Services</strong><span>Haircut &amp; Blow Dry</span>
+                            </div>
+                        </div>
+
+                        <!-- Review 3 -->
+                        <div class="atm-review-card">
+                            <div class="atm-review-top">
+                                <div class="atm-reviewer">
+                                    <div class="atm-avatar" style="background:#7a5230;">C</div>
+                                    <div>
+                                        <div class="atm-reviewer-name">Charlotte R.</div>
+                                        <div class="atm-reviewer-meta">11 reviews &bull; 6 photos</div>
+                                    </div>
+                                </div>
+                                <svg width="18" height="18" fill="none" stroke="#9ca3af" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                                </svg>
+                            </div>
+                            <div class="atm-review-row">
+                                <div class="atm-review-stars">
+                                    <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                    <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                    <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                    <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                    <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                </div>
+                                <span class="atm-review-ago">2 months ago</span>
+                            </div>
+                            <p class="atm-review-text">My hair extensions are flawless — completely undetectable and
+                                matched my natural colour perfectly. I've had extensions before but never this quality.
+                                Absolutely worth it.</p>
+                            <div class="atm-review-service"><strong>Services</strong><span>Hair Extensions</span></div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ══ GALLERY ══ -->
+    <div class="atm-gallery-section atm-max">
+        <div class="atm-grid-3">
+            <img src="https://athenamortlake.com/wp-content/uploads/2026/05/hair-salon-close-up-hairdresser-makes-hairdo-for-2026-03-24-07-43-50-utc-scaled.jpg"
+                alt="Hair Salon Mortlake" class="atm-gallery-img">
+            <img src="https://athenamortlake.com/wp-content/uploads/2026/05/hair-stylist-at-work-highlighting-auburn-hair-2026-01-09-00-54-42-utc-scaled.jpg"
+                alt="Luxury Hair Colour Richmond" class="atm-gallery-img">
+            <img src="https://athenamortlake.com/wp-content/uploads/2026/05/hair-extensions-application-process-in-a-salon-2026-03-16-23-58-59-utc-scaled.jpg"
+                alt="Hair Extensions London" class="atm-gallery-img" style="object-position:center bottom;">
+        </div>
+    </div>
+
+
+    <!-- ══ MAIN CONTENT + SIDEBAR ══ -->
+    <div class="atm-main-section atm-max">
+        <div class="atm-grid-12">
+
+            <!-- LEFT COLUMN -->
+            <div>
+                <span class="atm-eyebrow">Cut &bull; Colour &bull; Style &bull; Transform</span>
+                <h2 class="atm-section-title">Your Hair, Elevated by Expert Hands</h2>
+                <p class="atm-intro-text">At Athena Mortlake, our luxury hair salon in Mortlake, Richmond offers a full
+                    range of professional hair services, including precision haircuts, bespoke styling, and high-quality
+                    hair extensions. Our experienced hairdressers create personalised looks designed to suit your face
+                    shape, lifestyle, and preferences. Whether you’re looking for a fresh cut, a complete restyle, or
+                    added length and volume, we deliver smooth, natural-looking results in a relaxed, premium salon
+                    environment.</p>
+
+                <!-- Feature Cards -->
+                <div class="atm-features-grid">
+                    <div class="atm-feature-card">
+                        <div class="atm-feature-icon">
+                            <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <h4>Master Certified Stylists</h4>
+                        <p>Highly trained hair professionals committed to precision, creativity, and delivering results
+                            that exceed your expectations every visit.</p>
+                    </div>
+                    <div class="atm-feature-card">
+                        <div class="atm-feature-icon">
+                            <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+                            </svg>
+                        </div>
+                        <h4>Premium Colour Artistry</h4>
+                        <p>Bespoke balayage, highlights and full colour using L'Oréal Professionnel for vibrant,
+                            long-lasting results that protect hair integrity.</p>
+                    </div>
+                    <div class="atm-feature-card">
+                        <div class="atm-feature-icon">
+                            <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                            </svg>
+                        </div>
+                        <h4>Natural Hair Extensions</h4>
+                        <p>100% Remy human hair extensions expertly applied for undetectable volume and length that
+                            blends seamlessly with your natural hair.</p>
+                    </div>
+                    <div class="atm-feature-card">
+                        <div class="atm-feature-icon">
+                            <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                            </svg>
+                        </div>
+                        <h4>Tailored to Your Hair</h4>
+                        <p>Every appointment begins with a thorough consultation — we assess your hair health, lifestyle
+                            and goals before picking up the scissors.</p>
+                    </div>
+                </div>
+
+                <!-- Capabilities -->
+                <div class="atm-capabilities">
+                    <svg width="42" height="42" fill="none" stroke="#f59e0b" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
+                            d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <div class="atm-capabilities-text">
+                        <h4>Treatment Capabilities</h4>
+                        <p>Blow Dry &bull; Haircut &amp; Styling &bull; Hair Extensions &bull; Hair Colour &bull;
+                            Balayage &bull; Highlights &bull; Root Touch-Up &bull; Keratin Treatment</p>
+                    </div>
+                </div>
+
+                <!-- Featured Treatments -->
+                <div class="atm-featured-section">
+                    <h3>Our Signature Experiences</h3>
+                    <div class="atm-grid-2">
+                        <div class="atm-treatment-card">
+                            <div class="atm-treatment-img">
+                                <img src="https://athenamortlake.com/wp-content/uploads/2026/05/Blow-Dry.jpg"
+                                    alt="Precision Haircut Mortlake">
+                                <span class="atm-popular-badge">Most Popular</span>
+                            </div>
+                            <div class="atm-treatment-body">
+                                <div class="atm-treatment-header">
+                                    <span class="atm-treatment-name">Cut &amp; Blow Dry</span>
+                                    <span class="atm-treatment-price">Contact For Price</span>
+                                </div>
+                                <p class="atm-treatment-desc">A precision cut sculpted to your face shape, finished with
+                                    a professional blow-dry and style that lasts. The ultimate expression of everyday
+                                    luxury.</p>
+                                <a href="https://wa.me/447884492575?text=Hi%20I%27m%20interested" target="_blank"
+                                    class="atm-btn atm-btn-black" style="width:100%;">Book
+                                    Consultation</a>
+                            </div>
+                        </div>
+                        <div class="atm-treatment-card">
+                            <div class="atm-treatment-img">
+                                <img src="https://athenamortlake.com/wp-content/uploads/2026/05/Hair-Cut.jpg"
+                                    alt="Balayage Colour Mortlake">
+                                <span class="atm-popular-badge">Premium</span>
+                            </div>
+                            <div class="atm-treatment-body">
+                                <div class="atm-treatment-header">
+                                    <span class="atm-treatment-name">Colour Artistry</span>
+                                    <span class="atm-treatment-price">Contact For Price</span>
+                                </div>
+                                <p class="atm-treatment-desc">From sun-kissed balayage to bold full-colour
+                                    transformations — our colourists create bespoke, head-turning results while
+                                    protecting your hair's health.</p>
+                                <a href="https://wa.me/447884492575?text=Hi%20I%27m%20interested" target="_blank"
+                                    class="atm-btn atm-btn-black" style="width:100%;">Contact For Price</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- PRICE MENU PLATE -->
+                <div class="atm-menu-plate">
+                    <div class="atm-menu-header">
+                        <h3>Hair Dressing Pricing</h3>
+                        <p>Transparent &amp; Honest</p>
+                    </div>
+
+                    <!-- Blow Dry -->
+                    <div class="atm-price-section">
+                        <div class="atm-price-section-header">
+                            <h4>Blow Dry</h4>
+                            <a href="https://wa.me/447884492575?text=Hi%20I%27m%20interested" target="_blank"
+                                class="atm-btn atm-btn-black" style="padding:.55rem 1.35rem;">Contact For Price</a>
+                        </div>
+                        <div class="atm-price-row"><span class="atm-price-label">Blow Dry (Short)</span>
+                            <div class="atm-price-dots"></div><span class="atm-price-value">Contact For Price</span>
+                        </div>
+                        <div class="atm-price-row"><span class="atm-price-label">Blow Dry (Medium)</span>
+                            <div class="atm-price-dots"></div><span class="atm-price-value">Contact For Price</span>
+                        </div>
+                        <div class="atm-price-row"><span class="atm-price-label">Blow Dry (Long)</span>
+                            <div class="atm-price-dots"></div><span class="atm-price-value">Contact For Price</span>
+                        </div>
+                        <div class="atm-price-row"><span class="atm-price-label">Blow Dry (Long / Thick)</span>
+                            <div class="atm-price-dots"></div><span class="atm-price-value">Contact For Price</span>
+                        </div>
+                        <div class="atm-price-row"><span class="atm-price-label">Blow Dry &amp; Tong Waves</span>
+                            <div class="atm-price-dots"></div><span class="atm-price-value">from Contact For
+                                Price</span>
+                        </div>
+                    </div>
+
+                    <!-- Haircut -->
+                    <div class="atm-price-section">
+                        <div class="atm-price-section-header">
+                            <h4>Haircut</h4>
+                            <a href="https://wa.me/447884492575?text=Hi%20I%27m%20interested" target="_blank"
+                                class="atm-btn atm-btn-black" style="padding:.55rem 1.35rem;">Contact For Price</a>
+                        </div>
+                        <div class="atm-price-row"><span class="atm-price-label">Ladies Cut &amp; Finish (Short)</span>
+                            <div class="atm-price-dots"></div><span class="atm-price-value">Contact For Price</span>
+                        </div>
+                        <div class="atm-price-row"><span class="atm-price-label">Ladies Cut &amp; Finish (Long)</span>
+                            <div class="atm-price-dots"></div><span class="atm-price-value">Contact For Price</span>
+                        </div>
+                        <div class="atm-price-row"><span class="atm-price-label">Restyle / Transformation</span>
+                            <div class="atm-price-dots"></div><span class="atm-price-value">Contact For Price</span>
+                        </div>
+                        <div class="atm-price-row"><span class="atm-price-label">Trim &amp; Blow Dry</span>
+                            <div class="atm-price-dots"></div><span class="atm-price-value">Contact For Price</span>
+                        </div>
+                        <div class="atm-price-row"><span class="atm-price-label">Gents Cut &amp; Style</span>
+                            <div class="atm-price-dots"></div><span class="atm-price-value">Contact For Price</span>
+                        </div>
+                    </div>
+
+                    <!-- Hair Extensions -->
+                    <div class="atm-price-section">
+                        <div class="atm-price-section-header">
+                            <h4>Hair Extensions</h4>
+                            <a href="https://wa.me/447884492575?text=Hi%20I%27m%20interested" target="_blank"
+                                class="atm-btn atm-btn-black" style="padding:.55rem 1.35rem;">Contact For Price</a>
+                        </div>
+                        <div class="atm-price-row"><span class="atm-price-label">Consultation</span>
+                            <div class="atm-price-dots"></div><span class="atm-price-value">Contact For Price</span>
+                        </div>
+                        <div class="atm-price-row"><span class="atm-price-label">Nano Ring Extensions (Full Head)</span>
+                            <div class="atm-price-dots"></div><span class="atm-price-value">Contact For Price</span>
+                        </div>
+                        <div class="atm-price-row"><span class="atm-price-label">Tape-In Extensions (Full Head)</span>
+                            <div class="atm-price-dots"></div><span class="atm-price-value">Contact For Price</span>
+                        </div>
+                        <div class="atm-price-row"><span class="atm-price-label">Clip-In Extensions (Set)</span>
+                            <div class="atm-price-dots"></div><span class="atm-price-value">Contact For Price</span>
+                        </div>
+                        <div class="atm-price-row"><span class="atm-price-label">Extension Maintenance / Removal</span>
+                            <div class="atm-price-dots"></div><span class="atm-price-value">Contact For Price</span>
+                        </div>
+                    </div>
+
+                    <!-- Hair Colour -->
+                    <div class="atm-price-section">
+                        <div class="atm-price-section-header">
+                            <h4>Hair Colour</h4>
+                            <a href="https://wa.me/447884492575?text=Hi%20I%27m%20interested" target="_blank"
+                                class="atm-btn atm-btn-black" style="padding:.55rem 1.35rem;">Contact For Price</a>
+                        </div>
+                        <div class="atm-price-row"><span class="atm-price-label">Root Tint Touch-Up</span>
+                            <div class="atm-price-dots"></div><span class="atm-price-value">Contact For Price</span>
+                        </div>
+                        <div class="atm-price-row"><span class="atm-price-label">Full Head Colour</span>
+                            <div class="atm-price-dots"></div><span class="atm-price-value">Contact For Price</span>
+                        </div>
+                        <div class="atm-price-row"><span class="atm-price-label">Half Head Highlights / Foils</span>
+                            <div class="atm-price-dots"></div><span class="atm-price-value">Contact For Price</span>
+                        </div>
+                        <div class="atm-price-row"><span class="atm-price-label">Full Head Highlights / Foils</span>
+                            <div class="atm-price-dots"></div><span class="atm-price-value">Contact For Price</span>
+                        </div>
+                        <div class="atm-price-row"><span class="atm-price-label">Balayage / Ombré</span>
+                            <div class="atm-price-dots"></div><span class="atm-price-value">from Contact For
+                                Price</span>
+                        </div>
+                        <div class="atm-price-row"><span class="atm-price-label">Toner / Gloss Treatment</span>
+                            <div class="atm-price-dots"></div><span class="atm-price-value">Contact For Price</span>
+                        </div>
+                        <div class="atm-price-row"><span class="atm-price-label">Colour Correction</span>
+                            <div class="atm-price-dots"></div><span class="atm-price-value">Contact For Price</span>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <!-- SEO Content -->
+                <div class="atm-seo-block">
+                    <h3>Luxury Hair Dressing Salon in Mortlake, Richmond</h3>
+                    <p>Discover exceptional hair artistry at Athena Clinical Spa, the premier destination for hair
+                        dressing in Mortlake, Richmond. Our master stylists combine technical precision with an eye for
+                        beauty to deliver transformations that enhance your natural features and reflect your personal
+                        style. Whether you're booking a sleek blow-dry for a special occasion, a structured precision
+                        cut, seamlessly blended hair extensions, or a bespoke colour service, every appointment begins
+                        with a thorough consultation to understand your hair's unique needs.</p>
+                    <p>We use only the finest professional products — including L'Oréal Professionnel colour ranges and
+                        Kérastase treatment systems — to ensure every result is as healthy as it is beautiful. From
+                        root to tip, our stylists prioritise the integrity of your hair alongside the aesthetic
+                        outcome. Experience the difference of truly personalised hair care in our tranquil, luxury
+                        salon in the heart of Richmond.</p>
+                </div>
+            </div>
+
+            <!-- RIGHT SIDEBAR -->
+            <div class="atm-sidebar">
+
+                <!-- Book Fast -->
+                <div class="atm-sidebar-card">
+                    <h3>Need to book fast?</h3>
+                    <p>Call or message us to arrange your hair appointment today.</p>
+                    <div class="atm-sidebar-btns">
+                        <a href="https://wa.me/447884492575?text=Hi%20I%27m%20interested" target="_blank"
+                            class="atm-btn atm-btn-wa">
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" style="flex-shrink:0;">
+                                <path
+                                    d="M12.031 0C5.385 0 0 5.385 0 12.031c0 2.133.551 4.156 1.558 5.96L.101 24l6.195-1.621c1.729.897 3.666 1.365 5.735 1.365 6.646 0 12.031-5.385 12.031-12.031S18.677 0 12.031 0zM17.65 16.59c-.276.776-1.593 1.488-2.186 1.547-.56.055-1.282.164-3.693-.834-2.9-1.196-4.756-4.148-4.896-4.335-.141-.188-1.168-1.55-1.168-2.955 0-1.405.733-2.096 1.011-2.392.278-.297.604-.372.805-.372.2 0 .401.003.576.012.188.009.438-.073.687.525.263.633.916 2.235 1 2.423.083.188.139.407.014.656-.126.249-.189.407-.375.633-.186.225-.395.49-.56.633-.186.164-.383.344-.173.705.21.362.936 1.549 2.015 2.511 1.396 1.246 2.564 1.636 2.923 1.782.358.146.568.125.782-.125.214-.25 1.012-1.18 1.283-1.587.271-.408.542-.34.869-.216.326.124 2.062.973 2.417 1.15.355.176.592.264.678.414.086.15.086.867-.19 1.642z" />
+                            </svg>
+                            WhatsApp Us
+                        </a>
+                        <a href="tel:+442080019638" class="atm-btn atm-btn-outline">
+                            Call: +44 20 8001 9638
+                        </a>
+                    </div>
+                </div>
+
+                <!-- FAQs -->
+                <div class="atm-sidebar-card">
+                    <h3>Service FAQs</h3>
+                    <div class="atm-faq-list">
+                        <div class="atm-faq-item">
+                            <button class="atm-faq-trigger" onclick="atmHairToggleFaq(this)">
+                                <span class="atm-treatment-name">Is a patch test required for colour?</span>
+                                <span class="atm-faq-icon">+</span>
+                            </button>
+                            <div class="atm-faq-body">
+                                <div class="atm-faq-body-inner">Yes. For your safety, a mandatory skin patch test is
+                                    required 48 hours prior to any first-time colour service to rule out allergic
+                                    reactions. This is a non-negotiable safety step that protects your health.</div>
+                            </div>
+                        </div>
+                        <div class="atm-faq-item">
+                            <button class="atm-faq-trigger" onclick="atmHairToggleFaq(this)">
+                                <span class="atm-treatment-name">How long does a Balayage take?</span>
+                                <span class="atm-faq-icon">+</span>
+                            </button>
+                            <div class="atm-faq-body">
+                                <div class="atm-faq-body-inner">A bespoke balayage service typically takes between 3.5
+                                    to 4.5 hours, depending on your hair density, length and desired result. We
+                                    recommend setting aside a full afternoon for this treatment.</div>
+                            </div>
+                        </div>
+                        <div class="atm-faq-item">
+                            <button class="atm-faq-trigger" onclick="atmHairToggleFaq(this)">
+                                <span class="atm-treatment-name">What types of extensions do you offer?</span>
+                                <span class="atm-faq-icon">+</span>
+                            </button>
+                            <div class="atm-faq-body">
+                                <div class="atm-faq-body-inner">We offer nano ring, tape-in, and clip-in extensions
+                                    using 100% Remy human hair. During your free consultation, we will assess your
+                                    natural hair and recommend the most suitable method for your lifestyle and hair
+                                    type.</div>
+                            </div>
+                        </div>
+                        <div class="atm-faq-item">
+                            <button class="atm-faq-trigger" onclick="atmHairToggleFaq(this)">
+                                <span class="atm-treatment-name">How often should I have a cut?</span>
+                                <span class="atm-faq-icon">+</span>
+                            </button>
+                            <div class="atm-faq-body">
+                                <div class="atm-faq-body-inner">For maintaining a healthy shape and removing split ends,
+                                    we recommend a trim every 6–8 weeks. For longer or chemically-treated hair, every
+                                    8–10 weeks helps maintain condition. Our stylists will advise based on your specific
+                                    hair goals.</div>
+                            </div>
+                        </div>
+                        <div class="atm-faq-item">
+                            <button class="atm-faq-trigger" onclick="atmHairToggleFaq(this)">
+                                <span class="atm-treatment-name">Which products do you use?</span>
+                                <span class="atm-faq-icon">+</span>
+                            </button>
+                            <div class="atm-faq-body">
+                                <div class="atm-faq-body-inner">We use L'Oréal Professionnel colour ranges and Kérastase
+                                    treatment systems exclusively. These professional-grade products ensure vivid,
+                                    lasting colour results while actively nourishing and protecting the hair fibre
+                                    throughout each service.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Trust Boxes -->
+                <div class="atm-sidebar-card">
+                    <div class="atm-trust-box">
+                        <svg width="30" height="30" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                        </svg>
+                        <div>
+                            <h4>Serving Mortlake, Richmond</h4>
+                            <p>Premium luxury hair salon in the heart of London.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="atm-sidebar-card">
+                    <div class="atm-trust-box">
+                        <svg width="30" height="30" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <div>
+                            <h4>L'Oréal Professionnel Salon</h4>
+                            <p>Master stylists. Premium products. Results you'll love from the moment you leave.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ══ BOTTOM CTA ══ -->
+    <div class="atm-bottom-cta">
+        <div class="atm-bottom-cta-inner">
+            <div class="atm-bottom-cta-left">
+                <div class="atm-cta-icon">
+                    <svg width="34" height="34" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                            d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                    </svg>
+                </div>
+                <div>
+                    <h3>Your Hair Deserves Expert Care</h3>
+                    <p>Book your hair dressing consultation in Mortlake, Richmond today.</p>
+                </div>
+            </div>
+            <div class="atm-bottom-cta-btns" style="display:flex; gap:10px;">
+                <a href="https://wa.me/447884492575?text=Hi%20I%27m%20interested" target="_blank"
+                    class="atm-btn atm-btn-black"
+                    style="display:flex; align-items:center; justify-content:center; height:50px; padding:0 16px;">
+                    Contact For Price
+                </a>
+                <a href="https://wa.me/447884492575?text=Hi%20I%27m%20interested" target="_blank"
+                    class="atm-btn atm-btn-wa"
+                    style="display:flex; align-items:center; justify-content:center; height:50px; padding:0 16px; gap:8px;">
+                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" style="flex-shrink:0;">
+                        <path
+                            d="M12.031 0C5.385 0 0 5.385 0 12.031c0 2.133.551 4.156 1.558 5.96L.101 24l6.195-1.621c1.729.897 3.666 1.365 5.735 1.365 6.646 0 12.031-5.385 12.031-12.031S18.677 0 12.031 0zM17.65 16.59c-.276.776-1.593 1.488-2.186 1.547-.56.055-1.282.164-3.693-.834-2.9-1.196-4.756-4.148-4.896-4.335-.141-.188-1.168-1.55-1.168-2.955 0-1.405.733-2.096 1.011-2.392.278-.297.604-.372.805-.372.2 0 .401.003.576.012.188.009.438-.073.687.525.263.633.916 2.235 1 2.423.083.188.139.407.014.656-.126.249-.189.407-.375.633-.186.225-.395.49-.56.633-.186.164-.383.344-.173.705.21.362.936 1.549 2.015 2.511 1.396 1.246 2.564 1.636 2.923 1.782.358.146.568.125.782-.125.214-.25 1.012-1.18 1.283-1.587.271-.408.542-.34.869-.216.326.124 2.062.973 2.417 1.15.355.176.592.264.678.414.086.15.086.867-.19 1.642z" />
+                    </svg>
+                    WhatsApp Us
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div><!-- end .atm-hair -->
+
+
+<script>
+    function atmHairToggleFaq(trigger) {
+        var body = trigger.nextElementSibling;
+        var icon = trigger.querySelector('.atm-faq-icon');
+        var isOpen = body.classList.contains('open');
+
+        var allBodies = document.querySelectorAll('.atm-hair .atm-faq-body');
+        var allIcons = document.querySelectorAll('.atm-hair .atm-faq-icon');
+        allBodies.forEach(function (b) { b.classList.remove('open'); });
+        allIcons.forEach(function (i) { i.innerText = '+'; });
+
+        if (!isOpen) {
+            body.classList.add('open');
+            icon.innerText = '\u2212';
+        }
+    }
+</script>

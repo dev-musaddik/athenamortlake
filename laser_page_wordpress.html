@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Laser Hair Removal | Athena Mortlake Clinical Spa</title>
     
-    <!-- Fonts & Scripts -->
+    <!-- Fonts & Utility Scripts -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     
@@ -25,12 +25,11 @@
             line-height: 26.1px;
             background-color: #ffffff;
             color: rgb(0, 0, 0);
-            scroll-behavior: smooth;
+            margin: 0;
+            padding: 0;
         }
 
-        h1, h2, h3, h4, h5, h6, .serif {
-            font-family: 'Montserrat', Verdana, Arial, sans-serif;
-        }
+        .serif { font-family: 'Montserrat', serif; }
 
         /* Custom Athena Components */
         .menu-plate {
@@ -101,6 +100,17 @@
             max-height: 500px;
             padding-bottom: 1rem;
         }
+
+        .btn-action {
+            display: inline-block;
+            padding: 1.25rem 2rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            font-size: 0.75rem;
+            font-weight: 800;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -121,7 +131,7 @@
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-10">
                     <div class="flex items-center gap-3">
                         <svg class="w-6 h-6 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                        <span class="text-xs md:text-sm font-medium">Painless Diode Laser</span>
+                        <span class="text-xs md:text-sm font-medium">Painless Diode</span>
                     </div>
                     <div class="flex items-center gap-3">
                         <svg class="w-6 h-6 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
@@ -130,6 +140,10 @@
                     <div class="flex items-center gap-3">
                         <svg class="w-6 h-6 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                         <span class="text-xs md:text-sm font-medium">Permanent Results</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <svg class="w-6 h-6 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path></svg>
+                        <span class="text-xs md:text-sm font-medium">Mortlake, Richmond</span>
                     </div>
                 </div>
 
@@ -148,127 +162,182 @@
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center flex flex-col md:flex-row items-center justify-center gap-4 mb-10">
                 <h3 class="serif text-2xl">Trusted by Local Clients</h3>
+                <div class="flex items-center text-amber-500 gap-1">
+                    <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                </div>
                 <span class="text-sm font-bold text-gray-400 uppercase tracking-widest">Rated 5.0</span>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Review 1 -->
-                <div class="bg-white p-5 border border-stone-200 rounded shadow-sm text-left font-sans flex flex-col">
+                <!-- Google Review 1 -->
+                <div class="bg-white p-5 border border-stone-200 rounded shadow-sm text-left flex flex-col">
                     <div class="flex justify-between items-start mb-3">
                         <div class="flex items-center gap-3">
                             <div class="w-10 h-10 rounded-full bg-[#6e4c41] flex items-center justify-center text-white text-lg font-medium">J</div>
                             <div>
                                 <h4 class="font-bold text-[#1a73e8] text-[15px] leading-tight">Jessica W.</h4>
-                                <div class="text-[12px] text-gray-500 mt-0.5">Local Guide</div>
+                                <div class="text-[12px] text-gray-500 mt-0.5">Local Guide • 4 reviews</div>
                             </div>
                         </div>
+                    </div>
+                    <div class="flex items-center gap-2 mb-3">
+                        <div class="flex text-[#fbbc04]">
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        </div>
+                        <span class="text-[13px] text-gray-500">3 weeks ago</span>
                     </div>
                     <p class="text-[14px] text-[#202124] leading-relaxed mb-4 flex-grow">Virtually painless laser hair removal. I saw results after just two sessions. The clinic is spotless.</p>
                 </div>
-                <!-- Review 2 -->
-                <div class="bg-white p-5 border border-stone-200 rounded shadow-sm text-left font-sans flex flex-col">
-                    <div class="flex justify-between items-start mb-3">
-                        <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 rounded-full bg-[#6e4c41] flex items-center justify-center text-white text-lg font-medium">A</div>
-                            <div>
-                                <h4 class="font-bold text-[#1a73e8] text-[15px] leading-tight">Amy B.</h4>
-                                <div class="text-[12px] text-gray-500 mt-0.5">Local Guide</div>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="text-[14px] text-[#202124] leading-relaxed mb-4 flex-grow">Professional and thorough. The staff made me feel incredibly comfortable throughout the entire treatment.</p>
-                </div>
-                <!-- Review 3 -->
-                <div class="bg-white p-5 border border-stone-200 rounded shadow-sm text-left font-sans flex flex-col">
-                    <div class="flex justify-between items-start mb-3">
-                        <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 rounded-full bg-[#6e4c41] flex items-center justify-center text-white text-lg font-medium">M</div>
-                            <div>
-                                <h4 class="font-bold text-[#1a73e8] text-[15px] leading-tight">Megan L.</h4>
-                                <div class="text-[12px] text-gray-500 mt-0.5">Local Guide</div>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="text-[14px] text-[#202124] leading-relaxed mb-4 flex-grow">So glad I chose Athena Mortlake. Fast, efficient, and my skin has never felt smoother. Worth every penny!</p>
-                </div>
+                <!-- Add more reviews as in the main site -->
             </div>
         </div>
     </div>
 
-    <!-- MAIN CONTENT -->
+    <!-- GALLERY GRID -->
+    <div class="grid grid-cols-3 gap-2 md:gap-6 max-w-7xl mx-auto px-6 py-16">
+        <img src="https://dev-musaddik.github.io/athenamortlake/images/laser.png" class="w-full h-64 object-cover rounded-sm">
+        <img src="https://dev-musaddik.github.io/athenamortlake/images/laser_2.png" class="w-full h-64 object-cover rounded-sm">
+        <img src="https://dev-musaddik.github.io/athenamortlake/images/laser.png" class="w-full h-64 object-cover rounded-sm">
+    </div>
+
+    <!-- MAIN CONTENT SPLIT -->
     <div class="max-w-7xl mx-auto px-6 py-12">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
             
             <!-- Left Column -->
             <div class="lg:col-span-7">
+                <span class="text-[10px] uppercase tracking-[0.3em] font-bold text-amber-600 block mb-4">Relax • Recover • Restore</span>
                 <h2 class="text-3xl md:text-4xl serif leading-tight mb-6">Silky, Smooth Skin with Advanced Laser Therapy</h2>
                 <p class="text-gray-600 leading-relaxed mb-12">Athena utilizes leading Diode Laser technology. Our systems feature advanced sapphire cooling tips to ensure a painless experience while targeting follicles with clinical precision across all Fitzpatrick skin types.</p>
 
-                <!-- Signature Experiences -->
+                <!-- Feature Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12">
+                    <div class="border border-stone-200 p-6 bg-stone-50 rounded-sm text-sm">
+                        <h4 class="font-bold mb-2">Painless Diode</h4>
+                        <p class="text-gray-500">Qualified, experienced and committed to safe, effective treatments.</p>
+                    </div>
+                    <div class="border border-stone-200 p-6 bg-stone-50 rounded-sm text-sm">
+                        <h4 class="font-bold mb-2">Safe for All Skin</h4>
+                        <p class="text-gray-500">Advanced techniques that accelerate results for every skin type.</p>
+                    </div>
+                </div>
+
+                <!-- Featured Experiences (Categories) -->
                 <div class="mb-16">
                     <h3 class="serif text-2xl mb-8">Our Signature Experiences</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div class="group bg-white border border-stone-100 rounded-sm overflow-hidden hover:shadow-md transition-shadow">
+                        <div class="group bg-white border border-stone-100 rounded-sm overflow-hidden shadow-sm">
                             <div class="h-48 overflow-hidden relative">
                                 <img src="https://dev-musaddik.github.io/athenamortlake/images/laser.png" class="w-full h-full object-cover">
-                                <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-[10px] font-black text-amber-700 uppercase tracking-widest border border-amber-100">Most Popular</div>
+                                <div class="absolute top-4 right-4 bg-white/90 px-3 py-1 rounded-full text-[10px] font-black text-amber-700">Most Popular</div>
                             </div>
                             <div class="p-6">
                                 <h4 class="font-bold text-lg text-stone-800">Face Laser Treatments</h4>
-                                <p class="text-xs text-stone-500 leading-relaxed mb-6">Medical-grade laser for smooth, clear and youthful facial skin. Targeted and precise.</p>
-                                <button class="w-full bg-stone-900 text-white py-3 text-[10px] font-bold uppercase tracking-widest hover:bg-amber-600 transition-colors" onclick="window.open('https://fresha.com')">Book Now</button>
+                                <p class="text-xs text-stone-500 leading-relaxed mb-6">Medical-grade laser for smooth, clear and youthful facial skin.</p>
+                                <button class="w-full bg-stone-900 text-white py-3 text-[10px] font-bold uppercase tracking-widest" onclick="window.open('https://fresha.com')">Book Now</button>
                             </div>
                         </div>
-                        <div class="group bg-white border border-stone-100 rounded-sm overflow-hidden hover:shadow-md transition-shadow">
+                        <div class="group bg-white border border-stone-100 rounded-sm overflow-hidden shadow-sm">
                             <div class="h-48 overflow-hidden relative">
                                 <img src="https://dev-musaddik.github.io/athenamortlake/images/laser_2.png" class="w-full h-full object-cover">
-                                <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-[10px] font-black text-amber-700 uppercase tracking-widest border border-amber-100">Most Popular</div>
+                                <div class="absolute top-4 right-4 bg-white/90 px-3 py-1 rounded-full text-[10px] font-black text-amber-700">Most Popular</div>
                             </div>
                             <div class="p-6">
                                 <h4 class="font-bold text-lg text-stone-800">Body Laser Treatments</h4>
-                                <p class="text-xs text-stone-500 leading-relaxed mb-6">Complete hair removal for total confidence and permanent silkiness across all areas.</p>
-                                <button class="w-full bg-stone-900 text-white py-3 text-[10px] font-bold uppercase tracking-widest hover:bg-amber-600 transition-colors" onclick="window.open('https://fresha.com')">Book Now</button>
+                                <p class="text-xs text-stone-500 leading-relaxed mb-6">Complete hair removal for total confidence across all areas.</p>
+                                <button class="w-full bg-stone-900 text-white py-3 text-[10px] font-bold uppercase tracking-widest" onclick="window.open('https://fresha.com')">Book Now</button>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Pricing Menu Plate -->
+                <!-- FULL PRICING MENU -->
                 <div class="menu-plate mb-16">
                     <div class="text-center mb-10">
                         <h3 class="serif text-2xl mb-1">Clinical Pricing</h3>
                         <p class="text-[9px] uppercase tracking-widest text-gray-400">Transparent & Honest</p>
                     </div>
-                    
+
+                    <!-- Category: Face -->
                     <div class="mb-12">
-                        <div class="flex justify-between items-center border-b pb-4 mb-6">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b pb-4 mb-6">
                             <h4 class="text-xl serif text-stone-800">Face Treatments</h4>
                             <button class="bg-black text-white px-6 py-2 text-[10px] font-bold uppercase tracking-widest" onclick="window.open('https://fresha.com')">Book Now</button>
                         </div>
                         <div class="price-row"><span class="label">Upper Lip</span><div class="dots"></div><span class="value">£15</span></div>
                         <div class="price-row"><span class="label">Chin</span><div class="dots"></div><span class="value">£18</span></div>
                         <div class="price-row"><span class="label">Full Face</span><div class="dots"></div><span class="value">£45</span></div>
+                        <div class="price-row"><span class="label">Neck</span><div class="dots"></div><span class="value">£25</span></div>
                     </div>
-                    <!-- Add more sections as needed -->
+
+                    <!-- Category: Upper Body -->
+                    <div class="mb-12">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b pb-4 mb-6">
+                            <h4 class="text-xl serif text-stone-800">Upper Body</h4>
+                            <button class="bg-black text-white px-6 py-2 text-[10px] font-bold uppercase tracking-widest" onclick="window.open('https://fresha.com')">Book Now</button>
+                        </div>
+                        <div class="price-row"><span class="label">Under Arms</span><div class="dots"></div><span class="value">£10</span></div>
+                        <div class="price-row"><span class="label">Full Arms</span><div class="dots"></div><span class="value">£80</span></div>
+                        <div class="price-row"><span class="label">Full Back</span><div class="dots"></div><span class="value">£100</span></div>
+                        <div class="price-row"><span class="label">Chest & Abdomen</span><div class="dots"></div><span class="value">£75</span></div>
+                    </div>
+
+                    <!-- Category: Lower Body -->
+                    <div class="mb-12">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b pb-4 mb-6">
+                            <h4 class="text-xl serif text-stone-800">Lower Body</h4>
+                            <button class="bg-black text-white px-6 py-2 text-[10px] font-bold uppercase tracking-widest" onclick="window.open('https://fresha.com')">Book Now</button>
+                        </div>
+                        <div class="price-row"><span class="label">Full Leg</span><div class="dots"></div><span class="value">£80</span></div>
+                        <div class="price-row"><span class="label">Brazilian/Hollywood</span><div class="dots"></div><span class="value">£30</span></div>
+                        <div class="price-row"><span class="label">Bikini Line</span><div class="dots"></div><span class="value">£25</span></div>
+                    </div>
+
+                    <!-- Category: Waxing -->
+                    <div class="mb-12">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b pb-4 mb-6">
+                            <h4 class="text-xl serif text-stone-800">Lower Body Waxing</h4>
+                            <button class="bg-black text-white px-6 py-2 text-[10px] font-bold uppercase tracking-widest" onclick="window.open('https://fresha.com')">Book Now</button>
+                        </div>
+                        <div class="price-row"><span class="label">Hollywood (Hot Wax)</span><div class="dots"></div><span class="value">£40</span></div>
+                        <div class="price-row"><span class="label">Full Body (Hot Wax)</span><div class="dots"></div><span class="value">£120</span></div>
+                    </div>
                 </div>
             </div>
 
             <!-- Right Column Sidebar -->
-            <div class="lg:col-span-5 space-y-8">
+            <div class="lg:col-span-5 space-y-8 lg:self-start sticky top-10">
                 <div class="bg-stone-50 border border-stone-200 p-8 rounded-sm">
                     <h3 class="serif text-2xl mb-4">Need to book fast?</h3>
-                    <button class="w-full mb-3 bg-[#25D366] text-white px-6 py-4 text-xs font-bold uppercase tracking-widest" onclick="window.open('https://wa.me/440000000000')">Call To Book</button>
+                    <p class="text-sm text-gray-600 mb-6">Call or message us to arrange your appointment today.</p>
+                    <button class="w-full mb-3 bg-[#25D366] text-white px-6 py-4 text-xs font-bold uppercase tracking-widest flex items-center justify-center gap-2" onclick="window.open('https://wa.me/440000000000')">WhatsApp Chat</button>
+                    <button class="w-full bg-black text-white px-6 py-4 text-xs font-bold uppercase tracking-widest" onclick="window.open('https://fresha.com')">Online Booking</button>
                 </div>
 
+                <!-- FAQs -->
                 <div class="bg-stone-50 border border-stone-200 p-8 rounded-sm">
                     <h3 class="serif text-2xl mb-6">Service FAQs</h3>
-                    <div class="faq-item">
+                    <div class="faq-item border-b border-gray-200">
                         <div class="faq-trigger" onclick="toggleFaq(this)"><span>How many sessions are needed?</span><span>+</span></div>
-                        <div class="faq-content"><p>We typically recommend a clinical course of 6 to 8 sessions spaced 4 to 6 weeks apart.</p></div>
+                        <div class="faq-content"><p>We typically recommend 6 to 8 sessions for permanent results.</p></div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-trigger" onclick="toggleFaq(this)"><span>Does it hurt?</span><span>+</span></div>
+                        <div class="faq-content"><p>Integrated cooling technology makes the treatment very comfortable.</p></div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+
+    <!-- BOTTOM CTA -->
+    <div class="bg-stone-100 py-16 text-center">
+        <h3 class="serif text-2xl mb-6">Your Body Deserves Expert Care</h3>
+        <button class="bg-black text-white px-12 py-4 text-sm font-bold uppercase tracking-widest" onclick="window.open('https://fresha.com')">Book Now</button>
     </div>
 
     <script>

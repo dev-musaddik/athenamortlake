@@ -1,0 +1,1913 @@
+<!-- ============================================================
+     ATHENA MORTLAKE — SKIN CLINIC / FACIALS PAGE
+     Restyled to match Laser page typography & design system
+     (Montserrat font family, matching font sizes, button styles)
+============================================================ -->
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Great+Vibes&display=swap"
+    rel="stylesheet">
+
+<style>
+    .fl-node-69eb8d67a650f .fl-row-content-wrap {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* ── RESET & SCOPE ── */
+    .atm-facials *,
+    .atm-facials *::before,
+    .atm-facials *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    .atm-facials a {
+        text-decoration: none;
+    }
+
+    .atm-facials img {
+        display: block;
+        max-width: 100%;
+    }
+
+    .atm-facials button {
+        font-family: inherit;
+        cursor: pointer;
+    }
+
+    /* ── DESIGN TOKENS (matched to laser page) ── */
+    .atm-facials {
+        --accent: #c5a059;
+        --gold: #c5a059;
+        --gold-light: #e8c47a;
+        --gold-pale: #fdf8ee;
+        --stone-50: #fafaf9;
+        --stone-100: #f5f5f4;
+        --stone-200: #e7e5e4;
+        --stone-400: #a8a29e;
+        --stone-600: #57534e;
+        --stone-800: #292524;
+        --black: #000;
+        --white: #ffffff;
+        --green-wa: #25D366;
+        --green-wa-d: #1ebe5d;
+
+        /* Typography matched to laser page */
+        font-family: Montserrat, sans-serif;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 1.7;
+        color: #000;
+        background: #fff;
+    }
+
+    /* ── TYPOGRAPHY ── */
+    .atm-facials h1,
+    .atm-facials h2,
+    .atm-facials h3,
+    .atm-facials h4 {
+        font-family: Montserrat, sans-serif;
+        line-height: 1.2;
+    }
+
+    /* ── LAYOUT ── */
+    .atm-facials .f-wrap {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+    }
+
+    .atm-facials .f-section {
+        padding: 5rem 1.5rem;
+    }
+
+    .atm-facials .f-section-sm {
+        padding: 3rem 1.5rem;
+    }
+
+    .atm-facials .f-grid-2 {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    @media(min-width:640px) {
+        .atm-facials .f-grid-2 {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    .atm-facials .f-grid-3 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.5rem;
+    }
+
+    @media(min-width:768px) {
+        .atm-facials .f-grid-3 {
+            gap: 1.5rem;
+        }
+    }
+
+    .atm-facials .f-grid-main {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+
+    @media(min-width:1024px) {
+        .atm-facials .f-grid-main {
+            grid-template-columns: 7fr 5fr;
+            gap: 6rem;
+        }
+    }
+
+    .atm-facials .f-grid-reviews {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    @media(min-width:768px) {
+        .atm-facials .f-grid-reviews {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    .atm-facials .f-grid-4 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+
+    @media(max-width:480px) {
+        .atm-facials .f-grid-4 {
+            grid-template-columns: 1fr;
+        }
+    }
+
+
+    /* ═══════════════════════════════════════════
+   BUTTONS — matched exactly to laser page
+═══════════════════════════════════════════ */
+    .atm-facials .f-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.55rem;
+        padding: 1rem 2rem;
+        font-family: Montserrat, sans-serif;
+        font-size: 1.05rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        white-space: nowrap;
+        border: none;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        line-height: 1;
+        vertical-align: middle;
+    }
+
+    .atm-facials .f-btn svg,
+    .atm-facials .f-btn img {
+        display: inline-block;
+        vertical-align: middle;
+        flex-shrink: 0;
+        position: relative;
+        top: 0;
+    }
+
+    .atm-facials .f-btn:hover {
+        transform: translateY(-1px);
+    }
+
+    .atm-facials .f-btn-black {
+        background: #000;
+        color: #fff;
+    }
+
+    .atm-facials .f-btn-black:hover {
+        background: #1a1a1a;
+        color: #fff;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .atm-facials .f-btn-wa {
+        background: #25D366;
+        color: #fff;
+    }
+
+    .atm-facials .f-btn-wa:hover {
+        background: #1ebe5d;
+        color: #fff;
+        box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3);
+    }
+
+    .atm-facials .f-btn-outline {
+        background: #fff;
+        border: 1.5px solid #e5e5e5;
+        color: #000;
+    }
+
+    .atm-facials .f-btn-outline:hover {
+        background: #fafafa;
+        border-color: #000;
+    }
+
+    .atm-facials .f-btn-amber {
+        background: #92400e;
+        color: #fff;
+    }
+
+    .atm-facials .f-btn-amber:hover {
+        background: var(--accent);
+        color: #fff;
+    }
+
+    /* full-width variant */
+    .atm-facials .f-btn-full {
+        width: 100%;
+    }
+
+    /* smaller price-table button — matched to laser atm-btn-black with reduced padding */
+    .atm-facials .f-btn-sm {
+        padding: 0.55rem 1.35rem;
+        font-size: 1.05rem;
+        font-weight: 800;
+    }
+
+
+    /* ═══════════════════════════════════════════
+   HERO — matched to laser page hero
+═══════════════════════════════════════════ */
+    .atm-facials .f-hero {
+        position: relative;
+        width: 100vw !important;
+        max-width: 100vw !important;
+        min-height: 620px;
+        display: flex;
+        align-items: center;
+        margin-left: calc(50% - 50vw) !important;
+        margin-right: calc(50% - 50vw) !important;
+        overflow: hidden;
+    }
+
+    .atm-facials .f-hero-bg {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        width: 100vw;
+    }
+
+    .atm-facials .f-hero-bg img {
+        width: 100vw;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .atm-facials .f-hero-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(135deg, rgba(0, 0, 0, 0.78) 0%, rgba(0, 0, 0, 0.48) 100%);
+    }
+
+    .atm-facials .f-hero-content {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        padding: 5rem 1.5rem;
+    }
+
+    .atm-facials .f-hero-inner {
+        max-width: 100vw;
+        color: #fff;
+    }
+
+    /* Hero eyebrow — matched to laser */
+    .atm-facials .f-hero-eyebrow {
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        letter-spacing: 0.22em;
+        color: #fde68a;
+        display: block;
+        margin-bottom: 1.1rem;
+        font-weight: 600;
+    }
+
+    /* Hero H1 — matched to laser */
+    .atm-facials .f-hero h1 {
+        font-family: Montserrat, sans-serif;
+        font-size: clamp(3.6rem, 9vw, 7rem);
+        margin-bottom: 1.5rem;
+        color: #fff;
+        font-weight: 400;
+    }
+
+    /* Hero subtext — matched to laser */
+    .atm-facials .f-hero-sub {
+        font-size: 1.6rem;
+        color: #e5e7eb;
+        font-weight: 300;
+        margin-bottom: 2.5rem;
+        max-width: 600px;
+        line-height: 1.75;
+    }
+
+    /* Trust badges — matched to laser */
+    .atm-facials .f-trust-badges {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        margin-bottom: 2.5rem;
+    }
+
+    @media(min-width:768px) {
+        .atm-facials .f-trust-badges {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+
+    .atm-facials .f-badge {
+        display: flex;
+        align-items: center;
+        gap: 0.65rem;
+        color: #fff;
+        font-size: 1.3rem;
+        font-weight: 500;
+    }
+
+    .atm-facials .f-badge svg {
+        color: #f59e0b;
+        flex-shrink: 0;
+    }
+
+    .atm-facials .f-hero-btns {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    @media(min-width:480px) {
+        .atm-facials .f-hero-btns {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+    }
+
+
+    /* ═══════════════════════════════════════════
+   EYEBROW / SECTION LABELS — matched to laser
+═══════════════════════════════════════════ */
+    .atm-facials .f-eyebrow {
+        font-size: 0.82rem;
+        text-transform: uppercase;
+        letter-spacing: 0.3em;
+        font-weight: 700;
+        color: #b45309;
+        display: block;
+        margin-bottom: 1rem;
+    }
+
+
+    /* ═══════════════════════════════════════════
+   REVIEWS STRIP — matched to laser
+═══════════════════════════════════════════ */
+    .atm-facials .atm-reviews-section {
+
+        padding: 30px 20px;
+        border-top: 1px solid #ebe7e2;
+        border-bottom: 1px solid #ebe7e2;
+        overflow: hidden;
+    }
+
+    /* Container */
+
+    .atm-facials .atm-max {
+        max-width: 1280px;
+        margin: 0 auto;
+    }
+
+    /* ─────────────────────────
+   HEADER
+───────────────────────── */
+
+    .atm-facials .atm-reviews-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 10px;
+        margin-bottom: 60px;
+    }
+
+    .atm-facials .atm-reviews-header h3 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 48px;
+        line-height: 1;
+        font-weight: 700;
+        color: #1f1f1f;
+        margin: 0;
+        letter-spacing: -1px;
+    }
+
+    .atm-facials .atm-stars {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+        color: #fbbc04;
+    }
+
+    .atm-facials .atm-stars svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .atm-facials .atm-review-count {
+        margin: 0;
+        font-size: 17px;
+        line-height: 1.5;
+        color: #777;
+    }
+
+    .atm-facials .atm-review-count strong {
+        color: #222;
+        font-weight: 700;
+    }
+
+    .atm-facials .atm-google-logo {
+        font-size: 42px;
+        font-weight: 700;
+        letter-spacing: -3px;
+        line-height: 1;
+    }
+
+    /* ─────────────────────────
+   REVIEW GRID
+───────────────────────── */
+
+    .atm-facials .atm-grid-reviews {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 28px;
+    }
+
+    /* ─────────────────────────
+   REVIEW CARD
+───────────────────────── */
+
+    .atm-facials .atm-review-card {
+        background: #fff;
+        border: 1px solid #ece7e2;
+        border-radius: 26px;
+        padding: 28px;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+        transition: all .3s ease;
+        position: relative;
+    }
+
+    .atm-facials .atm-review-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 14px 40px rgba(0, 0, 0, 0.08);
+    }
+
+    /* Top */
+
+    .atm-facials .atm-review-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 14px;
+        margin-bottom: 18px;
+    }
+
+    .atm-facials .atm-reviewer {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+    }
+
+    /* Avatar */
+
+    .atm-facials .atm-avatar {
+        width: 54px;
+        height: 54px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+
+        color: #fff;
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    /* Reviewer */
+
+    .atm-facials .atm-reviewer-name {
+        font-size: 18px;
+        font-weight: 700;
+        color: #202124;
+        line-height: 1.2;
+    }
+
+    .atm-facials .atm-reviewer-meta {
+        font-size: 14px;
+        color: #7b7b7b;
+        margin-top: 3px;
+    }
+
+    /* Row */
+
+    .atm-facials .atm-review-row {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 18px;
+    }
+
+    .atm-facials .atm-review-stars {
+        display: flex;
+        align-items: center;
+        gap: 2px;
+        color: #fbbc04;
+    }
+
+    .atm-facials .atm-review-stars svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    .atm-facials .atm-review-ago {
+        font-size: 14px;
+        font-weight: 500;
+        color: #7a7a7a;
+    }
+
+    .atm-facials .atm-review-badge {
+        background: #f3f4f6;
+        color: #555;
+        border: 1px solid #e5e7eb;
+
+        font-size: 11px;
+        font-weight: 700;
+
+        padding: 4px 8px;
+        border-radius: 999px;
+    }
+
+    /* Review Text */
+
+    .atm-facials .atm-review-text {
+        font-size: 16px;
+        line-height: 1.8;
+        color: #333;
+        margin-bottom: 24px;
+        flex-grow: 1;
+    }
+
+    /* Service */
+
+    .atm-facials .atm-review-service {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        padding-top: 18px;
+        margin-bottom: 22px;
+
+        border-top: 1px solid #eeeeee;
+    }
+
+    .atm-facials .atm-review-service strong {
+        font-size: 14px;
+        font-weight: 700;
+        color: #222;
+    }
+
+    .atm-facials .atm-review-service span {
+        font-size: 14px;
+        color: #777;
+    }
+
+    /* Button */
+
+    .atm-facials .atm-reply-btn {
+        width: 100%;
+        border: none;
+        background: #111;
+        color: #fff;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+
+        border-radius: 14px;
+        padding: 14px 20px;
+
+        font-size: 14px;
+        font-weight: 600;
+
+        cursor: pointer;
+        transition: .25s ease;
+    }
+
+    .atm-facials .atm-reply-btn:hover {
+        background: #222;
+        transform: translateY(-1px);
+    }
+
+    .atm-facials .atm-reply-btn svg {
+        width: 15px;
+        height: 15px;
+        flex-shrink: 0;
+    }
+
+    /* ─────────────────────────
+   MOBILE
+───────────────────────── */
+
+    @media(max-width:768px) {
+
+        .atm-facials .atm-reviews-section {
+            padding: 70px 16px;
+        }
+
+        .atm-facials .atm-reviews-header {
+            margin-bottom: 45px;
+        }
+
+        .atm-facials .atm-reviews-header h3 {
+            font-size: 38px;
+        }
+
+        .atm-facials .atm-google-logo {
+            font-size: 34px;
+        }
+
+        .atm-facials .atm-grid-reviews {
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .atm-facials .atm-review-card {
+            padding: 22px;
+            border-radius: 22px;
+        }
+
+        .atm-facials .atm-review-text {
+            font-size: 15px;
+        }
+    }
+
+    /* ═══════════════════════════════════════════
+   GALLERY — matched to laser
+═══════════════════════════════════════════ */
+    .atm-facials .f-gallery-img {
+        width: 100%;
+        object-fit: cover;
+        border-radius: 2px;
+        height: 8rem;
+        transition: opacity 0.4s, transform 0.4s;
+    }
+
+    @media(min-width:768px) {
+        .atm-facials .f-gallery-img {
+            height: 18rem;
+        }
+    }
+
+    .atm-facials .f-gallery-img:hover {
+        opacity: 0.88;
+        transform: scale(1.01);
+    }
+
+
+    /* ═══════════════════════════════════════════
+   SECTION HEADING — matched to laser
+═══════════════════════════════════════════ */
+    .atm-facials .f-section-title {
+        font-family: Montserrat, sans-serif;
+        font-size: clamp(2.1rem, 3vw, 3rem);
+        margin-bottom: 1.5rem;
+        font-weight: 700;
+    }
+
+    .atm-facials .f-intro-text {
+        font-size: 1.5rem;
+        color: #4b5563;
+        line-height: 1.6;
+        margin-bottom: 3rem;
+    }
+
+
+    /* ═══════════════════════════════════════════
+   FEATURE CARDS — matched to laser
+═══════════════════════════════════════════ */
+    .atm-facials .f-feat-card {
+        border: 1px solid var(--stone-200);
+        padding: 1.75rem;
+        background: var(--stone-50);
+        border-radius: 2px;
+        position: relative;
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .atm-facials .f-feat-card::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(90deg, var(--accent), var(--gold-light));
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.35s ease;
+    }
+
+    .atm-facials .f-feat-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.07);
+    }
+
+    .atm-facials .f-feat-card:hover::after {
+        transform: scaleX(1);
+    }
+
+    .atm-facials .f-feat-icon {
+        color: #f59e0b;
+        margin-bottom: 1rem;
+    }
+
+    .atm-facials .f-feat-card h4 {
+        font-family: Montserrat, sans-serif;
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-bottom: 0.6rem;
+    }
+
+    .atm-facials .f-feat-card p {
+        font-size: 1.1rem;
+        color: #6b7280;
+        line-height: 1.7;
+    }
+
+
+    /* ═══════════════════════════════════════════
+   CAPABILITIES BAR — matched to laser
+═══════════════════════════════════════════ */
+    .atm-facials .f-cap-bar {
+        border: 1px solid var(--stone-200);
+        border-left: 4px solid var(--accent);
+        padding: 1.75rem;
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin-bottom: 3rem;
+    }
+
+    @media(min-width:640px) {
+        .atm-facials .f-cap-bar {
+            flex-direction: row;
+            align-items: center;
+        }
+    }
+
+    .atm-facials .f-cap-bar h4 {
+        font-family: Montserrat, sans-serif;
+        font-size: 1.1rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+    }
+
+    .atm-facials .f-cap-bar p {
+        font-size: 0.95rem;
+        color: #4b5563;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        line-height: 2.1;
+        font-weight: 600;
+    }
+
+
+    /* ═══════════════════════════════════════════
+   TREATMENT CARDS — matched to laser
+═══════════════════════════════════════════ */
+    .atm-facials .f-treat-card {
+        background: #fff;
+        border: 1px solid #f5f5f4;
+        border-radius: 2px;
+        overflow: hidden;
+        transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
+
+    .atm-facials .f-treat-card:hover {
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+        transform: translateY(-3px);
+    }
+
+    .atm-facials .f-treat-img {
+        height: 210px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .atm-facials .f-treat-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.7s ease;
+    }
+
+    .atm-facials .f-treat-card:hover .f-treat-img img {
+        transform: scale(1.06);
+    }
+
+    .atm-facials .f-pop-badge {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: rgba(255, 255, 255, 0.94);
+        backdrop-filter: blur(4px);
+        padding: 0.3rem 0.85rem;
+        border-radius: 999px;
+        font-size: 0.75rem;
+        font-weight: 900;
+        color: #92400e;
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+        border: 1px solid #fef3c7;
+    }
+
+    .atm-facials .f-treat-body {
+        padding: 1.75rem;
+    }
+
+    .atm-facials .f-treat-hdr {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 0.75rem;
+        gap: 1rem;
+    }
+
+    .atm-facials .f-treat-name {
+        font-family: Montserrat, sans-serif;
+        font-weight: 700;
+        font-size: 1.35rem;
+        color: #1c1917;
+    }
+
+    .atm-facials .f-treat-price {
+        font-weight: 900;
+        font-size: 1.35rem;
+        color: var(--accent);
+        white-space: nowrap;
+    }
+
+    .atm-facials .f-treat-desc {
+        font-size: 1rem;
+        color: #78716c;
+        line-height: 1.7;
+        margin-bottom: 1.5rem;
+    }
+
+
+    /* ═══════════════════════════════════════════
+   CTA MINI BANNER — matched to laser
+═══════════════════════════════════════════ */
+    .atm-facials .f-cta-banner {
+        background: linear-gradient(135deg, #1c1917 0%, #292524 100%);
+        padding: 2.5rem 2rem;
+        text-align: center;
+        border-radius: 4px;
+        margin-bottom: 4rem;
+        color: #fff;
+    }
+
+    .atm-facials .f-cta-banner svg {
+        color: #f59e0b;
+        margin: 0 auto 1rem;
+        display: block;
+    }
+
+    .atm-facials .f-cta-banner h3 {
+        font-family: Montserrat, sans-serif;
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        color: #fff;
+    }
+
+    .atm-facials .f-cta-btns {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        min-height: 52px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @media(min-width:480px) {
+        .atm-facials .f-cta-btns {
+            flex-direction: row;
+        }
+    }
+
+
+    /* ═══════════════════════════════════════════
+   PRICE MENU PLATE — matched to laser
+═══════════════════════════════════════════ */
+    .atm-facials .f-menu-plate {
+        border: 1px solid #e5e5e5;
+        border-top: 4px solid var(--accent);
+        padding: 3rem 2rem;
+        background: #fff;
+        position: relative;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.03);
+        margin-bottom: 4rem;
+    }
+
+    @media(min-width:640px) {
+        .atm-facials .f-menu-plate {
+            padding: 4rem 3rem;
+        }
+    }
+
+    .atm-facials .f-menu-plate::before {
+        content: '';
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+        border: 1px solid #fafafa;
+        pointer-events: none;
+    }
+
+    .atm-facials .f-menu-hdr {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    .atm-facials .f-menu-hdr h3 {
+        font-family: Montserrat, sans-serif;
+        font-size: 2.1rem;
+        font-weight: 700;
+        margin-bottom: 0.35rem;
+    }
+
+    .atm-facials .f-menu-hdr p {
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.3em;
+        color: #9ca3af;
+    }
+
+    .atm-facials .f-price-section {
+        margin-bottom: 3rem;
+    }
+
+    .atm-facials .f-price-section:last-child {
+        margin-bottom: 0;
+    }
+
+    .atm-facials .f-price-sec-hdr {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        border-bottom: 1px solid #f5f5f4;
+        padding-bottom: 1.1rem;
+        margin-bottom: 1.75rem;
+    }
+
+    @media(min-width:480px) {
+        .atm-facials .f-price-sec-hdr {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+    .atm-facials .f-price-sec-hdr h4 {
+        font-family: Montserrat, sans-serif;
+        font-size: 1.55rem;
+        font-weight: 700;
+        color: #1c1917;
+    }
+
+    .atm-facials .f-price-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 1.35rem;
+    }
+
+    .atm-facials .f-p-label {
+        background: #fff;
+        padding-right: 12px;
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: #333;
+    }
+
+    .atm-facials .f-p-dots {
+        flex-grow: 1;
+        border-bottom: 1px dotted #ddd;
+        margin-bottom: 4px;
+    }
+
+    .atm-facials .f-p-val {
+        background: #fff;
+        padding-left: 12px;
+        font-weight: 700;
+        color: var(--accent);
+        font-size: 1.15rem;
+    }
+
+
+    /* ═══════════════════════════════════════════
+   SEO BLOCK — matched to laser
+═══════════════════════════════════════════ */
+    .atm-facials .f-seo {
+        margin-bottom: 4rem;
+    }
+
+    .atm-facials .f-seo h3 {
+        font-family: Montserrat, sans-serif;
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+    }
+
+    .atm-facials .f-seo p {
+        font-size: 1.15rem;
+        color: #4b5563;
+        line-height: 1.85;
+        margin-bottom: 1.1rem;
+    }
+
+
+    /* ═══════════════════════════════════════════
+   SIDEBAR — matched to laser
+═══════════════════════════════════════════ */
+    .atm-facials .f-sidebar {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    @media(min-width:1024px) {
+        .atm-facials .f-sidebar {
+            position: sticky;
+            top: 100px;
+        }
+    }
+
+    .atm-facials .f-s-card {
+        background: var(--stone-50);
+        border: 1px solid var(--stone-200);
+        padding: 2rem;
+        border-radius: 2px;
+    }
+
+    .atm-facials .f-s-card h3 {
+        font-family: Montserrat, sans-serif;
+        font-size: 1.8rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+    }
+
+    .atm-facials .f-s-card p {
+        font-size: 1.1rem;
+        color: #4b5563;
+        margin-bottom: 1.5rem;
+        line-height: 1.7;
+    }
+
+    .atm-facials .f-s-btns {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .atm-facials .f-s-btns .f-btn {
+        width: 100%;
+    }
+
+
+    /* ═══════════════════════════════════════════
+   FAQ — matched to laser
+═══════════════════════════════════════════ */
+    .atm-facials .f-faq-list {
+        border-top: 1px solid #e5e7eb;
+    }
+
+    .atm-facials .f-faq-item {
+        border-bottom: 1px solid #e5e7eb;
+    }
+
+    .atm-facials .f-faq-trigger {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.1rem 0;
+        cursor: pointer;
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: #1f2937;
+        background: none;
+        border: none;
+        width: 100%;
+        text-align: left;
+        transition: color 0.3s;
+        gap: 0.5rem;
+        font-family: Montserrat, sans-serif;
+    }
+
+    .atm-facials .f-faq-trigger:hover {
+        color: var(--accent);
+    }
+
+    .atm-facials .f-faq-icon {
+        font-size: 1.4rem;
+        color: #9ca3af;
+        font-weight: 300;
+        flex-shrink: 0;
+        line-height: 1;
+    }
+
+    .atm-facials .f-faq-body {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .atm-facials .f-faq-body.open {
+        max-height: 500px;
+    }
+
+    .atm-facials .f-faq-body-inner {
+        padding-bottom: 1.1rem;
+        font-size: 1.1rem;
+        color: #4b5563;
+        line-height: 1.75;
+    }
+
+
+    /* ═══════════════════════════════════════════
+   TRUST BOX — matched to laser
+═══════════════════════════════════════════ */
+    .atm-facials .f-trust-box {
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .atm-facials .f-trust-box svg {
+        color: #f59e0b;
+        flex-shrink: 0;
+        margin-top: 2px;
+    }
+
+    .atm-facials .f-trust-box h4 {
+        font-family: Montserrat, sans-serif;
+        font-size: 1.1rem;
+        font-weight: 700;
+        margin-bottom: 0.3rem;
+    }
+
+    .atm-facials .f-trust-box p {
+        font-size: 1.1rem;
+        color: #6b7280;
+        line-height: 1.6;
+    }
+
+
+    /* ═══════════════════════════════════════════
+   BOTTOM CTA BAR — matched to laser
+═══════════════════════════════════════════ */
+    .atm-facials .f-bottom-cta {
+        background: var(--stone-100);
+        padding: 4.5rem 1.5rem;
+        border-top: 1px solid var(--stone-200);
+    }
+
+    .atm-facials .f-bottom-inner {
+        max-width: 1280px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    @media(min-width:768px) {
+        .atm-facials .f-bottom-inner {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+    .atm-facials .f-bottom-left {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .atm-facials .f-cta-icon {
+        width: 68px;
+        height: 68px;
+        border-radius: 50%;
+        background: #fff;
+        border: 1px solid var(--stone-200);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+    }
+
+    .atm-facials .f-cta-icon svg {
+        color: #f59e0b;
+    }
+
+    .atm-facials .f-bottom-inner h3 {
+        font-family: Montserrat, sans-serif;
+        font-size: 1.95rem;
+        font-weight: 700;
+        margin-bottom: 0.3rem;
+    }
+
+    .atm-facials .f-bottom-inner p {
+        font-size: 1.1rem;
+        color: #4b5563;
+    }
+
+    .atm-facials .f-bottom-btns {
+        display: flex;
+        flex-direction: row;
+        gap: 0.75rem;
+        flex-shrink: 0;
+        align-items: flex-start;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    @media(min-width:768px) {
+        .atm-facials .f-bottom-btns {
+            flex-direction: row;
+            width: auto;
+            align-items: center;
+        }
+    }
+
+
+    /* ═══════════════════════════════════════════
+   UTILITY
+═══════════════════════════════════════════ */
+    .atm-facials .f-max {
+        max-width: 1280px;
+        margin: 0 auto;
+    }
+
+    .atm-facials svg {
+        display: inline-block;
+        vertical-align: middle;
+    }
+</style>
+
+
+<!-- ══════════════════════════════════════════════
+     PAGE WRAPPER
+══════════════════════════════════════════════ -->
+<div class="atm-facials">
+
+    <!-- ═══ HERO ═══ -->
+    <div class="f-hero">
+        <div class="f-hero-bg">
+            <img src="https://athenamortlake.com/wp-content/uploads/2026/05/luxury-facials-richmond-athena-mortlake.jpg"
+                alt="A client enjoying a relaxing, bespoke luxury facial treatment at the Athena Mortlake beauty salon in Richmond.">
+            <div class="f-hero-overlay"></div>
+        </div>
+        <div class="f-hero-content">
+            <div class="f-max">
+                <div class="f-hero-inner-hero-inner">
+                    <span class="f-hero-eyebrow">Athena Mortlake &mdash; Skin</span>
+                    <h1>Facial Treatments in Richmond | Hydrating, Calming & Deep Cleansing Facials</h1>
+                    <p class="f-hero-sub">Refresh and restore your skin with expert facials in Richmond tailored to your
+                        skin type and concerns.
+                        From deep cleansing to intense hydration, enjoy glowing, healthy-looking results after every
+                        treatment.</p>
+
+                    <div class="f-trust-badges">
+                        <div class="f-badge">
+                            <svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            <span>Grade Skincare</span>
+                        </div>
+                        <div class="f-badge">
+                            <svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            </svg>
+                            <span>Acne &amp; Anti-Aging Experts</span>
+                        </div>
+                        <div class="f-badge">
+                            <svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            <span>Bespoke Skin Plans</span>
+                        </div>
+                        <div class="f-badge">
+                            <svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                            <span>Mortlake, Richmond</span>
+                        </div>
+                    </div>
+
+                    <div class="f-hero-btns" style="display:flex; gap:10px;">
+                        <a href="https://www.fresha.com/book-now/athena-mortlake-c2gmn07m/all-offer?pId=1090219"
+                            target="_blank" class="f-btn f-btn-black"
+                            style="display:flex; align-items:center; justify-content:center; height:52px; padding:0 18px;">
+                            Book Now
+                        </a>
+                        <a href="https://wa.me/447884492575?text=Hi%20I%27m%20interested%20in%20a%20facial"
+                            target="_blank" class="f-btn f-btn-wa"
+                            style="display:flex; align-items:center; justify-content:center; height:52px; padding:0 18px; gap:8px;">
+                            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24" style="flex-shrink:0;">
+                                <path
+                                    d="M12.031 0C5.385 0 0 5.385 0 12.031c0 2.133.551 4.156 1.558 5.96L.101 24l6.195-1.621c1.729.897 3.666 1.365 5.735 1.365 6.646 0 12.031-5.385 12.031-12.031S18.677 0 12.031 0zM17.65 16.59c-.276.776-1.593 1.488-2.186 1.547-.56.055-1.282.164-3.693-.834-2.9-1.196-4.756-4.148-4.896-4.335-.141-.188-1.168-1.55-1.168-2.955 0-1.405.733-2.096 1.011-2.392.278-.297.604-.372.805-.372.2 0 .401.003.576.012.188.009.438-.073.687.525.263.633.916 2.235 1 2.423.083.188.139.407.014.656-.126.249-.189.407-.375.633-.186.225-.395.49-.56.633-.186.164-.383.344-.173.705.21.362.936 1.549 2.015 2.511 1.396 1.246 2.564 1.636 2.923 1.782.358.146.568.125.782-.125.214-.25 1.012-1.18 1.283-1.587.271-.408.542-.34.869-.216.326.124 2.062.973 2.417 1.15.355.176.592.264.678.414.086.15.086.867-.19 1.642z" />
+                            </svg>
+                            WhatsApp Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ═══ REVIEWS ═══ -->
+    <div class="atm-reviews-section">
+        <div class="atm-max">
+            <div class="atm-reviews-section">
+                <div class="atm-max">
+
+                    <!-- Reviews Header -->
+                    <div class="atm-reviews-header">
+
+                        <h3>Excellent</h3>
+
+                        <div class="atm-stars">
+                            <!-- Repeat same star SVG 5x -->
+                            <svg width="22" height="22" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+
+                            <svg width="22" height="22" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+
+                            <svg width="22" height="22" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+
+                            <svg width="22" height="22" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+
+                            <svg width="22" height="22" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                        </div>
+
+                        <p class="atm-review-count">
+                            Based on <strong>55 Reviews</strong>
+                        </p>
+
+                        <div class="atm-google-logo">
+                            <span style="color:#4285F4;">G</span>
+                            <span style="color:#EA4335;">o</span>
+                            <span style="color:#FBBC05;">o</span>
+                            <span style="color:#4285F4;">g</span>
+                            <span style="color:#34A853;">l</span>
+                            <span style="color:#EA4335;">e</span>
+                        </div>
+
+                    </div>
+
+                    <!-- Reviews Grid -->
+                    <div class="atm-grid-reviews">
+                        <!-- Review 1 -->
+                        <!-- Review 1 -->
+                        <div class="atm-review-card">
+                            <div class="atm-review-top">
+                                <div class="atm-reviewer">
+                                    <div class="atm-avatar" style="background:#6e4c41;">S</div>
+                                    <div>
+                                        <div class="atm-reviewer-name">Sarah T.</div>
+                                        <div class="atm-reviewer-meta">6 reviews &bull; 1 photo</div>
+                                    </div>
+                                </div>
+                                <svg width="18" height="18" fill="none" stroke="#9ca3af" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                                </svg>
+                            </div>
+
+                            <div class="atm-review-row">
+                                <div class="atm-review-stars">
+                                    <!-- 5 Stars -->
+                                    <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                </div>
+
+                                <span class="atm-review-ago">1 week ago</span>
+                                <span class="atm-review-badge">NEW</span>
+                            </div>
+
+                            <p class="atm-review-text">
+                                Had the hydrafacial treatment and my skin was glowing instantly.
+                                It's feels very professional and relaxing.
+                            </p>
+
+                            <div class="atm-review-service">
+                                <strong>Services</strong>
+                                <span>Advanced Skin Facials</span>
+                            </div>
+                        </div>
+
+                        <!-- Review 2 -->
+                        <div class="atm-review-card">
+                            <div class="atm-review-top">
+                                <div class="atm-reviewer">
+                                    <div class="atm-avatar" style="background:#3a6186;">E</div>
+                                    <div>
+                                        <div class="atm-reviewer-name">Emily R.</div>
+                                        <div class="atm-reviewer-meta">3 reviews &bull; 0 photos</div>
+                                    </div>
+                                </div>
+                                <svg width="18" height="18" fill="none" stroke="#9ca3af" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                                </svg>
+                            </div>
+
+                            <div class="atm-review-row">
+                                <div class="atm-review-stars">
+                                    <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                </div>
+
+                                <span class="atm-review-ago">3 weeks ago</span>
+                                <span class="atm-review-badge">NEW</span>
+                            </div>
+
+                            <p class="atm-review-text">
+                                I booked a deep cleansing facial and my skin has never looked better.
+                                Staff were friendly and explained every step clearly.
+                            </p>
+
+                            <div class="atm-review-service">
+                                <strong>Services</strong>
+                                <span>Advanced Skin Facials</span>
+                            </div>
+                        </div>
+
+                        <!-- Review 3 -->
+                        <div class="atm-review-card">
+                            <div class="atm-review-top">
+                                <div class="atm-reviewer">
+                                    <div class="atm-avatar" style="background:#4a7c59;">L</div>
+                                    <div>
+                                        <div class="atm-reviewer-name">Laura M.</div>
+                                        <div class="atm-reviewer-meta">9 reviews &bull; 3 photos</div>
+                                    </div>
+                                </div>
+                                <svg width="18" height="18" fill="none" stroke="#9ca3af" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                                </svg>
+                            </div>
+
+                            <div class="atm-review-row">
+                                <div class="atm-review-stars">
+                                    <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                </div>
+
+                                <span class="atm-review-ago">1 month ago</span>
+                            </div>
+
+                            <p class="atm-review-text">
+                                The anti-aging facial left my skin smooth, hydrated, and refreshed.
+                                Beautiful with amazing attention to detail.
+                            </p>
+
+                            <div class="atm-review-service">
+                                <strong>Services</strong>
+                                <span>Advanced Skin Treatments</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+    <!-- ═══ GALLERY ═══ -->
+    <div class="f-section-sm f-max">
+        <div class="f-grid-3">
+            <img src="https://athenamortlake.com/wp-content/uploads/2026/05/Facials-ExtractionPurity-Treatment.jpg"
+                alt="Skin Clinic Facials Mortlake" class="f-gallery-img">
+            <img src="https://athenamortlake.com/wp-content/uploads/2026/05/Facials-Athena-Bespoke-.jpg"
+                alt="Advanced Facial Richmond" class="f-gallery-img">
+            <img src="https://athenamortlake.com/wp-content/uploads/2026/05/Facials-Time-Resistjpg.jpg"
+                alt="Dermatology Clinic London" class="f-gallery-img" style="object-position:center bottom;">
+        </div>
+    </div>
+
+
+    <!-- ═══ MAIN CONTENT + SIDEBAR ═══ -->
+    <div class="f-section f-max">
+        <div class="f-grid-main">
+
+            <!-- ── LEFT COLUMN ── -->
+            <div>
+                <span class="f-eyebrow">Relax &bull; Recover &bull; Restore</span>
+                <h2 class="f-section-title">Revitalise Your Complexion with Expert Skin Therapy</h2>
+                <p class="f-intro-text">At Athena Mortlake, our facial treatments in Richmond are designed to leave
+                    your skin feeling clean, balanced, and refreshed. We offer Hydralessence for deep hydration,
+                    Calming & Soothing facials to comfort sensitive skin, and Purity Treatments to deeply cleanse
+                    and refine the complexion. Each treatment includes expert extractions where needed to help clear
+                    congestion and improve skin clarity, leaving you with a healthier, natural glow.</p>
+
+                <!-- Feature Cards -->
+                <div class="f-grid-4" style="margin-bottom:3rem;">
+                    <div class="f-feat-card">
+                        <div class="f-feat-icon">
+                            <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <h4>Advanced Skincare Expertise</h4>
+                        <p>Professional-strength actives and protocols designed to produce measurable, lasting
+                            improvements in skin health.
+                        </p>
+                    </div>
+                    <div class="f-feat-card">
+                        <div class="f-feat-icon">
+                            <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            </svg>
+                        </div>
+                        <h4>Acne & Anti-Ageing Experts
+                        </h4>
+                        <p>Advanced targeted techniques addressing congestion, hyperpigmentation, rosacea and premature
+                            ageing.</p>
+                    </div>
+                    <div class="f-feat-card">
+                        <div class="f-feat-icon">
+                            <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <h4>Bespoke Dermatological Plans</h4>
+                        <p>Every patient receives a fully customised treatment path designed exclusively for their
+                            unique skin profile.</p>
+                    </div>
+                    <div class="f-feat-card">
+                        <div class="f-feat-icon">
+                            <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                            </svg>
+                        </div>
+                        <h4>Tailored to Your Skin</h4>
+                        <p>Digital skin mapping at consultation ensures every ingredient and modality matches your
+                            skin's exact needs.</p>
+                    </div>
+                </div>
+
+                <!-- Capabilities -->
+                <div class="f-cap-bar">
+                    <svg width="42" height="42" fill="none" stroke="#f59e0b" viewBox="0 0 24 24" style="flex-shrink:0">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
+                            d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <div>
+                        <h4>Treatment Capabilities</h4>
+                        <p>Deep Cleansing &bull; Chemical Peels &bull; LED Therapy &bull; Dermaplaning &bull; Anti-Aging
+                            Facials &bull; Extraction</p>
+                    </div>
+                </div>
+
+                <!-- Signature Experiences -->
+                <div style="margin-bottom:4rem;">
+                    <h3 style="font-family:Montserrat,sans-serif;font-size:2.1rem;font-weight:700;margin-bottom:2rem;">
+                        Our Signature Experiences</h3>
+                    <div class="f-grid-2">
+                        <div class="f-treat-card">
+                            <div class="f-treat-img">
+                                <img src="https://athenamortlake.com/wp-content/uploads/2026/05/Facials-Extraction.jpg"
+                                    alt="EXTRACTION">
+                                <span class="f-pop-badge">Most Popular</span>
+                            </div>
+                            <div class="f-treat-body">
+                                <div class="f-treat-hdr">
+                                    <span class="f-treat-name">EXTRACTION</span>
+                                    <span class="f-treat-price">from £85</span>
+                                </div>
+                                <p class="f-treat-desc">An Efficient way to help clear the skin of blackheads and
+                                    Congestion without Impacting the health of the skin or Spreading Acne.</p>
+                                <a href="https://www.fresha.com/book-now/athena-mortlake-c2gmn07m/all-offer?pId=1090219"
+                                    target="_blank" class="f-btn f-btn-black f-btn-full">Book Treatment</a>
+                            </div>
+                        </div>
+                        <div class="f-treat-card">
+                            <div class="f-treat-img">
+                                <img src="https://athenamortlake.com/wp-content/uploads/2026/05/Facials-Calming-Soothing.jpg"
+                                    alt="ATHENA BESPOKE
+">
+                                <span class="f-pop-badge">Most Popular</span>
+                            </div>
+                            <div class="f-treat-body">
+                                <div class="f-treat-hdr">
+                                    <span class="f-treat-name">ATHENA BESPOKE
+                                    </span>
+                                    <span class="f-treat-price">from £120</span>
+                                </div>
+                                <p class="f-treat-desc">Our Signature Facial includes a free skin map to customise
+                                    treatment, aiming to energise, Enhance, and Naturally Purify for
+                                    Healthy Skin.</p>
+                                <a href="https://www.fresha.com/book-now/athena-mortlake-c2gmn07m/all-offer?pId=1090219"
+                                    target="_blank" class="f-btn f-btn-black f-btn-full">Book Treatment</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mini CTA Banner -->
+
+
+                <!-- PRICE MENU -->
+                <div class="f-menu-plate">
+                    <div class="f-menu-hdr">
+                        <h3>Facials Pricing</h3>
+                        <p>Transparent &amp; Honest</p>
+                    </div>
+
+                    <div class="f-price-section">
+                        <div class="f-price-sec-hdr">
+                            <h4>Targeted Facials</h4>
+                            <a href="https://www.fresha.com/book-now/athena-mortlake-c2gmn07m/all-offer?pId=1090219"
+                                target="_blank" class="f-btn f-btn-black f-btn-sm">Book Now</a>
+                        </div>
+                        <div class="f-price-row"><span class="f-p-label">Extraction Facial (60 min)</span>
+                            <div class="f-p-dots"></div><span class="f-p-val">£85</span>
+                        </div>
+                        <div class="f-price-row"><span class="f-p-label">Hydralessence (60 min)</span>
+                            <div class="f-p-dots"></div><span class="f-p-val">£75</span>
+                        </div>
+                        <div class="f-price-row"><span class="f-p-label">Calming &amp; Soothing (60 min)</span>
+                            <div class="f-p-dots"></div><span class="f-p-val">£75</span>
+                        </div>
+                        <div class="f-price-row"><span class="f-p-label">Vital Defence (60 min)</span>
+                            <div class="f-p-dots"></div><span class="f-p-val">£70</span>
+                        </div>
+                        <div class="f-price-row"><span class="f-p-label">Purity Treatment (60 min)</span>
+                            <div class="f-p-dots"></div><span class="f-p-val">£70</span>
+                        </div>
+                    </div>
+
+                    <div class="f-price-section">
+                        <div class="f-price-sec-hdr">
+                            <h4>Premium Facials</h4>
+                            <a href="https://www.fresha.com/book-now/athena-mortlake-c2gmn07m/all-offer?pId=1090219"
+                                target="_blank" class="f-btn f-btn-black f-btn-sm">Book Now</a>
+                        </div>
+                        <div class="f-price-row"><span class="f-p-label">Time Resist Anti-Aging (90 min)</span>
+                            <div class="f-p-dots"></div><span class="f-p-val">£120</span>
+                        </div>
+                        <div class="f-price-row"><span class="f-p-label">Athena Bespoke Signature (90 min)</span>
+                            <div class="f-p-dots"></div><span class="f-p-val">£120</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SEO Content -->
+                <div class="f-seo">
+                    <h3>Advanced Facials & Skin Treatments in Mortlake, Richmond</h3>
+                    <p>Achieve radiant, flawless skin at Athena Mortlake, the leading destination for advanced facials
+                        in Mortlake, Richmond. We go beyond traditional spa facials by utilising professional-grade
+                        active ingredients, chemical peels, and targeted LED light therapy. Our treatments are designed
+                        to combat complex skin concerns including congestion, hyperpigmentation, rosacea and premature
+                        ageing.</p>
+                    <p>Every face is unique, which is why we begin with a comprehensive skin mapping analysis. This
+                        allows our skin specialists to formulate a bespoke treatment plan that repairs your skin's lipid
+                        barrier and stimulates collagen production from within. Experience expert-level transformation
+                        and glowing, lasting results.</p>
+                </div>
+            </div>
+
+            <!-- ── RIGHT SIDEBAR ── -->
+            <div class="f-sidebar">
+
+                <!-- Book Fast -->
+                <div class="f-s-card">
+                    <h3>Need to book fast?</h3>
+                    <p>Call or message us to arrange your facial appointment today.</p>
+                    <div class="f-s-btns">
+                        <a href="https://wa.me/447884492575?text=Hi%20I%27m%20interested%20in%20a%20facial"
+                            target="_blank" class="f-btn f-btn-wa f-btn-full" style="gap:8px;">
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" style="flex-shrink:0">
+                                <path
+                                    d="M12.031 0C5.385 0 0 5.385 0 12.031c0 2.133.551 4.156 1.558 5.96L.101 24l6.195-1.621c1.729.897 3.666 1.365 5.735 1.365 6.646 0 12.031-5.385 12.031-12.031S18.677 0 12.031 0zM17.65 16.59c-.276.776-1.593 1.488-2.186 1.547-.56.055-1.282.164-3.693-.834-2.9-1.196-4.756-4.148-4.896-4.335-.141-.188-1.168-1.55-1.168-2.955 0-1.405.733-2.096 1.011-2.392.278-.297.604-.372.805-.372.2 0 .401.003.576.012.188.009.438-.073.687.525.263.633.916 2.235 1 2.423.083.188.139.407.014.656-.126.249-.189.407-.375.633-.186.225-.395.49-.56.633-.186.164-.383.344-.173.705.21.362.936 1.549 2.015 2.511 1.396 1.246 2.564 1.636 2.923 1.782.358.146.568.125.782-.125.214-.25 1.012-1.18 1.283-1.587.271-.408.542-.34.869-.216.326.124 2.062.973 2.417 1.15.355.176.592.264.678.414.086.15.086.867-.19 1.642z" />
+                            </svg>
+                            WhatsApp Us
+                        </a>
+                        <a href="https://www.fresha.com/book-now/athena-mortlake-c2gmn07m/all-offer?pId=1090219"
+                            target="_blank" class="f-btn f-btn-outline f-btn-full" style="gap:8px;">
+
+                            Book Now
+                        </a>
+                    </div>
+                </div>
+
+                <!-- FAQs -->
+                <div class="f-s-card">
+                    <h3>Service FAQs</h3>
+                    <div class="f-faq-list">
+                        <div class="f-faq-item">
+                            <button class="f-faq-trigger" onclick="atmFacialsFaq(this)">
+                                <span>What is a Skin Map?</span>
+                                <span class="f-faq-icon">+</span>
+                            </button>
+                            <div class="f-faq-body">
+                                <div class="f-faq-body-inner">A Skin Map is a diagnostic consultation where we analyse
+                                    UV damage, dehydration levels, and congestion to create a fully customised treatment
+                                    plan tailored to your skin.</div>
+                            </div>
+                        </div>
+                        <div class="f-faq-item">
+                            <button class="f-faq-trigger" onclick="atmFacialsFaq(this)">
+                                <span>Will I be red after extraction?</span>
+                                <span class="f-faq-icon">+</span>
+                            </button>
+                            <div class="f-faq-body">
+                                <div class="f-faq-body-inner">Some mild erythema (redness) is normal after manual
+                                    extraction but typically subsides within 2 to 24 hours. We apply a calming mask
+                                    afterwards to minimise this.</div>
+                            </div>
+                        </div>
+                        <div class="f-faq-item">
+                            <button class="f-faq-trigger" onclick="atmFacialsFaq(this)">
+                                <span>How often should I have a facial?</span>
+                                <span class="f-faq-icon">+</span>
+                            </button>
+                            <div class="f-faq-body">
+                                <div class="f-faq-body-inner">For optimal results we recommend a facial every 4 to 6
+                                    weeks — aligned with your skin's natural cell turnover cycle. Your practitioner will
+                                    advise the right frequency for your skin type.</div>
+                            </div>
+                        </div>
+                        <div class="f-faq-item">
+                            <button class="f-faq-trigger" onclick="atmFacialsFaq(this)">
+                                <span>Which products do you use?</span>
+                                <span class="f-faq-icon">+</span>
+                            </button>
+                            <div class="f-faq-body">
+                                <div class="f-faq-body-inner">We use a curated selection of grade skincare
+                                    brands chosen for their efficacy. Specific products are selected based on
+                                    your skin's individual diagnostic results.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Trust Boxes -->
+                <div class="f-s-card">
+                    <div class="f-trust-box">
+                        <svg width="30" height="30" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                        </svg>
+                        <div>
+                            <h4>Serving Mortlake, Richmond</h4>
+                            <p>Premium wellness sanctuary in the heart of London's most sought-after neighbourhood.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="f-s-card">
+                    <div class="f-trust-box">
+                        <svg width="30" height="30" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <div>
+                            <h4>Professional Excellence</h4>
+                            <p>Trusted expert care. Real, measurable results. Your skin's health is our priority.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- end sidebar -->
+        </div>
+    </div>
+
+
+    <!-- ═══ BOTTOM CTA ═══ -->
+    <div class="f-bottom-cta">
+        <div class="f-bottom-inner">
+            <div class="f-bottom-left">
+                <div class="f-cta-icon">
+                    <svg width="34" height="34" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                            d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                    </svg>
+                </div>
+                <div>
+                    <h3>Your Skin Deserves Expert Care</h3>
+                    <p>Book your advanced facial in Mortlake, Richmond today.</p>
+                </div>
+            </div>
+            <div class="f-bottom-btns" style="display:flex; gap:10px;">
+                <a href="https://www.fresha.com/book-now/athena-mortlake-c2gmn07m/all-offer?pId=1090219" target="_blank"
+                    class="f-btn f-btn-black"
+                    style="display:flex; align-items:center; justify-content:center; height:50px; padding:0 16px;">
+                    Book Now
+                </a>
+                <a href="https://wa.me/447884492575?text=Hi%20I%27m%20interested%20in%20a%20facial" target="_blank"
+                    class="f-btn f-btn-wa"
+                    style="display:flex; align-items:center; justify-content:center; height:50px; padding:0 16px; gap:8px;">
+                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" style="flex-shrink:0">
+                        <path
+                            d="M12.031 0C5.385 0 0 5.385 0 12.031c0 2.133.551 4.156 1.558 5.96L.101 24l6.195-1.621c1.729.897 3.666 1.365 5.735 1.365 6.646 0 12.031-5.385 12.031-12.031S18.677 0 12.031 0zM17.65 16.59c-.276.776-1.593 1.488-2.186 1.547-.56.055-1.282.164-3.693-.834-2.9-1.196-4.756-4.148-4.896-4.335-.141-.188-1.168-1.55-1.168-2.955 0-1.405.733-2.096 1.011-2.392.278-.297.604-.372.805-.372.2 0 .401.003.576.012.188.009.438-.073.687.525.263.633.916 2.235 1 2.423.083.188.139.407.014.656-.126.249-.189.407-.375.633-.186.225-.395.49-.56.633-.186.164-.383.344-.173.705.21.362.936 1.549 2.015 2.511 1.396 1.246 2.564 1.636 2.923 1.782.358.146.568.125.782-.125.214-.25 1.012-1.18 1.283-1.587.271-.408.542-.34.869-.216.326.124 2.062.973 2.417 1.15.355.176.592.264.678.414.086.15.086.867-.19 1.642z" />
+                    </svg>
+                    WhatsApp Us
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div><!-- end .atm-facials -->
+
+
+<script>
+    function atmFacialsFaq(trigger) {
+        var body = trigger.nextElementSibling;
+        var icon = trigger.querySelector('.f-faq-icon');
+        var isOpen = body.classList.contains('open');
+
+        document.querySelectorAll('.atm-facials .f-faq-body').forEach(function (b) { b.classList.remove('open'); });
+        document.querySelectorAll('.atm-facials .f-faq-icon').forEach(function (i) { i.innerText = '+'; });
+
+        if (!isOpen) {
+            body.classList.add('open');
+            icon.innerText = '\u2212';
+        }
+    }
+</script>

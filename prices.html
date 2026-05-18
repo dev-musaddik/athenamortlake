@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Athena Mortlake Clinical Spa | Pricing Menu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Great+Vibes&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --brand-primary: #1a1a1a;
+            --brand-accent: #c5a059;
+            --bg-soft: #fbfbfb;
+            --text-light: #666666;
+            --border-color: #f0f0f0;
+        }
+
+        body {
+            font-family: 'Montserrat', Verdana, Arial, sans-serif;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 26.1px;
+            background-color: #ffffff;
+            color: rgb(0, 0, 0);
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3, h4, h5, h6, .serif {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Navbar styles */
+        .nav-dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            min-width: 280px;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+            border: 1px solid var(--border-color);
+            padding: 1rem 0;
+            z-index: 1000;
+        }
+
+        .group:hover .nav-dropdown {
+            display: block;
+        }
+
+        .nav-dropdown a {
+            display: block;
+            padding: 0.85rem 2rem;
+            font-size: 11px;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: #666;
+            transition: all 0.3s ease;
+        }
+
+        .nav-dropdown a:hover {
+            background: #fcf9f3;
+            color: var(--brand-accent);
+            padding-left: 2.25rem;
+        }
+
+        /* Pricing Section Styles */
+        .menu-plate {
+            border: 1px solid #e5e5e5;
+            padding: 3rem 2rem;
+            position: relative;
+            background: #fff;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.02);
+            margin-bottom: 2rem;
+            break-inside: avoid;
+        }
+
+        .menu-plate::before {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+            border: 1px solid #f9f9f9;
+            pointer-events: none;
+        }
+
+        .price-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 0.8rem;
+        }
+
+        .price-row .label {
+            background: white;
+            padding-right: 8px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: #333;
+        }
+
+        .price-row .dots {
+            flex-grow: 1;
+            border-bottom: 1px dotted #ccc;
+            margin-bottom: 4px;
+        }
+
+        .price-row .value {
+            background: white;
+            padding-left: 8px;
+            font-weight: 700;
+            color: var(--brand-accent);
+            font-size: 0.95rem;
+        }
+
+        .price-col-header {
+            display: flex;
+            justify-content: flex-end;
+            gap: 1rem;
+            margin-bottom: 0.5rem;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #888;
+        }
+        
+        .price-col-header span {
+            width: 40px;
+            text-align: right;
+        }
+
+        .price-row-multi {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 0.8rem;
+        }
+
+        .price-row-multi .label {
+            background: white;
+            padding-right: 8px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: #333;
+        }
+
+        .price-row-multi .dots {
+            flex-grow: 1;
+            border-bottom: 1px dotted #ccc;
+            margin-bottom: 4px;
+        }
+
+        .price-row-multi .values {
+            background: white;
+            padding-left: 8px;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .price-row-multi .values span {
+            width: 40px;
+            text-align: right;
+            font-weight: 700;
+            color: var(--brand-accent);
+            font-size: 0.95rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: #1a1a1a;
+            position: relative;
+        }
+        
+        .section-title a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .section-title a:hover {
+            color: var(--brand-accent);
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 2px;
+            background: var(--brand-accent);
+            margin: 12px auto 0;
+        }
+
+        .masonry-grid {
+            column-count: 1;
+            column-gap: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .masonry-grid {
+                column-count: 2;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .masonry-grid {
+                column-count: 3;
+            }
+        }
+
+        .sub-heading {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            font-weight: 700;
+            color: #999;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body class="antialiased bg-[#fafafa]">
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full z-[110] bg-white/95 backdrop-blur-md border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="relative z-[110]">
+                <a href="index.html" class="flex flex-col items-start focus:outline-none pt-1">
+                    <div class="relative mb-3 pr-8">
+                        <span class="text-2xl md:text-3xl font-normal tracking-[0.2em] font-['Montserrat'] text-black">ATHENA</span>
+                        <span class="absolute -bottom-3 left-50 top-5 right-0 text-3xl md:text-4xl text-[#c5a059]"
+                            style="font-family: 'Great Vibes', cursive; transform: rotate(-2deg);">Mortlake</span>
+                    </div>
+                    <span class="text-[8px] uppercase tracking-[0.6em] text-gray-400 font-['Montserrat']">Clinical Beauty & Spa</span>
+                </a>
+            </div>
+
+            <div class="hidden md:flex gap-10 h-full items-center text-[10px] font-bold uppercase tracking-[0.25em] text-gray-400">
+                <a href="index.html" class="hover:text-black transition-colors">Home</a>
+
+                <div class="relative group h-full flex items-center cursor-pointer">
+                    <span class="hover:text-black transition-colors flex items-center gap-2">
+                        Services
+                        <svg class="w-2.5 h-2.5 opacity-40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </span>
+                    <div class="nav-dropdown">
+                        <a href="Hair-Dressing.html">Hair Atelier</a>
+                        <a href="laser_page_wordpress.html">Laser Clinic</a>
+                        <a href="facials.html">Skin Clinic</a>
+                        <a href="hydrafacial.html">Hydrafacial™</a>
+                        <a href="microblading.html">Microblading</a>
+                        <a href="Manicure&Pedicure.html">Nail Studio</a>
+                        <a href="EyebrowThreading.html">Precision Threading</a>
+                        <a href="body-massage.html">Body Therapy</a>
+                    </div>
+                </div>
+                <a href="prices.html" class="text-black transition-colors">Prices</a>
+            </div>
+
+            <div class="flex items-center gap-4 z-[110]">
+                <button onclick="window.open('https://fresha.com')"
+                    class="hidden sm:block bg-black text-white px-8 py-3 text-[10px] uppercase tracking-[0.25em] font-bold rounded-sm hover:opacity-80 transition-all">Book Online</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="pt-32 pb-16 text-center">
+        <div class="max-w-4xl mx-auto px-6">
+            <h1 class="text-4xl md:text-6xl serif mb-6">Treatment Menu</h1>
+            <div class="w-16 h-px bg-amber-500 mx-auto mb-6"></div>
+            <p class="text-gray-500 max-w-2xl mx-auto text-sm">Explore our comprehensive range of clinical and aesthetic treatments. Click on any section heading to learn more about the service.</p>
+        </div>
+    </header>
+
+    <!-- Pricing Content -->
+    <main class="max-w-7xl mx-auto px-6 pb-24">
+        <div class="masonry-grid">
+            
+            <!-- THREADING -->
+            <div class="menu-plate">
+                <h3 class="section-title"><a href="EyebrowThreading.html">Threading</a></h3>
+                <div class="price-row"><span class="label">Eyebrow</span><div class="dots"></div><span class="value">£8</span></div>
+                <div class="price-row"><span class="label">Upper lip</span><div class="dots"></div><span class="value">£6</span></div>
+                <div class="price-row"><span class="label">Chin</span><div class="dots"></div><span class="value">£8</span></div>
+                <div class="price-row"><span class="label">Neck</span><div class="dots"></div><span class="value">£10</span></div>
+                <div class="price-row"><span class="label">Sides/Forehead/Lower lip</span><div class="dots"></div><span class="value">£8</span></div>
+            </div>
+
+            <!-- WAXING (FACE) -->
+            <div class="menu-plate">
+                <h3 class="section-title"><a href="EyebrowThreading.html">Waxing (Face)</a></h3>
+                <div class="price-row"><span class="label">Upper lip/Chin</span><div class="dots"></div><span class="value">£8</span></div>
+                <div class="price-row"><span class="label">Nostrils/Ears</span><div class="dots"></div><span class="value">£10</span></div>
+                <div class="price-row"><span class="label">Eyebrows/Neck</span><div class="dots"></div><span class="value">£10</span></div>
+                <div class="price-row"><span class="label">Jawline</span><div class="dots"></div><span class="value">£12</span></div>
+                <div class="price-row"><span class="label">Sides/Cheeks</span><div class="dots"></div><span class="value">£10</span></div>
+                <div class="price-row"><span class="label">Full Face</span><div class="dots"></div><span class="value">£30</span></div>
+                <div class="price-row"><span class="label">Full Face incl. Eyebrows</span><div class="dots"></div><span class="value">£35</span></div>
+            </div>
+
+            <!-- LASH & BROW ENHANCEMENT -->
+            <div class="menu-plate">
+                <h3 class="section-title"><a href="microblading.html">Lash & Brow Enhancement</a></h3>
+                <div class="price-row"><span class="label">Lash Tint</span><div class="dots"></div><span class="value">£15</span></div>
+                <div class="price-row"><span class="label">Brow Tint</span><div class="dots"></div><span class="value">£10</span></div>
+                <div class="price-row"><span class="label">Lash Lift and Tint</span><div class="dots"></div><span class="value">£55</span></div>
+                <div class="price-row"><span class="label">Brow Lamination</span><div class="dots"></div><span class="value">£45</span></div>
+                <div class="price-row"><span class="label">LVL lash Lift</span><div class="dots"></div><span class="value">£55</span></div>
+            </div>
+
+            <!-- KIDS WAXING -->
+            <div class="menu-plate">
+                <h3 class="section-title">Kids Waxing</h3>
+                <div class="price-row"><span class="label">Eyebrow</span><div class="dots"></div><span class="value">£5</span></div>
+                <div class="price-row"><span class="label">Upper lip</span><div class="dots"></div><span class="value">£4</span></div>
+                <div class="price-row"><span class="label">Chin</span><div class="dots"></div><span class="value">£5</span></div>
+                <div class="price-row"><span class="label">Neck</span><div class="dots"></div><span class="value">£8</span></div>
+                <div class="price-row"><span class="label">Sides/Forehead/Lower lip</span><div class="dots"></div><span class="value">£6</span></div>
+            </div>
+
+            <!-- COMBO PACKAGES -->
+            <div class="menu-plate">
+                <h3 class="section-title">Combo Packages</h3>
+                <div class="price-row"><span class="label">Eyebrow & upper lip</span><div class="dots"></div><span class="value">£13</span></div>
+                <div class="price-row"><span class="label">Eyebrow, upper lip & chin</span><div class="dots"></div><span class="value">£20</span></div>
+                <div class="price-row"><span class="label">Eyebrow & tint</span><div class="dots"></div><span class="value">£16</span></div>
+                <div class="price-row"><span class="label">Lash & brow tint</span><div class="dots"></div><span class="value">£22</span></div>
+                <div class="price-row"><span class="label">Lash lift/tint + Brow lamination</span><div class="dots"></div><span class="value">£90</span></div>
+            </div>
+
+            <!-- WAXING (BODY) -->
+            <div class="menu-plate">
+                <h3 class="section-title">Waxing (Body)</h3>
+                <div class="price-col-header">
+                    <span>Hot</span>
+                    <span>Strip</span>
+                </div>
+                <div class="price-row-multi">
+                    <span class="label">Under Arms</span><div class="dots"></div>
+                    <div class="values"><span>£15</span><span>£12</span></div>
+                </div>
+                <div class="price-row-multi">
+                    <span class="label">Half arms</span><div class="dots"></div>
+                    <div class="values"><span>£20</span><span>£18</span></div>
+                </div>
+                <div class="price-row-multi">
+                    <span class="label">Full arms</span><div class="dots"></div>
+                    <div class="values"><span>£25</span><span>£22</span></div>
+                </div>
+                <div class="price-row-multi">
+                    <span class="label">Bikini Line</span><div class="dots"></div>
+                    <div class="values"><span>£20</span><span>£18</span></div>
+                </div>
+                <div class="price-row-multi">
+                    <span class="label">Hollywood</span><div class="dots"></div>
+                    <div class="values"><span>£40</span><span>£35</span></div>
+                </div>
+                <div class="price-row-multi">
+                    <span class="label">Brazilian</span><div class="dots"></div>
+                    <div class="values"><span>£40</span><span>£35</span></div>
+                </div>
+                <div class="price-row-multi">
+                    <span class="label">Half Legs</span><div class="dots"></div>
+                    <div class="values"><span>£25</span><span>£20</span></div>
+                </div>
+                <div class="price-row-multi">
+                    <span class="label">Full Legs</span><div class="dots"></div>
+                    <div class="values"><span>£35</span><span>£30</span></div>
+                </div>
+                <div class="price-row-multi">
+                    <span class="label">Back/Chest/Stomach</span><div class="dots"></div>
+                    <div class="values"><span>£30</span><span>£25</span></div>
+                </div>
+            </div>
+
+            <!-- FACIALS -->
+            <div class="menu-plate">
+                <h3 class="section-title"><a href="facials.html">Facials</a></h3>
+                <div class="price-row"><span class="label">Express Facial</span><div class="dots"></div><span class="value">£35</span></div>
+                <div class="price-row"><span class="label">Deep Cleanse Facial</span><div class="dots"></div><span class="value">£45</span></div>
+                <div class="price-row"><span class="label">Dermaplaning</span><div class="dots"></div><span class="value">£50</span></div>
+                <div class="price-row"><span class="label">Microneedling</span><div class="dots"></div><span class="value">£70</span></div>
+                <div class="price-row"><span class="label">Chemical Peel</span><div class="dots"></div><span class="value">£60</span></div>
+                <div class="price-row"><span class="label">LED Light Therapy</span><div class="dots"></div><span class="value">£30</span></div>
+            </div>
+
+            <!-- MASSAGE -->
+            <div class="menu-plate">
+                <h3 class="section-title"><a href="body-massage.html">Massage</a></h3>
+                <div class="price-row"><span class="label">Indian Head Massage (30m)</span><div class="dots"></div><span class="value">£35</span></div>
+                <div class="price-row"><span class="label">Back, Neck & Shoulder (30m)</span><div class="dots"></div><span class="value">£40</span></div>
+                <div class="price-row"><span class="label">Full Body Massage (60m)</span><div class="dots"></div><span class="value">£60</span></div>
+                <div class="price-row"><span class="label">Hot Stone Massage (60m)</span><div class="dots"></div><span class="value">£65</span></div>
+                <div class="price-row"><span class="label">Deep Tissue Massage (60m)</span><div class="dots"></div><span class="value">£65</span></div>
+                <div class="price-row"><span class="label">Reflexology (45m)</span><div class="dots"></div><span class="value">£45</span></div>
+            </div>
+
+            <!-- MEN'S GROOMING -->
+            <div class="menu-plate">
+                <h3 class="section-title">Men's Grooming</h3>
+                <div class="price-row"><span class="label">Eyebrow Threading</span><div class="dots"></div><span class="value">£10</span></div>
+                <div class="price-row"><span class="label">Beard Line Up</span><div class="dots"></div><span class="value">£12</span></div>
+                <div class="price-row"><span class="label">Nose/Ear Wax</span><div class="dots"></div><span class="value">£10</span></div>
+                <div class="price-row"><span class="label">Back Wax</span><div class="dots"></div><span class="value">£30</span></div>
+                <div class="price-row"><span class="label">Chest Wax</span><div class="dots"></div><span class="value">£30</span></div>
+            </div>
+
+            <!-- NAILS -->
+            <div class="menu-plate">
+                <h3 class="section-title"><a href="Manicure&Pedicure.html">Nails</a></h3>
+                <div class="sub-heading">Acrylic</div>
+                <div class="price-row"><span class="label">Full Set</span><div class="dots"></div><span class="value">£35</span></div>
+                <div class="price-row"><span class="label">Infill</span><div class="dots"></div><span class="value">£25</span></div>
+                <div class="price-row"><span class="label">Take Off</span><div class="dots"></div><span class="value">£15</span></div>
+
+                <div class="sub-heading">BIAB</div>
+                <div class="price-row"><span class="label">Full Set</span><div class="dots"></div><span class="value">£40</span></div>
+                <div class="price-row"><span class="label">Infill</span><div class="dots"></div><span class="value">£30</span></div>
+                <div class="price-row"><span class="label">Take Off</span><div class="dots"></div><span class="value">£15</span></div>
+
+                <div class="sub-heading">Shellac / Gel</div>
+                <div class="price-row"><span class="label">Manicure</span><div class="dots"></div><span class="value">£30</span></div>
+                <div class="price-row"><span class="label">Pedicure</span><div class="dots"></div><span class="value">£35</span></div>
+                <div class="price-row"><span class="label">Take Off</span><div class="dots"></div><span class="value">£10</span></div>
+
+                <div class="sub-heading">Normal Polish</div>
+                <div class="price-row"><span class="label">Manicure</span><div class="dots"></div><span class="value">£20</span></div>
+                <div class="price-row"><span class="label">Pedicure</span><div class="dots"></div><span class="value">£25</span></div>
+            </div>
+
+            <!-- HAIR DRESSING -->
+            <div class="menu-plate">
+                <h3 class="section-title"><a href="Hair-Dressing.html">Hair Dressing</a></h3>
+                <div class="sub-heading">Ladies</div>
+                <div class="price-row"><span class="label">Wash & Cut</span><div class="dots"></div><span class="value">£35</span></div>
+                <div class="price-row"><span class="label">Wash, Cut & Blow Dry</span><div class="dots"></div><span class="value">£45</span></div>
+                <div class="price-row"><span class="label">Restyle</span><div class="dots"></div><span class="value">£55</span></div>
+                <div class="price-row"><span class="label">Blow Dry</span><div class="dots"></div><span class="value">£25</span></div>
+                <div class="price-row"><span class="label">Roots Colour</span><div class="dots"></div><span class="value">£40</span></div>
+                <div class="price-row"><span class="label">Full Head Colour</span><div class="dots"></div><span class="value">£60</span></div>
+                <div class="price-row"><span class="label">Half Head Highlights</span><div class="dots"></div><span class="value">£65</span></div>
+                <div class="price-row"><span class="label">Full Head Highlights</span><div class="dots"></div><span class="value">£85</span></div>
+                <div class="price-row"><span class="label">Balayage</span><div class="dots"></div><span class="value">from £95</span></div>
+
+                <div class="sub-heading">Gents</div>
+                <div class="price-row"><span class="label">Dry Cut</span><div class="dots"></div><span class="value">£18</span></div>
+                <div class="price-row"><span class="label">Wash & Cut</span><div class="dots"></div><span class="value">£22</span></div>
+                <div class="price-row"><span class="label">Skin Fade</span><div class="dots"></div><span class="value">£20</span></div>
+                <div class="price-row"><span class="label">Beard Trim</span><div class="dots"></div><span class="value">£10</span></div>
+            </div>
+
+            <!-- LASER HAIR REMOVAL -->
+            <div class="menu-plate">
+                <h3 class="section-title"><a href="laser_page_wordpress.html">Laser Hair Removal</a></h3>
+                <div class="sub-heading">Face Treatments</div>
+                <div class="price-row"><span class="label">Upper Lip</span><div class="dots"></div><span class="value">£15</span></div>
+                <div class="price-row"><span class="label">Chin</span><div class="dots"></div><span class="value">£18</span></div>
+                <div class="price-row"><span class="label">Centre Brow</span><div class="dots"></div><span class="value">£7</span></div>
+                <div class="price-row"><span class="label">Full Face</span><div class="dots"></div><span class="value">£45</span></div>
+                
+                <div class="sub-heading">Body Treatments</div>
+                <div class="price-row"><span class="label">Under Arms</span><div class="dots"></div><span class="value">£10</span></div>
+                <div class="price-row"><span class="label">Half Arms / Full Arms</span><div class="dots"></div><span class="value">£45 / £80</span></div>
+                <div class="price-row"><span class="label">Lower Leg / Full Leg</span><div class="dots"></div><span class="value">£65 / £80</span></div>
+                <div class="price-row"><span class="label">Bikini Line</span><div class="dots"></div><span class="value">£25</span></div>
+                <div class="price-row"><span class="label">Brazilian / Hollywood</span><div class="dots"></div><span class="value">£30</span></div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-stone-50 py-24 border-t border-stone-200">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-16">
+            <div>
+                <div class="relative mb-8 inline-block pr-10">
+                    <span class="text-3xl md:text-4xl font-normal tracking-[0.2em] font-['Playfair_Display'] text-black block">ATHENA</span>
+                    <span class="absolute -bottom-4 right-0 text-4xl md:text-5xl text-[#c5a059]"
+                        style="font-family: 'Great Vibes', cursive; transform: rotate(-2deg);">Mortlake</span>
+                </div>
+                <p class="text-[10px] text-gray-400 uppercase tracking-[0.4em] leading-loose">Clinical Beauty & Spa<br>London Boutique Clinic</p>
+            </div>
+            <div class="flex flex-col gap-4">
+                <h4 class="text-[10px] font-black tracking-[0.2em] uppercase text-gray-400">Quick Links</h4>
+                <div class="flex flex-col gap-3 text-sm text-gray-500">
+                    <a href="index.html" class="hover:text-black">Home</a>
+                    <a href="#" class="hover:text-black">Clinical Ethics</a>
+                    <a href="#" class="hover:text-black">Privacy Policy</a>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-[10px] font-black tracking-[0.2em] uppercase text-gray-400 mb-6">Patient Support</h4>
+                <p class="text-xs text-gray-500 mb-4">Questions about your treatment?</p>
+                <a href="https://wa.me/440000000000" class="inline-flex items-center gap-2 bg-[#25D366] text-white px-6 py-3 rounded-md font-bold text-xs uppercase tracking-widest hover:bg-[#128C7E] transition-colors shadow-sm">
+                    WhatsApp Chat
+                </a>
+            </div>
+        </div>
+        <div class="mt-20 text-center">
+            <p class="text-gray-300 text-[9px] uppercase tracking-widest">&copy; 2024 Athena Mortlake Clinical Spa. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
